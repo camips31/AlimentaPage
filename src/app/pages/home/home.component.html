@@ -1,0 +1,98 @@
+<!-- Hero Section: estilo imagen referencia -->
+<section class="hero">
+  <div class="hero-box">
+    <h1 class="hero-title">Nutrición consciente<br>para mejorar tu salud y bienestar</h1>
+    <div class="hero-team">
+      <img src="assets/profesional3sinfondo.png" alt="Equipo Alimenta"
+           onerror="this.style.display='none'">
+    </div>
+  </div>
+  <div class="container hero-team-info">
+    <div class="team-member" *ngFor="let prof of professionals">
+      <strong>{{ prof.name }}</strong>
+      <span>{{ prof.specialty }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- Especialidades & Servicios - panel pastel full width -->
+<section class="specialties">
+  <div class="container">
+    <h2 class="section-title">Especialidades &amp; Servicios</h2>
+  </div>
+  <div class="specialties-grid">
+    <div class="specialty-panel" *ngFor="let s of services.slice(0, 5); let i = index"
+      [style.background-color]="panelColors[i % panelColors.length]">
+    <div class="specialty-icon"><span class="material-icons">{{ s.icon }}</span></div>
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.description }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Nuestro Proceso Integrativo -->
+<section class="process">
+  <div class="container">
+    <h2 class="section-title">Nuestro Proceso Integrativo</h2>
+    <div class="process-grid">
+      <div class="process-step" *ngFor="let step of processSteps">
+        <h4>{{ step.title }}</h4>
+        <p>{{ step.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios -->
+<section class="benefits-section bg-cream-soft">
+  <div class="container">
+    <h2 class="section-title">¿Por Qué Elegir Alimenta?</h2>
+    <p class="section-subtitle">
+      Nos destacamos por nuestro compromiso con tu salud y satisfacción
+    </p>
+    <div class="grid grid-4">
+      <div class="benefit-card" *ngFor="let benefit of benefits">
+        <div class="benefit-icon"><span class="material-icons">{{ benefit.icon }}</span></div>
+        <h3>{{ benefit.title }}</h3>
+        <p>{{ benefit.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">Lo Que Dicen Nuestros Pacientes</h2>
+    <p class="section-subtitle">Testimonios reales de personas que han confiado en nosotros</p>
+    <div class="grid grid-3">
+      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+        <div class="stars">
+          <span *ngFor="let star of getStars(testimonial.rating)" class="star"><span class="material-icons">star</span></span>
+        </div>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{ testimonial.name.charAt(0) }}</div>
+          <div>
+            <h4>{{ testimonial.name }}</h4>
+            <p>Paciente de Alimenta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>¿Listo para Transformar tu Vida?</h2>
+      <p>Agenda tu consulta ahora y comienza tu camino hacia una vida más saludable</p>
+      <div class="cta-buttons">
+        <a [href]="whatsappLink" target="_blank" class="btn btn-primary">Agenda Tu Consulta</a>
+        <a routerLink="/contacto" class="btn btn-outline">Más Información</a>
+      </div>
+    </div>
+  </div>
+</section>

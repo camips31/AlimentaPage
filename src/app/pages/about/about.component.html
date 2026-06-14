@@ -1,0 +1,107 @@
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Sobre Nosotros</h1>
+    <p>Conoce nuestra historia, misión y al equipo detrás de Alimenta</p>
+  </div>
+</section>
+
+<!-- Historia -->
+<section class="history-section">
+  <div class="container">
+    <div class="content-grid">
+      <div class="text-content">
+        <h2>¿Qué es Alimenta?</h2>
+        <p>{{ description }}</p>
+      </div>
+      <div class="image-content">
+        <img src="assets/history.jpg" alt="Historia de Alimenta">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Misión y Visión -->
+<section class="mission-vision bg-cream">
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card">
+        <h2>Misión</h2>
+        <p>{{ mission }}</p>
+      </div>
+      <div class="mv-card">
+        <h2>Visión</h2>
+        <p>{{ vision }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Valores -->
+<section class="values-section">
+  <div class="container">
+    <h2 class="section-title">Nuestros Valores</h2>
+    <div class="grid grid-4">
+      <div class="value-card" *ngFor="let value of values">
+        <div class="value-icon"><span class="material-icons">{{ value.icon }}</span></div>
+        <h3>{{ value.title }}</h3>
+        <p>{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Equipo -->
+<section class="team-section bg-beige">
+  <div class="container">
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <p class="section-subtitle">
+      Profesionales altamente capacitados y comprometidos con tu bienestar
+    </p>
+    
+    <div class="team-grid">
+      <div class="team-member" *ngFor="let member of team">
+        <div class="member-image">
+          <img [src]="member.image" [alt]="member.name">
+        </div>
+        <div class="member-info">
+          <h3>{{ member.name }}</h3>
+          <p class="specialty">{{ member.specialty }}</p>
+          <p class="credential" *ngIf="member.credential">Registro: {{ member.credential }}</p>
+          <p class="city" *ngIf="member.city"><span class="material-icons">location_on</span> {{ member.city }}</p>
+          <p class="description">{{ member.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Línea de Tiempo -->
+<section class="timeline-section">
+  <div class="container">
+    <h2 class="section-title">Nuestro Recorrido</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let milestone of milestones">
+        <div class="timeline-year">{{ milestone.year }}</div>
+        <div class="timeline-content">
+          <p>{{ milestone.event }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>¿Quieres Ser Parte de Nuestra Historia?</h2>
+      <p>Agenda tu consulta y comienza tu transformación hoy</p>
+      <a href="https://wa.me/59177731818?text=Hola%2C%20quiero%20agendar%20una%20consulta" 
+         target="_blank" 
+         class="btn btn-primary btn-lg">
+        Agenda Tu Consulta
+      </a>
+    </div>
+  </div>
+</section>

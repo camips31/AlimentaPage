@@ -1,0 +1,85 @@
+<div class="services-page">
+  <section class="hero-section">
+    <div class="container">
+      <h1>Nuestros Servicios</h1>
+      <p class="subtitle">Soluciones integrales de nutrición adaptadas a tus necesidades</p>
+    </div>
+  </section>
+
+  <section class="our-services-section">
+    <div class="container">
+      <h2>Nuestros servicios</h2>
+      <ul class="services-overview">
+        <li>Evaluación nutricional individual.</li>
+        <li>Plan alimentario personalizado.</li>
+        <li>Talleres presenciales y virtuales.</li>
+        <li>Acompañamiento pre y post cirugía</li>
+        <li>Colaboración con gimnasios, farmacias y médicos especialistas.</li>
+        <li>Participación como proveedor en redes de seguros de salud.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="services-grid">
+    <div class="container">
+      <div class="services-list">
+        @for (service of services; track service.id) {
+          <div class="service-card">
+            <div class="service-icon"><span class="material-icons">{{ service.icon }}</span></div>
+            <h2>{{ service.title }}</h2>
+            <p class="service-description">{{ service.description }}</p>
+            
+            <div class="service-details">
+              <div class="detail-item">
+                <h4>¿Para quién es?</h4>
+                <p>{{ service.targetAudience }}</p>
+              </div>
+
+              <div class="detail-item">
+                <h4>Beneficios</h4>
+                <ul>
+                  @for (benefit of service.benefits; track benefit) {
+                    <li>{{ benefit }}</li>
+                  }
+                </ul>
+              </div>
+
+              <div class="detail-item">
+                <h4>Duración</h4>
+                <p>{{ service.duration }}</p>
+              </div>
+            </div>
+
+            <button class="btn-primary" (click)="contactWhatsApp(service.whatsappMsg)">
+              Reservar Consulta
+            </button>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="companies-section">
+    <div class="container">
+      <h2>Empresas que confían en nosotros</h2>
+      <p class="section-subtitle">Hemos trabajado con importantes organizaciones en Bolivia</p>
+      <div class="companies-grid">
+        @for (company of companies; track company.name) {
+          <div class="company-logo">
+            <img [src]="company.logo" [alt]="company.name" />
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>¿Listo para empezar tu transformación?</h2>
+      <p>Agenda tu consulta hoy y comienza tu camino hacia una vida más saludable</p>
+      <button class="btn-primary" (click)="contactWhatsApp('Hola! Me gustaría agendar una consulta')">
+        Agendar Consulta
+      </button>
+    </div>
+  </section>
+</div>

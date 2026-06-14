@@ -1,0 +1,55 @@
+<div class="faq-page">
+  <section class="hero-section">
+    <div class="container">
+      <h1>Preguntas Frecuentes</h1>
+      <p class="subtitle">Encuentra respuestas a las dudas más comunes sobre nuestros servicios</p>
+    </div>
+  </section>
+
+  <section class="faq-content">
+    <div class="container">
+      <div class="categories-filter">
+        @for (category of categories; track category) {
+          <button 
+            class="category-btn"
+            [class.active]="selectedCategory === category"
+            (click)="filterByCategory(category)">
+            {{ category }}
+          </button>
+        }
+      </div>
+
+      <div class="faqs-list">
+        @for (faq of filteredFaqs; track faq.question) {
+          <div class="faq-item" [class.open]="faq.isOpen">
+            <button class="faq-question" (click)="toggleFaq(faq)">
+              <span class="question-text">{{ faq.question }}</span>
+              <span class="toggle-icon">{{ faq.isOpen ? '−' : '+' }}</span>
+            </button>
+            @if (faq.isOpen) {
+              <div class="faq-answer">
+                <p>{{ faq.answer }}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
+      @if (filteredFaqs.length === 0) {
+        <div class="no-faqs">
+          <p>No hay preguntas en esta categoría todavía.</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <div class="container">
+      <h2>¿No encontraste lo que buscabas?</h2>
+      <p>Envíanos tu consulta por WhatsApp y te responderemos a la brevedad</p>
+      <button class="btn-primary" (click)="contactWhatsApp()">
+        Hacer una consulta
+      </button>
+    </div>
+  </section>
+</div>
