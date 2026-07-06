@@ -89,6 +89,15 @@
   transition: transform 180ms ease;
 }
 
+.hero-professional-cecilia {
+  grid-template-rows: clamp(270px, 21vw, 340px) auto;
+}
+
+.hero-professional-cecilia .hero-photo-frame {
+  height: clamp(270px, 21vw, 340px);
+  overflow: visible;
+}
+
 .hero-professional:hover,
 .hero-professional:focus-within {
   transform: translateY(-8px);
@@ -114,8 +123,14 @@
 }
 
 .hero-professional-cecilia .hero-photo-frame img {
-  transform: scale(1.03) translateY(-2px);
-  transform-origin: bottom center;
+  height: 86%;
+  object-position: bottom center;
+  transform: translateY(-12px);
+  transform-origin: center;
+}
+
+.hero-professional-cecilia .hero-profile-link {
+  margin-top: 0;
 }
 
 .hero-carousel-button {

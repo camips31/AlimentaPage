@@ -120,7 +120,7 @@ export class AboutComponent {
       philosophy: 'Creo que una alimentación saludable debe adaptarse a la vida de las personas y no al revés. Mi objetivo es acompañar a cada paciente en la construcción de hábitos sostenibles que le permitan mejorar su salud, bienestar y calidad de vida mediante estrategias prácticas, personalizadas y respaldadas por evidencia científica.'
     },
     {
-      name: 'Lic. Carrillo Sainz Valeria Isabel',
+      name: 'Lic. Valeria Isabel Carrillo Sainz',
       specialty: 'Nutrición Clínica y Deportiva',
       credential: 'C - 6144191',
       city: 'La Paz',
@@ -146,7 +146,7 @@ export class AboutComponent {
       philosophy: 'Creo que una alimentación saludable debe adaptarse a la vida de las personas y no al revés. Mi objetivo es acompañar a cada paciente para que logre resultados sostenibles, mejorando no solo su alimentación, sino también su bienestar físico y emocional.'
     },
     {
-      name: 'Lic. Llaguno Gómez Mariel',
+      name: 'Lic. Mariel Llaguno Gómez',
       specialty: 'Nutrición en Recomposición Corporal y Bariatría',
       credential: 'LL - 6148826',
       city: 'La Paz',
