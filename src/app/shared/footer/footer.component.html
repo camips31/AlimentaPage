@@ -60,11 +60,29 @@
       </div>
 
       <div class="footer-col">
-        <form class="footer-form" (submit)="$event.preventDefault()">
-          <input type="text" placeholder="Nombre" class="footer-input" />
-          <input type="email" placeholder="Email" class="footer-input" />
-          <textarea placeholder="Enviar Mensaje" class="footer-input footer-textarea" rows="2"></textarea>
-          <button type="submit" class="footer-submit">Enviar Mensaje</button>
+        <form class="footer-form" (ngSubmit)="sendFooterWhatsApp()" #footerFormRef="ngForm">
+          <input
+            type="text"
+            name="footerName"
+            placeholder="Nombre"
+            class="footer-input"
+            [(ngModel)]="footerForm.name"
+            required />
+          <input
+            type="email"
+            name="footerEmail"
+            placeholder="Email"
+            class="footer-input"
+            [(ngModel)]="footerForm.email"
+            required />
+          <textarea
+            name="footerMessage"
+            placeholder="Enviar Mensaje"
+            class="footer-input footer-textarea"
+            rows="2"
+            [(ngModel)]="footerForm.message"
+            required></textarea>
+          <button type="submit" class="footer-submit" [disabled]="!footerFormRef.valid">Enviar Mensaje</button>
         </form>
       </div>
     </div>
