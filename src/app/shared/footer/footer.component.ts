@@ -11,16 +11,10 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   currentYear = new Date().getFullYear();
-  
-  socialLinks = {
-    instagram: 'https://www.instagram.com/alimentabolivia',
-    facebook: 'https://www.facebook.com/alimentabolivia',
-    tiktok: 'https://www.tiktok.com/@alimentabolivia'
-  };
 
-  contactInfo = {
-    phone: '+591 00000000',
-    email: 'contacto@alimenta.com.bo',
-    address: 'Dirección del centro, Ciudad, Bolivia'
+  socialLinks = {
+    instagram: 'https://www.instagram.com/alimenta.bol?igsh=am82MzF6aW9xcjln',
+    facebook: 'https://www.facebook.com/share/1LCzxk5mQx/',
+    tiktok: 'https://www.tiktok.com/@alimenta.bol?_r=1&_t=ZS-97UYWM1TIE0'
   };
 }

@@ -1,0 +1,51 @@
+.legal-page {
+  background: #fbf2df;
+  min-height: 100vh;
+  padding: 1rem 0 3rem;
+}
+
+.legal-hero {
+  padding: 0.8rem 0 1.2rem;
+  text-align: center;
+}
+
+.legal-hero h1 {
+  color: #24485a;
+  font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.legal-hero h1::after {
+  background: linear-gradient(90deg, var(--brand-sand) 0%, #d9a586 52%, var(--brand-sand-soft) 100%);
+  border-radius: 999px;
+  content: '';
+  display: block;
+  height: 3px;
+  margin: 0.55rem auto 0;
+  width: 105px;
+}
+
+.legal-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(63, 110, 129, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(52, 80, 68, 0.08);
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 1.25rem;
+}
+
+.legal-card h2 {
+  color: #24485a;
+  font-size: 1.05rem;
+  margin: 1rem 0 0.35rem;
+}
+
+.legal-card p {
+  color: #5f6670;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 0 0 0.55rem;
+}

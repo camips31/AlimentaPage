@@ -2,7 +2,7 @@
 <section class="page-hero">
   <div class="container">
     <h1>Sobre Nosotros</h1>
-    <p>Conoce nuestra historia, misión y al equipo detrás de Alimenta</p>
+    <p>Conoce nuestra historia, misión y el enfoque integral de Alimenta</p>
   </div>
 </section>
 
@@ -11,11 +11,24 @@
   <div class="container">
     <div class="content-grid">
       <div class="text-content">
-        <h2>¿Qué es Alimenta?</h2>
-        <p>{{ description }}</p>
+        <span class="section-kicker">¿Qué es Alimenta?</span>
+        <h2>Nuestra Historia</h2>
+        <p *ngFor="let paragraph of history">{{ paragraph }}</p>
       </div>
       <div class="image-content">
-        <img src="assets/history.jpg" alt="Historia de Alimenta">
+        <img [src]="aboutImages[0]" alt="Espacio de atención de Alimenta">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Espacios -->
+<section class="spaces-section bg-cream-soft">
+  <div class="container">
+    <h2 class="section-title">Nuestros Espacios</h2>
+    <div class="spaces-grid">
+      <div class="space-photo" *ngFor="let image of aboutImages.slice(1); let i = index">
+        <img [src]="image" [alt]="'Espacio Alimenta ' + (i + 2)">
       </div>
     </div>
   </div>
@@ -43,7 +56,10 @@
     <h2 class="section-title">Nuestros Valores</h2>
     <div class="grid grid-4">
       <div class="value-card" *ngFor="let value of values">
-        <div class="value-icon"><span class="material-icons">{{ value.icon }}</span></div>
+        <div class="value-icon">
+          <img *ngIf="value.iconPath; else materialValueIcon" [src]="value.iconPath" [alt]="value.title" class="alimenta-icon">
+          <ng-template #materialValueIcon><span class="material-icons">{{ value.icon }}</span></ng-template>
+        </div>
         <h3>{{ value.title }}</h3>
         <p>{{ value.description }}</p>
       </div>
@@ -56,20 +72,53 @@
   <div class="container">
     <h2 class="section-title">Nuestro Equipo</h2>
     <p class="section-subtitle">
-      Profesionales altamente capacitados y comprometidos con tu bienestar
+      Alimenta está conformado por profesionales especializados en nutrición clínica, deportiva, pediátrica, psicología y entrenamiento físico.
     </p>
-    
+
     <div class="team-grid">
-      <div class="team-member" *ngFor="let member of team">
+      <div class="team-member" *ngFor="let member of team" [id]="member.id">
         <div class="member-image">
-          <img [src]="member.image" [alt]="member.name">
+          <img *ngIf="member.image" [src]="member.image" [alt]="member.name">
+          <div class="member-image-placeholder" *ngIf="!member.image">
+            {{ member.name.charAt(0) }}
+          </div>
         </div>
         <div class="member-info">
           <h3>{{ member.name }}</h3>
           <p class="specialty">{{ member.specialty }}</p>
-          <p class="credential" *ngIf="member.credential">Registro: {{ member.credential }}</p>
+          <div class="member-meta">
+            <span *ngIf="member.credential">MP: {{ member.credential }}</span>
+          </div>
           <p class="city" *ngIf="member.city"><span class="material-icons">location_on</span> {{ member.city }}</p>
-          <p class="description">{{ member.description }}</p>
+          <p class="description" *ngIf="member.description">{{ member.description }}</p>
+
+          <div class="member-detail-grid">
+            <div class="member-detail" *ngIf="member.education?.length">
+              <h4>Formación Académica</h4>
+              <ul>
+                <li *ngFor="let item of member.education">{{ item }}</li>
+              </ul>
+            </div>
+
+            <div class="member-detail" *ngIf="member.specializations?.length">
+              <h4>Áreas de Especialización</h4>
+              <ul>
+                <li *ngFor="let item of member.specializations">{{ item }}</li>
+              </ul>
+            </div>
+
+            <div class="member-detail" *ngIf="member.achievements?.length">
+              <h4>Logros Deportivos</h4>
+              <ul>
+                <li *ngFor="let item of member.achievements">{{ item }}</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="member-philosophy" *ngIf="member.philosophy">
+            <h4>Filosofía de Trabajo</h4>
+            <p>{{ member.philosophy }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -87,21 +136,6 @@
           <p>{{ milestone.event }}</p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2>¿Quieres Ser Parte de Nuestra Historia?</h2>
-      <p>Agenda tu consulta y comienza tu transformación hoy</p>
-      <a href="https://wa.me/59177731818?text=Hola%2C%20quiero%20agendar%20una%20consulta" 
-         target="_blank" 
-         class="btn btn-primary btn-lg">
-        Agenda Tu Consulta
-      </a>
     </div>
   </div>
 </section>

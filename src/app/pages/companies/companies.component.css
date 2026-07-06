@@ -1,0 +1,355 @@
+.companies-page {
+  background: #fbf2df;
+  min-height: 100vh;
+}
+
+.companies-hero {
+  background: #fbf2df;
+  padding: 1rem 0 0.5rem !important;
+  text-align: center;
+}
+
+.companies-hero h1 {
+  color: #24485a;
+  font-size: clamp(1.65rem, 3vw, 2.15rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 0.55rem;
+}
+
+.companies-hero h1::after {
+  background: linear-gradient(90deg, var(--brand-sand) 0%, #d9a586 52%, var(--brand-sand-soft) 100%);
+  border-radius: 999px;
+  content: '';
+  display: block;
+  height: 3px;
+  margin: 0.5rem auto 0;
+  width: 105px;
+}
+
+.companies-hero p,
+.section-heading p {
+  color: #5f6670;
+  font-size: 0.92rem;
+  line-height: 1.42;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.intro-section,
+.alimenta-section,
+.workshops-section,
+.menus-section,
+.internships-section,
+.outsourcing-section,
+.collaborators-section,
+.team-note {
+  background: #fbf2df;
+  padding: 1.55rem 0;
+}
+
+.intro-section {
+  padding-top: 0 !important;
+}
+
+.intro-grid,
+.workshop-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.intro-card,
+.benefit-panel,
+.team-note .container,
+.menu-card,
+.service-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(63, 110, 129, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(52, 80, 68, 0.07);
+}
+
+.intro-card,
+.benefit-panel {
+  padding: 0.95rem;
+}
+
+.intro-card.accent {
+  background: #fff8ea;
+}
+
+h2 {
+  color: #24485a;
+  font-size: clamp(1.18rem, 1.7vw, 1.48rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.6rem;
+}
+
+h3 {
+  color: #243946;
+  font-size: 0.98rem;
+  line-height: 1.25;
+  margin: 0 0 0.42rem;
+}
+
+p {
+  color: #5f666b;
+  font-size: 0.84rem;
+  line-height: 1.42;
+  margin: 0 0 0.55rem;
+}
+
+.intro-card p,
+.service-card p,
+.workshop-grid article > p,
+.team-note p,
+.menu-card p,
+.internships-copy p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.companies-hero p,
+.section-heading p {
+  text-align: center;
+}
+
+ul {
+  display: grid;
+  gap: 0.32rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: #4d5559;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  padding-left: 1.05rem;
+  position: relative;
+}
+
+li::before {
+  color: #8cab77;
+  content: "\2713";
+  font-weight: 900;
+  left: 0;
+  position: absolute;
+}
+
+.section-heading {
+  margin: 0 auto 1rem;
+  max-width: 880px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem;
+  text-align: left;
+}
+
+.service-icon {
+  align-items: center;
+  background: #fff8ea;
+  border-radius: 999px;
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  margin-bottom: 0.45rem;
+  width: 42px;
+}
+
+.service-icon img {
+  height: 26px;
+  object-fit: contain;
+  width: 26px;
+}
+
+.service-icon .material-icons {
+  color: #b37d5a;
+  font-size: 1.45rem;
+}
+
+button,
+.team-note a {
+  align-items: center;
+  background: #356f82;
+  border: 0;
+  border-radius: 999px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 800;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0.58rem 0.85rem;
+  text-decoration: none;
+}
+
+button:hover,
+.team-note a:hover {
+  background: #b37d5a;
+}
+
+.workshop-grid article:first-child {
+  padding-right: 1rem;
+}
+
+.benefit-panel button {
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.team-note {
+  padding: 0 0 1.55rem;
+}
+
+.team-note .container {
+  padding: 1rem;
+  text-align: center;
+}
+
+.team-note p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 850px;
+}
+
+.menu-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.9rem;
+}
+
+.menu-card button {
+  margin-top: 0.75rem;
+}
+
+.outsourcing-section {
+  text-align: center;
+}
+
+.internships-layout {
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.internships-copy {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(63, 110, 129, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(52, 80, 68, 0.07);
+  padding: 1rem;
+}
+
+.internships-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.internships-gallery {
+  display: grid;
+  gap: 0.45rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.internships-gallery img {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(52, 80, 68, 0.08);
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.outsourcing-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+  margin: 0.8rem auto 1rem;
+  max-width: 920px;
+}
+
+.outsourcing-list span {
+  background: #ffffff;
+  border: 1px solid rgba(179, 125, 90, 0.18);
+  border-radius: 999px;
+  color: #2d4b42;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.45rem 0.65rem;
+}
+
+.collaborators-section {
+  padding-top: 0;
+}
+
+.collaborators-grid {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.collaborator-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(63, 110, 129, 0.12);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  min-height: 78px;
+  padding: 0.65rem;
+}
+
+.collaborator-item img {
+  border-radius: 7px;
+  display: block;
+  max-height: 46px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 980px) {
+  .services-grid,
+  .menu-grid,
+  .intro-grid,
+  .workshop-grid,
+  .internships-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-grid article:first-child {
+    padding-right: 0;
+  }
+
+  .collaborators-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .collaborators-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

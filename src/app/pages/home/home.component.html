@@ -1,16 +1,44 @@
 <!-- Hero Section: estilo imagen referencia -->
 <section class="hero">
   <div class="hero-box">
-    <h1 class="hero-title">Nutrición consciente<br>para mejorar tu salud y bienestar</h1>
     <div class="hero-team">
-      <img src="assets/profesional3sinfondo.png" alt="Equipo Alimenta"
-           onerror="this.style.display='none'">
-    </div>
-  </div>
-  <div class="container hero-team-info">
-    <div class="team-member" *ngFor="let prof of professionals">
-      <strong>{{ prof.name }}</strong>
-      <span>{{ prof.specialty }}</span>
+      <h1 class="hero-title">Nutrición que transforma hábitos, <br>salud y calidad de vida</h1>
+      <p class="hero-subtitle">
+        En Alimenta trabajamos con una filosofía de alimentación flexible y no restrictiva para ayudarte a mejorar tu salud física, mental y emocional mediante un acompañamiento profesional y personalizado.
+      </p>
+      <button
+        type="button"
+        class="hero-carousel-button hero-carousel-button-prev"
+        (click)="scrollHeroTeam(heroCarousel, -1)"
+        aria-label="Ver profesionales anteriores">
+        <span class="material-icons" aria-hidden="true">chevron_left</span>
+      </button>
+      <div class="hero-lineup" #heroCarousel aria-label="Equipo Alimenta">
+        <div
+          class="hero-professional"
+          [class.hero-professional-cecilia]="prof.id === 'cecilia-monterrey'"
+          *ngFor="let prof of heroProfessionals; let i = index"
+          [style.--lineup-index]="i">
+          <div class="hero-photo-frame">
+            <img [src]="prof.image" [alt]="prof.name">
+          </div>
+          <a
+            class="hero-profile-link"
+            [href]="'/sobre-nosotros#' + prof.id"
+            [attr.aria-label]="'Ver perfil de ' + prof.name">
+            <strong>{{ prof.name }}</strong>
+            <span>{{ prof.specialty }}</span>
+            <span class="material-icons hero-profile-icon" aria-hidden="true">add_circle</span>
+          </a>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="hero-carousel-button hero-carousel-button-next"
+        (click)="scrollHeroTeam(heroCarousel, 1)"
+        aria-label="Ver siguientes profesionales">
+        <span class="material-icons" aria-hidden="true">chevron_right</span>
+      </button>
     </div>
   </div>
 </section>
@@ -23,7 +51,10 @@
   <div class="specialties-grid">
     <div class="specialty-panel" *ngFor="let s of services.slice(0, 5); let i = index"
       [style.background-color]="panelColors[i % panelColors.length]">
-    <div class="specialty-icon"><span class="material-icons">{{ s.icon }}</span></div>
+    <div class="specialty-icon">
+      <img *ngIf="s.iconPath; else materialSpecialtyIcon" [src]="s.iconPath" [alt]="s.title" class="alimenta-icon">
+      <ng-template #materialSpecialtyIcon><span class="material-icons">{{ s.icon }}</span></ng-template>
+    </div>
       <h3>{{ s.title }}</h3>
       <p>{{ s.description }}</p>
     </div>
@@ -52,7 +83,10 @@
     </p>
     <div class="grid grid-4">
       <div class="benefit-card" *ngFor="let benefit of benefits">
-        <div class="benefit-icon"><span class="material-icons">{{ benefit.icon }}</span></div>
+        <div class="benefit-icon">
+          <img *ngIf="benefit.iconPath; else materialBenefitIcon" [src]="benefit.iconPath" [alt]="benefit.title" class="alimenta-icon">
+          <ng-template #materialBenefitIcon><span class="material-icons">{{ benefit.icon }}</span></ng-template>
+        </div>
         <h3>{{ benefit.title }}</h3>
         <p>{{ benefit.description }}</p>
       </div>
@@ -63,10 +97,19 @@
 <!-- Testimonios -->
 <section class="testimonials-section">
   <div class="container">
-    <h2 class="section-title">Lo Que Dicen Nuestros Pacientes</h2>
-    <p class="section-subtitle">Testimonios reales de personas que han confiado en nosotros</p>
-    <div class="grid grid-3">
-      <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+    <h2 class="section-title">Lo que dicen nuestros pacientes</h2>
+    <p class="section-subtitle">Reseñas de pacientes que han confiado en Alimenta</p>
+    <div class="testimonials-carousel-wrap">
+      <button
+        type="button"
+        class="testimonial-nav"
+        (click)="scrollTestimonials(testimonialsCarousel, -1)"
+        aria-label="Ver reseñas anteriores">
+        <span class="material-icons" aria-hidden="true">chevron_left</span>
+      </button>
+
+      <div class="testimonials-carousel" #testimonialsCarousel>
+      <div class="testimonial-card" *ngFor="let testimonial of realTestimonials">
         <div class="stars">
           <span *ngFor="let star of getStars(testimonial.rating)" class="star"><span class="material-icons">star</span></span>
         </div>
@@ -75,24 +118,19 @@
           <div class="author-avatar">{{ testimonial.name.charAt(0) }}</div>
           <div>
             <h4>{{ testimonial.name }}</h4>
-            <p>Paciente de Alimenta</p>
+            <p>Reseña de Google</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Final -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-content">
-      <h2>¿Listo para Transformar tu Vida?</h2>
-      <p>Agenda tu consulta ahora y comienza tu camino hacia una vida más saludable</p>
-      <div class="cta-buttons">
-        <a [href]="whatsappLink" target="_blank" class="btn btn-primary">Agenda Tu Consulta</a>
-        <a routerLink="/contacto" class="btn btn-outline">Más Información</a>
       </div>
+
+      <button
+        type="button"
+        class="testimonial-nav"
+        (click)="scrollTestimonials(testimonialsCarousel, 1)"
+        aria-label="Ver más reseñas">
+        <span class="material-icons" aria-hidden="true">chevron_right</span>
+      </button>
     </div>
   </div>
 </section>

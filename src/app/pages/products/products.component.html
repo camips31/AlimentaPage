@@ -1,50 +1,71 @@
 <div class="products-page">
-  <section class="hero-section">
-    <div class="container">
-      <h1>Nuestros Productos</h1>
-      <p class="subtitle">Invierte en tu salud con nuestros servicios nutricionales</p>
+  <section class="products-hero">
+    <div class="container hero-inner">
+      <h1>Productos para acompanar tu bienestar</h1>
+      <p>
+        Proteinas, mates, suplementos y edulcorantes seleccionados para complementar
+        tu proceso nutricional de forma practica.
+      </p>
     </div>
   </section>
 
-  <section class="products-section">
+  <section class="catalog-section">
     <div class="container">
-      <div class="products-grid">
-        @for (product of products; track product.id) {
-          <div class="product-card">
-            <div class="product-image">
-              <img [src]="product.image" [alt]="product.name" />
-            </div>
-            <div class="product-content">
-              <h3>{{ product.name }}</h3>
-              <p class="description">{{ product.description }}</p>
-              <div class="price">
-                <span class="currency">Bs.</span>
-                <span class="amount">{{ product.price }}</span>
-              </div>
-              <ul class="features">
-                @for (feature of product.features; track feature) {
-                  <li>✓ {{ feature }}</li>
-                }
-              </ul>
-              <button class="btn btn-primary" (click)="contactWhatsApp(product.name)">
-                Consultar por WhatsApp
-              </button>
-            </div>
+      @for (category of productCategories; track category.title) {
+        <article class="category-block">
+          <div class="category-heading">
+            <h2>{{ category.title }}</h2>
+            <p>{{ category.description }}</p>
           </div>
-        }
-      </div>
-    </div>
-  </section>
 
-  <section class="cta-section">
-    <div class="container">
-      <h2>¿Necesitas más información?</h2>
-      <p>Contáctanos y te ayudaremos a elegir el mejor plan para ti</p>
-      <a href="https://wa.me/59177731818?text=Hola%2C%20necesito%20más%20información%20sobre%20los%20productos" 
-         target="_blank" 
-         class="btn btn-primary">
-        Contactar
-      </a>
+          <div class="products-grid">
+            @for (product of category.products; track product.name) {
+              <div class="product-card" [class.empty-image]="!product.image">
+                <div class="product-image">
+                  @if (product.image) {
+                    <img [src]="product.image" [alt]="product.name" loading="lazy" />
+                  }
+                </div>
+
+                <div class="product-content">
+                  <h3>{{ product.name }}</h3>
+
+                  <div class="price-row">
+                    @for (price of product.prices; track price.label) {
+                      <span class="price-chip">
+                        <strong>{{ price.amount }}</strong>
+                        <small>{{ price.label }}</small>
+                      </span>
+                    }
+                  </div>
+
+                  @if (product.description) {
+                    <p class="description">{{ product.description }}</p>
+                  }
+
+                  @if (product.ingredients) {
+                    <p class="ingredients">
+                      <span>Ingredientes:</span> {{ product.ingredients }}
+                    </p>
+                  }
+
+                  @if (product.features?.length) {
+                    <ul class="features">
+                      @for (feature of product.features; track feature) {
+                        <li>{{ feature }}</li>
+                      }
+                    </ul>
+                  }
+
+                  <button class="btn btn-primary" (click)="contactWhatsApp(product.name)">
+                    Consultar por WhatsApp
+                  </button>
+                </div>
+              </div>
+            }
+          </div>
+        </article>
+      }
     </div>
   </section>
 </div>

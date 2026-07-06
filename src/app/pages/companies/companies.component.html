@@ -1,0 +1,195 @@
+<div class="companies-page">
+  <section class="companies-hero">
+    <div class="container">
+      <h1>Planes y Servicios para Empresas</h1>
+      <p>Empresas saludables en Bolivia con programas de nutricion, bienestar corporativo y menus institucionales.</p>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <div class="intro-grid">
+        <article class="intro-card">
+          <h2>Que es una empresa saludable</h2>
+          <p>
+            Una empresa saludable promueve el bienestar integral de sus colaboradores mediante acciones orientadas
+            a la prevencion, el cuidado de la salud y la mejora de los habitos de vida.
+          </p>
+          <p>
+            Las empresas que invierten en salud laboral contribuyen a reducir el ausentismo, mejorar la productividad
+            y fortalecer el compromiso de sus equipos.
+          </p>
+        </article>
+
+        <article class="intro-card accent">
+          <h2>Por que invertir en bienestar corporativo</h2>
+          <ul>
+            @for (benefit of benefits; track benefit) {
+              <li>{{ benefit }}</li>
+            }
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alimenta-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Alimenta Empresas</h2>
+        <p>
+          Desarrollamos programas de nutricion y bienestar corporativo adaptados a empresas e instituciones en Bolivia.
+          Trabajamos junto a Recursos Humanos, Seguridad y Salud Ocupacional y Responsabilidad Social Empresarial.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        @for (service of mainServices; track service.title) {
+          <article class="service-card">
+            <span class="service-icon">
+              <img [src]="service.iconPath" [alt]="service.title" (error)="service.iconPath = ''">
+              @if (!service.iconPath) {
+                <span class="material-icons">{{ service.icon }}</span>
+              }
+            </span>
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <button type="button" (click)="contactWhatsApp(service.title)">
+              Pide un presupuesto
+            </button>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="workshops-section">
+    <div class="container">
+      <div class="workshop-grid">
+        <article>
+          <h2>Charlas de bienestar y alimentacion saludable</h2>
+          <p>
+            Ofrecemos conferencias educativas sobre nutricion, salud integral, manejo del estres, habitos saludables
+            y calidad de vida. Tambien disenamos charlas personalizadas segun las necesidades de cada institucion.
+          </p>
+          <h3>A quienes estan dirigidas</h3>
+          <ul>
+            @for (item of audienceItems; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </article>
+
+        <article class="benefit-panel">
+          <h3>Beneficios</h3>
+          <ul>
+            @for (benefit of workshopBenefits; track benefit) {
+              <li>{{ benefit }}</li>
+            }
+          </ul>
+          <button type="button" (click)="contactWhatsApp('charlas y talleres corporativos')">
+            Quiero contactar con alguien
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-note">
+    <div class="container">
+      <h2>Equipo especializado</h2>
+      <p>
+        Contamos con un equipo multidisciplinario de nutricionistas y profesionales de la salud con experiencia en
+        nutricion clinica, deportiva, salud metabolica y psicologia aplicada a la conducta alimentaria.
+      </p>
+      <a routerLink="/sobre-nosotros">Conoce a los profesionales</a>
+    </div>
+  </section>
+
+  <section class="menus-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Menus institucionales y servicios especializados</h2>
+        <p>
+          Asesoria en menus para colegios, guarderias, centros educativos, residencias y empresas.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+        @for (section of menuServices; track section.title) {
+          <article class="menu-card">
+            <h3>{{ section.title }}</h3>
+            @for (paragraph of section.paragraphs; track paragraph) {
+              <p>{{ paragraph }}</p>
+            }
+            @if (section.items?.length) {
+              <ul>
+                @for (item of section.items; track item) {
+                  <li>{{ item }}</li>
+                }
+              </ul>
+            }
+            <button type="button" (click)="contactWhatsApp(section.title)">
+              Mas informacion
+            </button>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="internships-section">
+    <div class="container">
+      <div class="internships-layout">
+        <div class="internships-copy">
+          <h2>Pasantías</h2>
+          <p>
+            En Alimenta también abrimos espacios de aprendizaje para estudiantes que desean acercarse a la práctica
+            profesional en nutrición, educación alimentaria y bienestar integral.
+          </p>
+          <p>
+            Actualmente, alumnos de Univalle realizan pasantías acompañando actividades formativas y procesos
+            supervisados por nuestro equipo profesional.
+          </p>
+        </div>
+
+        <div class="internships-gallery">
+          @for (photo of internshipPhotos; track photo) {
+            <img [src]="photo" alt="Pasantías Alimenta" loading="lazy">
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="outsourcing-section">
+    <div class="container">
+      <h2>Beneficios de externalizar el servicio</h2>
+      <div class="outsourcing-list">
+        @for (benefit of outsourcingBenefits; track benefit) {
+          <span>{{ benefit }}</span>
+        }
+      </div>
+      <button type="button" (click)="contactWhatsApp('servicios empresariales e institucionales')">
+        Pidenos un presupuesto
+      </button>
+    </div>
+  </section>
+
+  <section class="collaborators-section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Empresas que confian en nosotros</h2>
+        <p>Instituciones, marcas y medios que han trabajado con Alimenta.</p>
+      </div>
+
+      <div class="collaborators-grid">
+        @for (collaborator of collaborators; track collaborator) {
+          <div class="collaborator-item">
+            <img [src]="collaborator.logo" [alt]="collaborator.name">
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+</div>

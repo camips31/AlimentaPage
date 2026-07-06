@@ -21,100 +21,75 @@ export class FaqComponent {
   categories = [
     'Todas',
     'Consultas',
-    'Servicios',
-    'Pagos',
-    'Planes',
+    'Atención',
+    'Pagos y Seguros',
     'General'
   ];
 
   faqs: FaqItem[] = [
     {
       question: '¿Cómo agendo una consulta?',
-      answer: 'Puedes agendar tu consulta de tres formas: enviándonos un mensaje por WhatsApp, llamando a nuestro teléfono o completando el formulario de contacto en nuestra web. Te responderemos lo antes posible para coordinar tu cita.',
+      answer: 'Para agendar una consulta puedes comunicarte a nuestro número de WhatsApp dependiendo de la sucursal que prefieras, en la ciudad de La Paz o en Santa Cruz.',
       isOpen: false,
       category: 'Consultas'
     },
     {
       question: '¿La atención es online o presencial?',
-      answer: 'Ofrecemos ambas modalidades. Puedes elegir la que mejor se adapte a tus necesidades. Las consultas online son por videollamada y tienen la misma calidad que las presenciales.',
+      answer: 'Tenemos ambas modalidades de atención. Los horarios varían de acuerdo a la disponibilidad de nuestras nutricionistas.',
       isOpen: false,
-      category: 'Consultas'
+      category: 'Atención'
     },
     {
       question: '¿Cuánto dura una consulta?',
-      answer: 'La primera consulta dura aproximadamente 60 minutos, ya que incluye una evaluación completa. Las consultas de seguimiento duran entre 30-45 minutos.',
+      answer: 'Una consulta tiene una duración promedio de 45 a 60 minutos para brindarte una atención de calidad y diseñar un plan de tratamiento 100% personalizado.',
       isOpen: false,
       category: 'Consultas'
     },
     {
       question: '¿Se realizan planes personalizados?',
-      answer: 'Sí, todos nuestros planes son 100% personalizados. Tomamos en cuenta tus objetivos, preferencias alimentarias, rutina diaria, condiciones de salud y presupuesto para crear un plan que se adapte perfectamente a ti.',
+      answer: 'Sí, todos nuestros planes son 100% personalizados, de acuerdo a las necesidades y gustos de cada uno de nuestros pacientes.',
       isOpen: false,
-      category: 'Servicios'
+      category: 'Atención'
     },
     {
       question: '¿Atienden niños?',
-      answer: 'Sí, contamos con nutricionistas especializadas en nutrición infantil y adolescente. Trabajamos con niños desde los 2 años en adelante.',
+      answer: 'Sí, tenemos nutricionistas capacitadas para la atención de tu niño.',
       isOpen: false,
-      category: 'Servicios'
+      category: 'Atención'
     },
     {
       question: '¿Qué métodos de pago aceptan?',
-      answer: 'Aceptamos transferencias bancarias, QR de todos los bancos, efectivo y tarjetas de crédito/débito. El pago se realiza al momento de la consulta o al inicio del plan elegido.',
+      answer: 'Actualmente aceptamos pagos por QR y efectivo.',
       isOpen: false,
-      category: 'Pagos'
-    },
-    {
-      question: '¿Puedo cambiar de plan durante el tratamiento?',
-      answer: 'Sí, entendemos que las necesidades pueden cambiar. Puedes ajustar tu plan en cualquier momento. Contáctanos y te ayudaremos a hacer la transición.',
-      isOpen: false,
-      category: 'Planes'
+      category: 'Pagos y Seguros'
     },
     {
       question: '¿Qué pasa si no puedo asistir a una consulta?',
-      answer: 'Te pedimos que nos avises con al menos 24 horas de anticipación para poder reprogramar tu cita sin ningún costo. Las cancelaciones con menos tiempo podrían tener un cargo.',
+      answer: 'Te reagendamos. Tienes la posibilidad de reagendar tu consulta siempre que notifiques tu falta con anticipación.',
       isOpen: false,
       category: 'Consultas'
     },
     {
       question: '¿Ofrecen planes para empresas?',
-      answer: 'Sí, tenemos programas corporativos que incluyen evaluaciones nutricionales, talleres educativos y seguimiento grupal. Estos programas están diseñados para mejorar la salud y productividad de los equipos de trabajo.',
+      answer: 'Sí, según las necesidades o disposición de la empresa se elabora un plan especial acorde a la cantidad de personas, a las actividades o con un enfoque de acuerdo a su trabajo.',
       isOpen: false,
-      category: 'Servicios'
+      category: 'General'
     },
     {
       question: '¿Necesito hacer análisis de laboratorio?',
-      answer: 'Depende de tu caso. En algunos casos solicitamos análisis de sangre para tener un panorama completo de tu salud. Si ya tienes análisis recientes (menos de 6 meses), puedes traerlos a tu consulta.',
+      answer: 'Es posible que nuestras nutricionistas te soliciten algún análisis de laboratorio si es necesario para descartar o confirmar alguna patología o deficiencia nutricional.',
       isOpen: false,
       category: 'Consultas'
     },
     {
-      question: '¿Cuánto tiempo toma ver resultados?',
-      answer: 'Los resultados varían según cada persona y sus objetivos. Generalmente, los cambios físicos se notan a partir de las 3-4 semanas, pero los cambios en energía y bienestar pueden sentirse desde la primera semana.',
-      isOpen: false,
-      category: 'General'
-    },
-    {
       question: '¿Trabajan con seguros médicos?',
-      answer: 'Emitimos facturas que puedes presentar a tu seguro para reembolso, pero no tenemos convenios directos. Te recomendamos consultar con tu seguro sobre la cobertura de consultas nutricionales.',
+      answer: 'Sí, actualmente trabajamos con Bisa Seguros y seguros COBEE.',
       isOpen: false,
-      category: 'Pagos'
-    },
-    {
-      question: '¿Qué diferencia hay entre un nutricionista y un nutriólogo?',
-      answer: 'En Bolivia, ambos términos se refieren a profesionales licenciados en Nutrición y Dietética. Todos nuestros profesionales cuentan con título universitario y están capacitados para brindarte atención integral.',
-      isOpen: false,
-      category: 'General'
-    },
-    {
-      question: '¿Hacen dietas para deportistas?',
-      answer: 'Sí, contamos con especialistas en nutrición deportiva que trabajan con atletas de diferentes disciplinas, desde amateur hasta profesional. Los planes incluyen periodización nutricional y estrategias de suplementación.',
-      isOpen: false,
-      category: 'Servicios'
+      category: 'Pagos y Seguros'
     },
     {
       question: '¿Puedo llevar acompañante a la consulta?',
-      answer: 'Sí, especialmente en el caso de niños, adolescentes o personas mayores. Para adultos también es bienvenido si deseas el apoyo de alguien cercano.',
+      answer: 'Por supuesto. Puedes llevar un acompañante a la consulta.',
       isOpen: false,
       category: 'Consultas'
     }
@@ -133,7 +108,6 @@ export class FaqComponent {
 
   filterByCategory(category: string) {
     this.selectedCategory = category;
-    // Cerrar todos los FAQs al cambiar de categoría
     this.faqs.forEach(faq => faq.isOpen = false);
   }
 

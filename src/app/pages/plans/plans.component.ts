@@ -12,145 +12,100 @@ export class PlansComponent {
   plans = [
     {
       id: 1,
-      name: 'Plan Inicial',
-      subtitle: 'Ideal para comenzar tu cambio',
-      price: 'Consultar',
-      duration: '1 mes',
+      name: 'Primera Consulta Nutricional',
+      subtitle: 'Evaluación inicial integral',
+      price: '150 Bs',
+      duration: '45 a 60 minutos',
       isPopular: false,
       includes: [
-        'Evaluación nutricional completa',
+        'Entrevista nutricional completa',
+        'Evaluación nutricional mediante metodología ISAK',
         'Análisis de composición corporal',
-        'Plan alimentario personalizado',
-        '2 consultas de seguimiento',
-        'Recetario digital',
-        'Soporte por WhatsApp'
+        'Detección de deficiencias e intolerancias nutricionales',
+        'Informe nutricional integral',
+        'Revisión o solicitud de análisis laboratoriales'
       ],
-      modality: 'Presencial u Online',
-      whatsappMsg: 'Hola! Me interesa el Plan Inicial'
+      buttonText: 'Reservar Consulta',
+      whatsappMsg: 'Hola! Quiero reservar una Primera Consulta Nutricional'
     },
     {
       id: 2,
-      name: 'Plan Transformación',
-      subtitle: 'El más elegido para resultados sostenibles',
-      price: 'Consultar',
-      duration: '3 meses',
+      name: 'Plan 1 mes',
+      subtitle: 'Acompañamiento personalizado mensual',
+      price: '445 Bs',
+      duration: '1 mes',
       isPopular: true,
       includes: [
-        'Todo lo del Plan Inicial',
-        '6 consultas de seguimiento',
-        'Ajustes mensuales del plan',
-        'Educación nutricional continua',
-        'Lista de compras personalizada',
-        'Guía de meal prep',
-        'Acceso a grupo de apoyo',
-        'Soporte prioritario por WhatsApp'
+        'Plan de alimentación personalizado',
+        'Menú semanal o sistema de intercambios',
+        'Recetas saludables',
+        'Comunicación vía WhatsApp',
+        'Seguimiento online',
+        '1 taller de nutrición o medicina del estilo de vida'
       ],
-      modality: 'Presencial u Online',
-      whatsappMsg: 'Hola! Me interesa el Plan Transformación'
+      buttonText: 'Quiero este plan',
+      whatsappMsg: 'Hola! Quiero el Plan 1 mes'
     },
     {
       id: 3,
-      name: 'Plan Integral',
-      subtitle: 'Acompañamiento completo',
-      price: 'Consultar',
-      duration: '6 meses',
-      isPopular: false,
-      includes: [
-        'Todo lo del Plan Transformación',
-        '12 consultas de seguimiento',
-        'Evaluación psicológica nutricional',
-        'Sesiones de coaching nutricional',
-        'Plan de ejercicios complementario',
-        'Análisis de laboratorio incluidos',
-        'Taller grupal de cocina saludable',
-        'Soporte 24/7 por WhatsApp',
-        'Garantía de resultados'
-      ],
-      modality: 'Presencial u Online',
-      whatsappMsg: 'Hola! Me interesa el Plan Integral'
-    },
-    {
-      id: 4,
-      name: 'Plan Deportivo',
-      subtitle: 'Para atletas y deportistas',
-      price: 'Consultar',
-      duration: '4 meses',
-      isPopular: false,
-      includes: [
-        'Evaluación deportiva completa',
-        'Plan de periodización nutricional',
-        '8 consultas de seguimiento',
-        'Estrategias de suplementación',
-        'Nutrición pre y post entrenamiento',
-        'Menús para competencia',
-        'Análisis de composición corporal mensual',
-        'Soporte por WhatsApp'
-      ],
-      modality: 'Presencial u Online',
-      whatsappMsg: 'Hola! Me interesa el Plan Deportivo'
-    },
-    {
-      id: 5,
-      name: 'Plan Familiar',
-      subtitle: 'Para toda la familia',
-      price: 'Consultar',
+      name: 'Plan 12 semanas',
+      subtitle: 'Programa de 3 meses para avanzar con seguimiento',
+      price: '990 Bs',
       duration: '3 meses',
       isPopular: false,
       includes: [
-        'Evaluación para 3-4 miembros',
-        'Plan alimentario familiar',
-        'Menús compartidos',
-        '6 consultas familiares',
-        'Educación nutricional para niños',
-        'Recetas fáciles y saludables',
-        'Lista de compras familiar',
-        'Soporte por WhatsApp'
+        '3 planes nutricionales personalizados',
+        'Recetas e intercambios saludables',
+        'Comunicación vía WhatsApp',
+        'Seguimiento online',
+        '4 reconsultas presenciales cada 20 días',
+        'Evaluación de avances y objetivos',
+        '4 talleres de nutrición o medicina del estilo de vida',
+        '20% de descuento en paquete de 6 barritas'
       ],
-      modality: 'Presencial u Online',
-      whatsappMsg: 'Hola! Me interesa el Plan Familiar'
+      buttonText: 'Quiero este plan',
+      whatsappMsg: 'Hola! Quiero el Plan 12 semanas'
     },
     {
-      id: 6,
-      name: 'Plan Corporativo',
-      subtitle: 'Para empresas',
-      price: 'Consultar',
-      duration: 'Personalizado',
+      id: 4,
+      name: 'Método Fit - 12 semanas',
+      subtitle: 'Nutrición, entrenamiento o terapia conductual',
+      price: '1.500 Bs',
+      duration: '3 meses',
       isPopular: false,
       includes: [
-        'Evaluaciones grupales',
-        'Talleres nutricionales',
-        'Charlas de educación alimentaria',
-        'Material educativo digital',
-        'Seguimiento grupal',
-        'Reportes para la empresa',
-        'Consultas individuales opcionales',
-        'Atención en oficinas'
+        '3 planes de alimentación personalizados',
+        '4 reconsultas cada 20 días',
+        'Plan de entrenamiento personalizado o sesión de terapia conductual psicológica',
+        'Suplementación incluida: proteína o Metabolism Booster',
+        'Recetas saludables',
+        'Comunicación vía WhatsApp'
       ],
-      modality: 'Presencial',
-      whatsappMsg: 'Hola! Me interesa el Plan Corporativo para mi empresa'
+      buttonText: 'Quiero este plan',
+      whatsappMsg: 'Hola! Quiero el Método Fit - 12 semanas'
     }
   ];
 
   benefits = [
     {
-      icon: '👥',
+      icon: 'person',
       title: 'Atención Personalizada',
-      description: 'Cada plan se adapta a tus necesidades específicas'
+      description: 'Cada plan se adapta a tus objetivos, hábitos y necesidades.'
     },
     {
-      icon: '📱',
+      icon: 'chat',
       title: 'Soporte Continuo',
-      description: 'Acompañamiento constante por WhatsApp'
+      description: 'Acompañamiento por WhatsApp durante tu proceso.'
     },
     {
-      icon: '🏠',
+      icon: 'sync_alt',
       title: 'Flexibilidad',
-      description: 'Modalidad presencial u online según prefieras'
+      description: 'Opciones presenciales, online y con seguimiento progresivo.'
     },
     {
-      icon: '📊',
+      icon: 'monitoring',
       title: 'Seguimiento',
-      description: 'Mediciones y ajustes regulares de tu progreso'
+      description: 'Evaluación de avances y ajustes según tus resultados.'
     }
   ];
 
