@@ -112,7 +112,7 @@ export class FaqComponent {
   }
 
   contactWhatsApp() {
-    const phone = '59175000000';
+    const phone = '59177731818';
     const message = 'Hola! Tengo una pregunta que no encontré en las FAQ';
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

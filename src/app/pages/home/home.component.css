@@ -641,3 +641,6 @@
   .cta-buttons { flex-direction: column; }
   .cta-buttons .btn { width: 100%; }
 }
+
+/* Espaciado del inicio con el carrusel temporalmente desactivado. */
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding: 28px 0 42px; }

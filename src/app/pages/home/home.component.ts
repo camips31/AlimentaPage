@@ -1,3 +1,4 @@
+import { TEAM } from '../../data/team';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -149,11 +150,6 @@ export class HomeComponent {
       rating: 5
     },
     {
-      name: 'Pablo Puglisi',
-      text: 'Excelente seguimiento de la Lic. Alba Condori. Muy amable y paciente.',
-      rating: 5
-    },
-    {
       name: 'Andrea Mendez',
       text: 'Fue una gran experiencia, aprendí a manejar mis hábitos alimenticios de una mejor manera. Gracias Alimenta.',
       rating: 5
@@ -165,97 +161,9 @@ export class HomeComponent {
     }
   ];
 
- professionals = [
-  {
-    name: 'Lic. Lucía Pinell',
-    specialty: 'Psicología Cognitivo Conductual',
-  },
-  {
-    name: 'Lic. Mariel Llaguno Gómez',
-    specialty: 'Nutrición en Recomposición Corporal y Bariatría',
-    credential: 'C - 6148826',
-    city: 'La Paz'
-  },
-  {
-    name: 'Lic. Katherine Paz Villarroel',
-    specialty: 'Nutrición en Recomposición Corporal',
-    credential: 'C - 6094050',
-    city: 'La Paz'
-  },
-  {
-    name: 'Lic. Valeria Isabel Carrillo Sainz',
-    specialty: 'Nutrición Deportiva',
-    credential: 'C - 6144191',
-    city: 'La Paz'
-  },
-  {
-    name: 'Lic. María René Nuñez Menacho',
-    specialty: 'Nutrición Pediátrica y Materno Infantil',
-    credential: 'N – 9664083',
-    city: 'Santa Cruz'
-  },
-  {
-    name: 'Lic. Ariani Santistevan Alpire',
-    specialty: 'Nutrición en Recomposición Corporal',
-    credential: 'S – 7709260',
-    city: 'Santa Cruz'
-  },
-  {
-    name: 'Lic. Alba Yesenia Condori Quispe',
-    specialty: 'Nutrición Pediátrica y Materno Infantil',
-    credential: 'C - 8461858',
-    city: 'La Paz'
-  },
-  {
-    name: 'Cecilia Monterrey',
-    specialty: 'Área de Entrenamiento',
-  }
-];
-
-  heroProfessionals = [
-    {
-      id: 'lucia-pinell',
-      name: 'Lic. Lucia Pinell',
-      specialty: 'Psicologia Cognitivo Conductual',
-      image: 'assets/Profiles/normalized/Lucia.png'
-    },
-    {
-      id: 'mariel-llaguno',
-      name: 'Lic. Mariel Llaguno',
-      specialty: 'Nutricion en Recomposicion Corporal y Bariatria',
-      image: 'assets/Profiles/normalized/Mariel.png'
-    },
-    {
-      id: 'katherine-paz',
-      name: 'Lic. Katherine Paz',
-      specialty: 'Nutricion en Recomposicion Corporal',
-      image: 'assets/Profiles/normalized/Katherine.png'
-    },
-    {
-      id: 'maria-rene-nunez',
-      name: 'Lic. Maria Rene',
-      specialty: 'Nutricion Pediatrica y Materno Infantil',
-      image: 'assets/Profiles/normalized/Rene.png'
-    },
-    {
-      id: 'ariani-santistevan',
-      name: 'Lic. Ariani Santistevan',
-      specialty: 'Nutricion en Recomposicion Corporal',
-      image: 'assets/Profiles/normalized/Ariani.png'
-    },
-    {
-      id: 'alba-condori',
-      name: 'Lic. Alba Yesenia',
-      specialty: 'Nutricion Pediatrica y Materno Infantil',
-      image: 'assets/Profiles/normalized/Alba.png'
-    },
-    {
-      id: 'cecilia-monterrey',
-      name: 'Cecilia Monterrey',
-      specialty: 'Area de Entrenamiento',
-      image: 'assets/Profiles/normalized/Cecilia.png'
-    }
-  ];
+  // Reactivar únicamente cuando se aprueben las fotografías del equipo vigente.
+  showTeamCarousel = false;
+  heroProfessionals = TEAM.filter(member => member.image);
 
   scrollHeroTeam(carousel: HTMLElement, direction: number): void {
     carousel.scrollBy({

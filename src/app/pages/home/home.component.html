@@ -6,6 +6,11 @@
       <p class="hero-subtitle">
         En Alimenta trabajamos con una filosofía de alimentación flexible y no restrictiva para ayudarte a mejorar tu salud física, mental y emocional mediante un acompañamiento profesional y personalizado.
       </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" routerLink="/contacto">Reserva tu consulta</a>
+        <a class="btn btn-secondary" routerLink="/planes">Conoce nuestros planes</a>
+      </div>
+      <ng-container *ngIf="showTeamCarousel">
       <button
         type="button"
         class="hero-carousel-button hero-carousel-button-prev"
@@ -39,6 +44,7 @@
         aria-label="Ver siguientes profesionales">
         <span class="material-icons" aria-hidden="true">chevron_right</span>
       </button>
+      </ng-container>
     </div>
   </div>
 </section>

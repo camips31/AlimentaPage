@@ -1,11 +1,8 @@
 <div class="products-page">
   <section class="products-hero">
     <div class="container hero-inner">
-      <h1>Productos para acompanar tu bienestar</h1>
-      <p>
-        Proteinas, mates, suplementos y edulcorantes seleccionados para complementar
-        tu proceso nutricional de forma practica.
-      </p>
+      <h1>Productos para acompañar tu bienestar</h1>
+      <p>Conoce nuestros productos. Para más información y disponibilidad, escríbenos por WhatsApp.</p>
     </div>
   </section>
 
@@ -17,51 +14,19 @@
             <h2>{{ category.title }}</h2>
             <p>{{ category.description }}</p>
           </div>
-
           <div class="products-grid">
             @for (product of category.products; track product.name) {
-              <div class="product-card" [class.empty-image]="!product.image">
-                <div class="product-image">
-                  @if (product.image) {
-                    <img [src]="product.image" [alt]="product.name" loading="lazy" />
-                  }
-                </div>
-
+              <article class="product-card">
                 <div class="product-content">
                   <h3>{{ product.name }}</h3>
-
-                  <div class="price-row">
-                    @for (price of product.prices; track price.label) {
-                      <span class="price-chip">
-                        <strong>{{ price.amount }}</strong>
-                        <small>{{ price.label }}</small>
-                      </span>
-                    }
-                  </div>
-
-                  @if (product.description) {
-                    <p class="description">{{ product.description }}</p>
-                  }
-
-                  @if (product.ingredients) {
-                    <p class="ingredients">
-                      <span>Ingredientes:</span> {{ product.ingredients }}
-                    </p>
-                  }
-
-                  @if (product.features?.length) {
-                    <ul class="features">
-                      @for (feature of product.features; track feature) {
-                        <li>{{ feature }}</li>
-                      }
-                    </ul>
-                  }
-
-                  <button class="btn btn-primary" (click)="contactWhatsApp(product.name)">
+                  <p class="description">{{ product.description }}</p>
+                  <button type="button" class="btn btn-primary"
+                    [attr.aria-label]="'Consultar por WhatsApp sobre ' + product.name"
+                    (click)="contactWhatsApp(product.name)">
                     Consultar por WhatsApp
                   </button>
                 </div>
-              </div>
+              </article>
             }
           </div>
         </article>

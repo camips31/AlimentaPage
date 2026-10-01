@@ -7,13 +7,13 @@
         </a>
       </div>
 
-      <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
+      <button type="button" aria-label="Abrir o cerrar menú" [attr.aria-expanded]="menuOpen" aria-controls="main-navigation" class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <ul class="nav-menu" [class.active]="menuOpen">
+      <ul id="main-navigation" class="nav-menu" [class.active]="menuOpen">
         <li>
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
             Inicio
@@ -40,11 +40,6 @@
           </a>
         </li>
         <li>
-          <a routerLink="/empresas" routerLinkActive="active" (click)="closeMenu()">
-            Empresas
-          </a>
-        </li>
-        <li>
           <a routerLink="/blog" routerLinkActive="active" (click)="closeMenu()">
             Blog
           </a>
@@ -59,15 +54,22 @@
             Contacto
           </a>
         </li>
-        <li class="nav-cta">
+
+      </ul>
+      <div class="nav-cta" [class.active]="menuOpen">
           <a href="https://wa.me/59177731818?text=Hola%2C%20quiero%20agendar%20una%20consulta" 
              target="_blank" 
              class="btn btn-primary"
              (click)="closeMenu()">
             Agenda Tu Cita
           </a>
-        </li>
-      </ul>
+          <a routerLink="/empresas"
+             routerLinkActive="active"
+             class="btn btn-companies"
+             (click)="closeMenu()">
+            Trabajo con Empresas
+          </a>
+      </div>
     </nav>
   </div>
 </header>

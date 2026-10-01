@@ -24,7 +24,7 @@ export class BlogComponent {
       label: 'Articulo 1',
       author: 'Valeria',
       image: 'assets/articulos/hambre emocional.jpg',
-      title: 'Como diferenciar el hambre emocional del hambre fisiologica',
+      title: '¿Cómo diferenciar el hambre emocional del hambre fisiológica?',
       excerpt: 'Una guia para reconocer senales del cuerpo, emociones y patrones que pueden influir en la alimentacion diaria.'
     },
     {
@@ -32,7 +32,7 @@ export class BlogComponent {
       label: 'Articulo 2',
       author: 'Valeria',
       image: 'assets/articulos/Dieta restritiva.jpg',
-      title: 'Por que las dietas restrictivas fracasan y que hacer en su lugar',
+      title: 'Por qué las dietas restrictivas fracasan y qué hacer en su lugar.',
       excerpt: 'Una mirada practica sobre habitos sostenibles, flexibilidad alimentaria y acompanamiento profesional.'
     },
     {
@@ -40,7 +40,7 @@ export class BlogComponent {
       label: 'Articulo 3',
       author: 'Valeria',
       image: 'assets/articulos/salud-matabolica.jpg',
-      title: 'Como mejorar tu salud metabolica con pequenos cambios diarios',
+      title: 'Cómo mejorar tu salud metabólica con pequeños cambios diarios.',
       excerpt: 'Cambios simples en tu rutina que pueden apoyar tu energia, composicion corporal y bienestar general.'
     }
   ];

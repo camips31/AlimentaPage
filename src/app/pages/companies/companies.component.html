@@ -13,7 +13,7 @@
           <h2>Que es una empresa saludable</h2>
           <p>
             Una empresa saludable promueve el bienestar integral de sus colaboradores mediante acciones orientadas
-            a la prevencion, el cuidado de la salud y la mejora de los habitos de vida.
+            a la prevención, el cuidado de la salud y la mejora de los hábitos de vida. Este enfoque busca impactar positivamente tanto en la calidad de vida de los trabajadores como en el desempeño y sostenibilidad de la organización.
           </p>
           <p>
             Las empresas que invierten en salud laboral contribuyen a reducir el ausentismo, mejorar la productividad
@@ -43,6 +43,17 @@
         </p>
       </div>
 
+      <p>Diseñamos intervenciones personalizadas con objetivos claros y medibles. Nos encargamos de la planificación, ejecución y seguimiento del servicio, además de entregar reportes periódicos de resultados y participación.</p>
+      <div class="services-grid">
+        @for (service of briefingServices; track service.title) {
+          <article class="service-card">
+            <h3>{{ service.title }}</h3>
+            @for (paragraph of service.paragraphs; track $index) { <p>{{ paragraph }}</p> }
+            <button type="button" (click)="contactWhatsApp(service.title)">Pide un presupuesto</button>
+          </article>
+        }
+      </div>
+      <h2>Modalidades de atención corporativa</h2>
       <div class="services-grid">
         @for (service of mainServices; track service.title) {
           <article class="service-card">
@@ -183,6 +194,7 @@
         <p>Instituciones, marcas y medios que han trabajado con Alimenta.</p>
       </div>
 
+      <p>También hemos colaborado con CULTIVA - Kéfir, Pediatrics, asociaciones de modelaje y médicos especialistas. Presencia en medios: Bolivia TV Mujer, Entre Mujeres, Pulso de la Tarde y Abiertamente (PTV).</p>
       <div class="collaborators-grid">
         @for (collaborator of collaborators; track collaborator) {
           <div class="collaborator-item">
