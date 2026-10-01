@@ -134,7 +134,7 @@ export class ProductsComponent {
 ];
 
   contactWhatsApp(productName: string) {
-    const phone = '59177731818';
+    const phone = '59178250459';
     const message = `Hola! Me interesa el producto: ${productName}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

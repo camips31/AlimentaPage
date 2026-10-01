@@ -158,7 +158,7 @@ export class CompaniesComponent {
   ];
 
   contactWhatsApp(subject = 'planes y servicios para empresas') {
-    const phone = '59177731818';
+    const phone = '59178250459';
     const message = `Hola! Quiero mas informacion sobre ${subject}.`;
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
   }

@@ -31,7 +31,7 @@ Mi correo es: ${this.footerForm.email}
 
 Mensaje: ${this.footerForm.message}`;
 
-    const url = `https://wa.me/59177731818?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/59178250459?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
 }

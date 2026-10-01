@@ -26,13 +26,13 @@ export class ContactComponent {
   };
 
   contactInfo = {
-    whatsapp: '+591 77731818',
+    whatsapp: '+591 78250459',
     emails: ['alimenta.vc@gmail.com', 'alimentaempresas@gmail.com'],
     locations: [
       {
         city: 'Sede La Paz',
         address: 'La Paz, sucursal Sopocachi, Av. Sánchez Lima, Edificio Orabela, oficina 2B',
-        phones: ['77731818', '78250459'],
+        phones: ['78250459'],
         mapUrl: 'https://www.google.com/maps/dir//-16.5124489,-68.1254433/@-16.5124489,-68.1280182,17z/data=!4m8!1m5!3m4!2zMTbCsDMwJzQ0LjgiUyA2OMKwMDcnMzEuNiJX!8m2!3d-16.5124489!4d-68.1254433!4m1!3e2?hl=es&entry=ttu'
       },
       {
@@ -79,7 +79,7 @@ export class ContactComponent {
   }
 
   contactWhatsApp(message: string = '¡Hola! Me gustaría agendar una consulta') {
-    const phone = '59177731818';
+    const phone = '59178250459';
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
   }

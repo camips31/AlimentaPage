@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  whatsappLink = 'https://wa.me/59177731818?text=Hola%2C%20quiero%20agendar%20una%20consulta';
+  whatsappLink = 'https://wa.me/59178250459?text=Hola%2C%20quiero%20agendar%20una%20consulta';
 
 
   processSteps = [

@@ -46,7 +46,7 @@ export class BlogComponent {
   ];
 
   contactWhatsApp(postTitle: string) {
-    const phone = '59177731818';
+    const phone = '59178250459';
     const message = `Hola! Quiero mas informacion sobre el blog: ${postTitle}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
