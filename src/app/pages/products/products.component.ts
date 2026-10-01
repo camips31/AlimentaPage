@@ -33,17 +33,17 @@ export class ProductsComponent {
       {
         "name": "Proteína aislada de suero de leche",
         "description": "Absorción ultrarrápida. Recuperación post-ejercicio. Síntesis muscular. Fortalece el sistema inmunológico.",
-        "image": "assets/productos/Proteina-suero-de-leche.jpg"
+        "image": "assets/productos/SUERO DE LECHE.png"
       },
       {
         "name": "Proteína de soya aislada",
         "description": "Ideal para veganos y vegetarianos. Favorece la salud cardiovascular. Apoyo durante la menopausia y cuidado óseo.",
-        "image": "assets/productos/proteina-soya-aislada-alimenta.jpg"
+        "image": "assets/productos/SOYA AISLADA.jpg"
       },
       {
         "name": "Proteína de Soja Isolada",
         "description": "Proteína de origen vegetal. Sin gluten. Sin azúcares añadidos.",
-        "image": "assets/productos/Proteina de Soja Isolada.jpg"
+        "image": "assets/productos/SOYA ISOLADA.png"
       }
     ]
   },
@@ -55,36 +55,37 @@ export class ProductsComponent {
         "name": "Mate Antiestrés",
         "description": "Calma los nervios, tranquilizante, actúa sobre cualquier alteración nerviosa.",
         "ingredients": "Psionaria, melisa, tilo, valeriana y menta.",
-        "image": "assets/productos/Antiestres.jpg"
+        "image": "assets/productos/ANTIESTRESS.png"
       },
       {
         "name": "Mate Tekin",
         "description": "Facilita el descenso de peso de manera natural y promueve una digestión ligera.",
         "ingredients": "Manzanilla, anís, menta, sen y gramilla.",
-        "image": "assets/productos/Tekin.jpg"
+        "image": "assets/productos/TEKIN.png"
       },
       {
         "name": "Mate Gastritis",
         "description": "Desinflamante del tracto digestivo que ayuda a neutralizar la acidez y el ardor estomacal.",
         "ingredients": "Zarzaparrilla, manzanilla, boldo, hinojo y alcachofa.",
-        "image": "assets/productos/Gastritis.jpg"
+        "image": "assets/productos/GASTRITIS.png"
       },
       {
         "name": "Mate Hepático",
         "description": "Desinflamante, absorbe los gases, normaliza la secreción biliar y digestivo.",
         "ingredients": "Boldo, manzanilla, alcachofa, menta y carqueja.",
-        "image": "assets/productos/mate hepatico .jpg"
+        "image": "assets/productos/HEPATICO.jpg"
       },
       {
         "name": "Mate Anticolesterol",
         "description": "Diurético, ayuda a eliminar colesterol y triglicéridos.",
-        "ingredients": "Alfalfa, zarzaparrilla, alcachofa, bolsa de pastor y lengua de vaca."
+        "ingredients": "Alfalfa, zarzaparrilla, alcachofa, bolsa de pastor y lengua de vaca.",
+        "image": "assets/productos/ANTICOLESTEROL.png"
       },
       {
         "name": "Mate Reductor",
         "description": "Laxante suave, ayuda a eliminar excesos de grasas del organismo y facilita el descenso de peso.",
         "ingredients": "Manzanilla, anís, menta, fucus, té verde y gramilla.",
-        "image": "assets/productos/Paquete mate reductor.jpg"
+        "image": "assets/productos/REDUCTOR.jpg"
       }
     ]
   },
@@ -95,17 +96,17 @@ export class ProductsComponent {
       {
         "name": "Omega 3 - 500 EPA 250 DHA",
         "description": "Protección cardiovascular. Antiinflamatorio. Ayuda a la concentración y memoria. Cuidado de la piel.",
-        "image": "assets/productos/omega3.jpg"
+        "image": "assets/productos/OMEGA3.png"
       },
       {
         "name": "Hormone Balance",
         "description": "Energía y vitalidad. Fortalecimiento inmunológico. Antioxidante. Regula función hormonal.",
-        "image": "assets/productos/Hormone-balance.jpg"
+        "image": "assets/productos/HORMONE BALANCE.png"
       },
       {
         "name": "Metabolism Booster",
         "description": "Apoyo metabólico. Complemento para objetivos nutricionales. Acompanamiento con plan profesional.",
-        "image": "assets/productos/booster.png"
+        "image": "assets/productos/BOOSTER.png"
       }
     ]
   },
@@ -116,17 +117,17 @@ export class ProductsComponent {
       {
         "name": "Stevia natural en polvo",
         "description": "100% natural. Cero calorías. Apto para diabéticos. Segura para cocinar.",
-        "image": "assets/productos/Stevia-natural-alimenta.jpg"
+        "image": "assets/productos/STEVIA NATURAL.png"
       },
       {
         "name": "Stevia en polvo",
         "description": "Bajo impacto metabólico. Fácil disolución. Alto rendimiento. Sabor mas identico al azúcar.",
-        "image": "assets/productos/Stevia-en-polvo.jpg"
+        "image": "assets/productos/STEVIA EN POLVO.png"
       },
       {
         "name": "Eritritol",
         "description": "0% índice glucémico. Sabor similar al azúcar. De fácil digestión. Resistente al calor.",
-        "image": "assets/productos/Eritritol.jpg"
+        "image": "assets/productos/ERITRITOL.png"
       }
     ]
   }

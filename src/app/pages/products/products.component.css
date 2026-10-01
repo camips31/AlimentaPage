@@ -201,3 +201,29 @@
 .catalog-filters button:focus-visible, .visual-product summary:focus-visible { outline: 2px solid #3f6e81; outline-offset: 3px; }
 @media(max-width: 1000px) { .visual-products { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media(max-width: 600px) { .visual-products { grid-template-columns: 1fr; } }
+
+/* Larger product photography with the full image preserved. */
+.visual-products { gap: 24px; }
+.visual-product { transition: border-color .2s, box-shadow .2s; }
+.visual-product:hover { border-color: #bbcba8; box-shadow: 0 6px 20px #24485a0a; }
+.visual-product summary { flex-direction: column; align-items: stretch; gap: 0; padding: 12px; }
+.product-thumbnail { flex: none; width: 100%; height: 260px; border-radius: 0; background: transparent; }
+.product-thumbnail img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.product-caption { display: block; padding: 16px 8px 8px; }
+.product-caption strong { font-size: 17px; line-height: 1.4; }
+.product-prompt { font-size: 13px; margin-top: 12px; }
+.product-expanded { padding: 0 20px 20px; }
+.product-thumbnail .material-icons { font-size: 64px; }
+@media (max-width: 600px) { .product-thumbnail { height: 280px; } }
+@media (prefers-reduced-motion: reduce) { .visual-product { transition: none; } }
+
+/* Portrait cards: photograph flush with the card edges. */
+.visual-products { grid-template-columns: repeat(3, minmax(0, 280px)); justify-content: center; gap: 24px; }
+.visual-product summary { padding: 0; }
+.product-thumbnail { height: auto; aspect-ratio: 3 / 4; border-radius: 0; background: transparent; }
+.product-thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+.product-caption { padding: 16px 18px 18px; }
+.product-caption strong { font-size: 16px; }
+.product-expanded { padding: 0 18px 18px; }
+@media (max-width: 1000px) { .visual-products { grid-template-columns: repeat(2, minmax(0, 280px)); } }
+@media (max-width: 600px) { .visual-products { grid-template-columns: minmax(0, 300px); } .product-thumbnail { height: auto; } }
