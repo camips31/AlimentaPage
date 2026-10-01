@@ -7,16 +7,19 @@
           <article class="post-card">
             <div class="post-image">
               <img [src]="post.image" [alt]="post.title" loading="lazy" />
-              <span>{{ post.label }}</span>
+
             </div>
             <div class="post-content">
-              <span class="author">Por {{ post.author }}</span>
+              <span class="topic">{{ post.label }}</span>
               <h2>{{ post.title }}</h2>
               <p>{{ post.excerpt }}</p>
             </div>
-            <button type="button" (click)="contactWhatsApp(post.title)">
-              Consultar
-            </button>
+            <div class="post-footer">
+              <span class="author">Por {{ post.author }}</span>
+              <button type="button" (click)="contactWhatsApp(post.title)" [attr.aria-label]="'Consultar por WhatsApp sobre: ' + post.title">
+                Consultar <span aria-hidden="true">↗</span>
+              </button>
+            </div>
           </article>
         }
       </div>

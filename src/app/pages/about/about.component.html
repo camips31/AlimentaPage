@@ -82,6 +82,7 @@
             <span *ngIf="member.credential">MP: {{ member.credential }}</span>
           </div>
           <p class="city" *ngIf="member.city"><span class="material-icons">location_on</span> {{ member.city }}</p>
+        </div>
           <details class="profile-details" *ngIf="member.description || member.education?.length || member.specializations?.length">
             <summary>Trayectoria y enfoque profesional</summary>
           <p class="description" *ngIf="member.description">{{ member.description }}</p>
@@ -114,7 +115,6 @@
             <p>{{ member.philosophy }}</p>
           </div>
           </details>
-        </div>
       </div>
     </div>
   </div>

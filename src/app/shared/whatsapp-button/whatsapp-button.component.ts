@@ -22,7 +22,7 @@ import { CommonModule } from '@angular/common';
       position: fixed;
       bottom: 18px;
       right: 18px;
-      background-color: #2f7a55;
+      background-color: #7fba3d;
       color: white;
       width: 52px;
       height: 52px;
@@ -30,27 +30,27 @@ import { CommonModule } from '@angular/common';
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 18px rgba(38, 83, 65, 0.28);
+      box-shadow: 0 8px 18px rgba(127, 186, 61, 0.28);
       z-index: 1000;
       transition: all 0.3s ease;
       animation: pulse 2.8s infinite;
     }
 
     .whatsapp-float:hover {
-      background-color: #3f8a63;
+      background-color: #83ac3a;
       transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 10px 22px rgba(38, 83, 65, 0.34);
+      box-shadow: 0 10px 22px rgba(127, 186, 61, 0.34);
     }
 
     @keyframes pulse {
       0% {
-        box-shadow: 0 8px 18px rgba(38, 83, 65, 0.24);
+        box-shadow: 0 8px 18px rgba(127, 186, 61, 0.24);
       }
       50% {
-        box-shadow: 0 8px 22px rgba(47, 122, 85, 0.4);
+        box-shadow: 0 8px 22px rgba(127, 186, 61, 0.4);
       }
       100% {
-        box-shadow: 0 8px 18px rgba(38, 83, 65, 0.24);
+        box-shadow: 0 8px 18px rgba(127, 186, 61, 0.24);
       }
     }
 

@@ -1,159 +1,41 @@
+<ng-template #contactIcon let-name="name"><svg class="contact-link-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false"><path [attr.d]="contactIcons[name]"></path></svg></ng-template>
 <div class="contact-page">
-  <section class="contact-content">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info-section">
-
-          <div class="locations">
-            <h1 class="content-heading">Encuentra tu sucursal</h1>
-            @for (location of contactInfo.locations; track location.city) {
-              <div class="location-item">
-                <h4><span class="material-icons">place</span> {{ location.city }}</h4>
-                <p>{{ location.address }}</p>
-                <div class="location-phones">
-                  <span class="material-icons">call</span>
-                  <span class="branch-phones">@for (phone of location.phones; track phone) { <a [href]="'https://wa.me/591' + phone" target="_blank" rel="noopener" [attr.aria-label]="'WhatsApp ' + location.city + ': ' + phone">{{ phone }}</a> }</span>
-                </div>
-                <a [href]="location.mapUrl" target="_blank" class="btn-map">
-                  <span class="material-icons">map</span> Ver en el mapa
-                </a>
-              </div>
-            }
-          </div>
-
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="method-icon"><span class="material-icons">chat</span></div>
-              <div class="method-info">
-                <h3>WhatsApp</h3>
-                <p>{{ contactInfo.whatsapp }}</p>
-                <button class="btn-contact" (click)="contactWhatsApp()">Enviar mensaje</button>
-              </div>
-            </div>
-
-            <div class="contact-method">
-              <div class="method-icon"><span class="material-icons">mail_outline</span></div>
-              <div class="method-info">
-                <h3>Correo electrónico</h3>
-                @for (email of contactInfo.emails; track email) {
-                  <p>{{ email }}</p>
-                }
-              </div>
-            </div>
-          </div>
-
-          <div class="social-media">
-            <h3>Redes Sociales</h3>
-            <div class="social-links">
-              @for (social of socialMedia; track social.name) {
-                <button class="social-btn" (click)="openSocialMedia(social.url)">
-                  <span class="social-icon" [class]="'social-icon social-icon-' + social.name.toLowerCase()">
-                    @switch (social.name) {
-                      @case ('Instagram') {
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5ZM12 7.35A4.65 4.65 0 1 1 12 16.65 4.65 4.65 0 0 1 12 7.35Zm0 2A2.65 2.65 0 1 0 12 14.65 2.65 2.65 0 0 0 12 9.35Zm5.08-2.18a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z"/>
-                        </svg>
-                      }
-                      @case ('Facebook') {
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M13.5 21.75v-8.5h2.86l.43-3.31H13.5V7.82c0-.96.27-1.61 1.65-1.61h1.76V3.25A23.6 23.6 0 0 0 14.34 3c-2.55 0-4.29 1.55-4.29 4.4v2.54H7.17v3.31h2.88v8.5h3.45Z"/>
-                        </svg>
-                      }
-                      @case ('TikTok') {
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M16.45 2.75c.34 2.54 1.77 4.12 4.05 4.28v3.05a7.2 7.2 0 0 1-4.02-1.22v6.44c0 3.25-2.12 5.95-5.38 5.95-3.43 0-5.6-2.36-5.6-5.24 0-3.31 2.73-5.7 6.15-5.12v3.18c-1.55-.49-2.92.4-2.92 1.88 0 1.1.82 2.04 2.15 2.04 1.48 0 2.23-1 2.23-2.58V2.75h3.34Z"/>
-                        </svg>
-                      }
-                      @case ('LinkedIn') {
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                          <path d="M5.34 8.9h3.2v10.35h-3.2V8.9Zm1.61-5.15a1.86 1.86 0 1 1 0 3.72 1.86 1.86 0 0 1 0-3.72Zm4.02 5.15h3.06v1.41h.04c.43-.8 1.47-1.64 3.03-1.64 3.24 0 3.84 2.13 3.84 4.9v5.68h-3.19v-5.03c0-1.2-.02-2.74-1.67-2.74-1.68 0-1.94 1.31-1.94 2.66v5.11h-3.17V8.9Z"/>
-                        </svg>
-                      }
-                    }
-                  </span>
-                  <div class="social-info">
-                    <strong>{{ social.name }}</strong>
-                    <span>{{ social.handle }}</span>
-                  </div>
-                </button>
-              }
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-section">
-          <h2>Envíanos un mensaje</h2>
-          <p>Completa el formulario y nos contactaremos contigo por WhatsApp.</p>
-
-          <form (ngSubmit)="submitForm()" #contactFormRef="ngForm">
-            <div class="form-group">
-              <label for="name">Nombre completo *</label>
-              <input
-                type="text"
-                id="name"
-                [(ngModel)]="contactForm.name"
-                name="name"
-                required
-                placeholder="Tu nombre">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input
-                type="email"
-                id="email"
-                [(ngModel)]="contactForm.email"
-                name="email"
-                required
-                placeholder="tu&#64;email.com">
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Teléfono / WhatsApp *</label>
-              <input
-                type="tel"
-                id="phone"
-                [(ngModel)]="contactForm.phone"
-                name="phone"
-                required
-                placeholder="+591 70000000">
-            </div>
-
-            <div class="form-group">
-              <label for="message">Mensaje *</label>
-              <textarea
-                id="message"
-                [(ngModel)]="contactForm.message"
-                name="message"
-                required
-                rows="4"
-                placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="btn-primary"
-              [disabled]="!contactFormRef.valid">
-              Enviar por WhatsApp
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="map-section">
-    <div class="container">
-      <h2>Nuestras Sedes</h2>
-      <div class="map-cards">
+  <section class="contact-content"><div class="container">
+    <div class="contact-layout">
+      <div class="branch-directory">
+        <h1 class="content-heading">Encuentra tu sucursal</h1>
         @for (location of contactInfo.locations; track location.city) {
-          <a [href]="location.mapUrl" target="_blank" class="map-card">
-            <span class="material-icons">location_on</span>
-            <strong>{{ location.city }}</strong>
-            <span>{{ location.address }}</span>
-          </a>
+          <article class="branch-entry">
+            <h2><span class="material-icons" aria-hidden="true">place</span>{{ location.city }}</h2>
+            <p>{{ location.address }}</p>
+            <div class="branch-links">
+              @for (phone of location.phones; track phone) {
+                <a [href]="'https://wa.me/591' + phone" target="_blank" rel="noopener" [attr.aria-label]="'WhatsApp ' + location.city + ': ' + phone"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: 'WhatsApp'}"></ng-container><span>{{ phone }}</span></a>
+              }
+              <a class="directions-link" [href]="location.mapUrl" target="_blank" rel="noopener"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: 'Map'}"></ng-container><span>Cómo llegar</span></a>
+            </div>
+          </article>
         }
       </div>
+      <div class="message-column">
+        <svg class="contact-leaves" viewBox="0 0 100 90" fill="none" aria-hidden="true" focusable="false">
+          <path d="M24 84C40 65 55 41 78 10" stroke="#87a85c" stroke-width="2" stroke-linecap="round"/>
+          <path d="M48 55C24 54 20 34 24 23C44 25 53 37 48 55Z" fill="#c4d7a8"/>
+          <path d="M58 41C56 18 70 8 88 7C86 28 76 40 58 41Z" fill="#a9c77e"/>
+          <path d="M34 73C48 53 66 54 77 59C67 76 50 80 34 73Z" fill="#d1dfb9"/>
+        </svg>
+        <h2>Hablemos</h2>
+        <p id="message-help">Abre WhatsApp con tu mensaje preparado. Tú decides cuándo enviarlo.</p>
+        <form (ngSubmit)="submitForm()" #contactFormRef="ngForm" aria-describedby="message-help">
+          <div class="message-field"><label for="contact-name">Nombre</label><input id="contact-name" name="name" type="text" autocomplete="name" required [(ngModel)]="contactForm.name" placeholder="Tu nombre"></div>
+          <div class="message-field"><label for="contact-message">Mensaje</label><textarea id="contact-message" name="message" rows="3" required [(ngModel)]="contactForm.message" placeholder="Cuéntanos cómo podemos ayudarte"></textarea></div>
+          <button class="contact-submit" type="submit" [disabled]="!contactFormRef.valid || !contactForm.name.trim() || !contactForm.message.trim()"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: 'WhatsApp'}"></ng-container><span>Continuar en WhatsApp</span></button>
+        </form>
+      </div>
     </div>
-  </section>
+    <div class="contact-bottom">
+      <div class="contact-emails" aria-label="Correos electrónicos">@for (email of contactInfo.emails; track email) { <a [href]="'mailto:' + email"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: 'Email'}"></ng-container><span>{{ email }}</span></a> }</div>
+      <nav class="contact-socials" aria-label="Redes sociales">@for (social of socialMedia; track social.name) { <a [href]="social.url" target="_blank" rel="noopener"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: social.name}"></ng-container><span>{{ social.name }}</span></a> }</nav>
+    </div>
+  </div></section>
 </div>
