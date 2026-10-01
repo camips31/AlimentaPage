@@ -8,19 +8,7 @@
         <p *ngFor="let paragraph of history">{{ paragraph }}</p>
       </div>
       <div class="image-content">
-        <img [src]="aboutImages[0]" alt="Espacio de atención de Alimenta">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Espacios -->
-<section class="spaces-section bg-cream-soft">
-  <div class="container">
-    <h2 class="section-title">Nuestros Espacios</h2>
-    <div class="spaces-grid">
-      <div class="space-photo" *ngFor="let image of aboutImages.slice(1); let i = index">
-        <img [src]="image" [alt]="'Espacio Alimenta ' + (i + 2)">
+        <img [src]="aboutImages[0]" alt="Plan nutricional con alimentos frescos">
       </div>
     </div>
   </div>

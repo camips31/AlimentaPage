@@ -10,9 +10,10 @@
             @for (plan of group.plans; track plan.id) {
               <article class="plan-card" [class.plan-featured]="popularPlanIds.has(plan.id)">
                 <div class="plan-header">
-                  @if (popularPlanIds.has(plan.id)) { <span class="plan-popularity">Más elegido</span> }
+                  @if (popularPlanIds.has(plan.id)) { <span class="plan-popularity"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M3 6l5 4 4-7 4 7 5-4-2 13H5L3 6zm2 15h14v-2H5v2z"/></svg>Más elegido</span> }
                   <h3 class="plan-name">{{ plan.name }}</h3>
                   @if (plan.subtitle) { <p class="plan-subtitle">{{ plan.subtitle }}</p> }
+                  @if (separatePrices[plan.id]) { <p class="separate-price">Por separado <s>{{ separatePrices[plan.id] }}</s></p> }
                   <div class="plan-price"><span class="price">{{ plan.price }}</span>@if (plan.duration) { <span class="duration">{{ plan.duration }}</span> }</div>
                   @if (plan.saving) { <span class="plan-saving">{{ plan.saving }}</span> }
                 </div>

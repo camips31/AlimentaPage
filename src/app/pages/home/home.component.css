@@ -22,12 +22,11 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/assets/Alimenta_Patron01_01.png');
-  background-repeat: repeat;
-  background-size: 420px auto;
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
-  opacity: 0.09;
+  background-image: linear-gradient(rgba(20, 30, 24, 0.48), rgba(20, 30, 24, 0.38)), url('/assets/hero-bowl-saludable.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -666,4 +665,15 @@
 @media (max-width: 768px) {
   :host .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 22px 0 28px; }
   :host .hero-actions .btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 300px; min-width: 0; min-height: 46px; margin: 0; padding: 12px 16px !important; border-radius: 24px; white-space: nowrap; font-size: 14px !important; line-height: 1.4; box-sizing: border-box; }
+}
+
+/* Preserve the photograph's color and give its wide composition room. */
+:host .hero-box { min-height: clamp(360px, 33.4vw, 640px); display: flex; align-items: center; padding: 32px 24px; }
+:host .hero-team { width: 100%; }
+:host .hero-title { color: #fff; text-shadow: 0 2px 12px #0005; }
+:host .hero-subtitle { color: #fff; text-shadow: 0 1px 8px #0008; }
+:host .hero-actions { padding-bottom: 0; }
+@media (max-width: 768px) {
+  :host .hero-box { min-height: 480px; padding: 28px 20px; }
+  :host .hero-box::before { background-position: 58% center; }
 }

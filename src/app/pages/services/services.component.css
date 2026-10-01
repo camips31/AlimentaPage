@@ -71,3 +71,6 @@ summary:focus-visible, button:focus-visible, a:focus-visible { outline: 3px soli
   .services-page .guidance-panel { width: calc(100% - 32px); gap: 14px; padding: 18px 0 !important; }
   .services-page .guidance-button { width: auto; min-height: 44px; }
 }
+
+/* Four ordered panels from the supplied photograph, excluding white gutters. */
+.specialty-photo { width: 100%; aspect-ratio: 496 / 360; background-image: url('/assets/services/nutricion-cuatro-etapas.png'); background-repeat: no-repeat; background-size: 413% auto; background-position-y: 42.3%; }

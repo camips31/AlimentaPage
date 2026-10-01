@@ -932,3 +932,6 @@ main .guidance-panel { max-width: 1112px !important; }
 app-root > main { padding-top: 32px; }
 main p { text-align: left; text-justify: auto; }
 @media(max-width: 768px) { app-root > main { padding-top: 24px; } }
+
+/* Home photograph starts immediately below the navigation. */
+app-root > main:has(> app-home) { padding-top: 0; }

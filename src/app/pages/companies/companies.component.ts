@@ -102,6 +102,23 @@ export class CompaniesComponent {
     'Mayor compromiso del personal'
   ];
 
+  collaborationPhotos = [
+  "assets/espacios/Image 2026-06-24 at 20.53.45.jpeg",
+  "assets/espacios/Image 2026-06-24 at 20.54.40.jpeg",
+  "assets/espacios/Image 2026-06-24 at 20.58.16.jpeg",
+  "assets/espacios/Image 2026-06-24 at 20.58.19.jpeg",
+  "assets/espacios/Image 2026-06-24 at 20.58.21.jpeg",
+  "assets/espacios/Image 2026-06-24 at 21.05.31.jpeg",
+  "assets/espacios/Image 2026-06-24 at 21.05.32.jpeg",
+  "assets/espacios/Image 2026-06-24 at 21.05.33.jpeg"
+];
+
+  scrollCollaborations(track: HTMLElement, direction: number) {
+    const photo = track.firstElementChild as HTMLElement | null;
+    if (!photo) return;
+    track.scrollBy({ left: direction * (photo.offsetWidth + 16), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }
+
   internshipPhotos = [
     'assets/pasantias/Image 2026-06-24 at 20.50.26.jpeg',
     'assets/pasantias/Image 2026-06-26 at 11.10.27.jpeg',

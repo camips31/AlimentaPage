@@ -20,17 +20,7 @@ export class AboutComponent {
     'Ofrecemos consultas individuales, programas personalizados, talleres y servicios para empresas.'
   ];
 
-  aboutImages = [
-    'assets/espacios/Image 2026-06-24 at 20.54.40 (1).jpeg',
-    'assets/espacios/Image 2026-06-24 at 20.53.45.jpeg',
-    'assets/espacios/Image 2026-06-24 at 20.54.40.jpeg',
-    'assets/espacios/Image 2026-06-24 at 20.58.16.jpeg',
-    'assets/espacios/Image 2026-06-24 at 20.58.19.jpeg',
-    'assets/espacios/Image 2026-06-24 at 20.58.21.jpeg',
-    'assets/espacios/Image 2026-06-24 at 21.05.31.jpeg',
-    'assets/espacios/Image 2026-06-24 at 21.05.32.jpeg',
-    'assets/espacios/Image 2026-06-24 at 21.05.33.jpeg'
-  ];
+  aboutImages = ["assets/plan-nutricional-historia.png"];
 
   team: any[] = TEAM;
 

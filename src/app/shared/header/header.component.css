@@ -90,9 +90,9 @@
 }
 
 .header .nav-cta .btn:hover { background: var(--primary-dark); }
-.header .nav-cta .btn-companies { background: #7fba3d; color: #fff; }
+.header .nav-cta .btn-companies { background: var(--primary); color: #fff; }
 .header .nav-cta .btn-companies:hover,
-.header .nav-cta .btn-companies.active { background: #83ac3a; color: #fff; }
+.header .nav-cta .btn-companies.active { background: var(--primary-dark); color: #fff; }
 .nav-cta .btn:focus-visible, .menu-toggle:focus-visible {
   outline: 3px solid #173545;
   outline-offset: 3px;

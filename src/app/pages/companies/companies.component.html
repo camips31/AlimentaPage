@@ -63,6 +63,17 @@
       </div>
 
       <p>También hemos colaborado con CULTIVA - Kéfir, Pediatrics, asociaciones de modelaje y médicos especialistas. Presencia en medios: Bolivia TV Mujer, Entre Mujeres, Pulso de la Tarde y Abiertamente (PTV).</p>
+      <div class="collaboration-carousel" role="region" aria-label="Fotos de colaboraciones">
+        <div class="collaboration-controls">
+          <button type="button" aria-label="Ver foto anterior" aria-controls="collaboration-photos" (click)="scrollCollaborations(collaborationTrack, -1)">←</button>
+          <button type="button" aria-label="Ver foto siguiente" aria-controls="collaboration-photos" (click)="scrollCollaborations(collaborationTrack, 1)">→</button>
+        </div>
+        <div class="collaboration-track" id="collaboration-photos" #collaborationTrack tabindex="0" aria-label="Galería desplazable de colaboraciones">
+          @for (photo of collaborationPhotos; track photo; let i = $index) {
+            <img [src]="photo" [alt]="'Colaboraciones de Alimenta · foto ' + (i + 1)" loading="lazy" width="360" height="240">
+          }
+        </div>
+      </div>
       <div class="collaborators-grid">
         @for (collaborator of collaborators; track collaborator) {
           <div class="collaborator-item">

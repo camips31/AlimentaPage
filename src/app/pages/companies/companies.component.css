@@ -397,3 +397,13 @@ button:hover,
 .wellbeing-benefit-list .material-icons { flex-shrink: 0; font-size: 21px; color: #618c3a; margin-top: 1px; }
 @media(max-width: 850px) { .wellbeing-benefit-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media(max-width: 540px) { .wellbeing-benefits { padding: 20px 16px; } .wellbeing-benefit-list { grid-template-columns: 1fr; gap: 14px; } .wellbeing-heading h2 { font-size: 18px !important; } }
+
+.collaboration-carousel { margin: 20px 0 28px; min-width: 0; }
+.collaboration-controls { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 12px; }
+.collaboration-controls button { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #d8ded4; background: #fffdf7; color: #3f6e81; font-size: 22px; cursor: pointer; }
+.collaboration-controls button:hover { background: #3f6e81; color: white; }
+.collaboration-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 32px) / 3); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #a7b9ae transparent; padding-bottom: 12px; }
+.collaboration-track img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; scroll-snap-align: start; }
+.collaboration-controls button:focus-visible, .collaboration-track:focus-visible { outline: 2px solid #3f6e81; outline-offset: 3px; }
+@media (max-width: 800px) { .collaboration-track { grid-auto-columns: calc((100% - 16px) / 2); } }
+@media (max-width: 540px) { .collaboration-track { grid-auto-columns: 86%; } }

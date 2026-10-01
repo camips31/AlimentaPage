@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class PlansComponent {
   // Plan destacado en la versión anterior del catálogo.
   popularPlanIds = new Set([2]);
+  separatePrices: Record<number, string> = { 4: '1380 Bs', 5: '1720 Bs', 8: '720 Bs', 9: '1080 Bs', 10: '1800 Bs' };
 
   planGroups = [
   {
@@ -93,7 +94,7 @@ export class PlansComponent {
     ]
   },
   {
-    "title": "Acompañamiento con psicología",
+    "title": "Servicios de Psicología",
     "plans": [
       {
         "id": 6,
