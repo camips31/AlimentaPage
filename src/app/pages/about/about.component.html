@@ -1,18 +1,10 @@
-<!-- Hero -->
-<section class="page-hero">
-  <div class="container">
-    <h1>Sobre Nosotros</h1>
-    <p>Conoce nuestra historia, misión y el enfoque integral de Alimenta</p>
-  </div>
-</section>
-
 <!-- Historia -->
 <section class="history-section">
   <div class="container">
     <div class="content-grid">
       <div class="text-content">
-        <span class="section-kicker">¿Qué es Alimenta?</span>
-        <h2>Nuestra Historia</h2>
+
+        <h1 class="content-heading">Nuestra historia</h1>
         <p *ngFor="let paragraph of history">{{ paragraph }}</p>
       </div>
       <div class="image-content">
@@ -90,6 +82,8 @@
             <span *ngIf="member.credential">MP: {{ member.credential }}</span>
           </div>
           <p class="city" *ngIf="member.city"><span class="material-icons">location_on</span> {{ member.city }}</p>
+          <details class="profile-details" *ngIf="member.description || member.education?.length || member.specializations?.length">
+            <summary>Trayectoria y enfoque profesional</summary>
           <p class="description" *ngIf="member.description">{{ member.description }}</p>
 
           <div class="member-detail-grid">
@@ -119,6 +113,7 @@
             <h4>Filosofía de Trabajo</h4>
             <p>{{ member.philosophy }}</p>
           </div>
+          </details>
         </div>
       </div>
     </div>

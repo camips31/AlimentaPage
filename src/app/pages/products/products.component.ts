@@ -2,8 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 interface ProductItem {
+  image?: string;
   name: string;
   description: string;
+  ingredients?: string;
 }
 
 interface ProductCategory {
@@ -20,22 +22,28 @@ interface ProductCategory {
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
+  selectedCategory = 0;
+  get activeCategory() { return this.productCategories[this.selectedCategory]; }
+
   productCategories: ProductCategory[] = [
   {
-    "title": "Proteinas",
-    "description": "Opciones para complementar tu alimentacion, recuperacion y objetivos de composicion corporal.",
+    "title": "Proteínas",
+    "description": "Opciones para complementar tu alimentación, recuperación y objetivos de composición corporal.",
     "products": [
       {
-        "name": "Proteina aislada de suero de leche",
-        "description": "Absorcion ultrarrapida. Recuperacion post-ejercicio. Sintesis muscular. Fortalece el sistema inmunologico."
+        "name": "Proteína aislada de suero de leche",
+        "description": "Absorción ultrarrápida. Recuperación post-ejercicio. Síntesis muscular. Fortalece el sistema inmunológico.",
+        "image": "assets/productos/Proteina-suero-de-leche.jpg"
       },
       {
-        "name": "Proteina de soya aislada",
-        "description": "Ideal para veganos y vegetarianos. Favorece la salud cardiovascular. Apoyo durante la menopausia y cuidado oseo."
+        "name": "Proteína de soya aislada",
+        "description": "Ideal para veganos y vegetarianos. Favorece la salud cardiovascular. Apoyo durante la menopausia y cuidado óseo.",
+        "image": "assets/productos/proteina-soya-aislada-alimenta.jpg"
       },
       {
-        "name": "Proteina de Soja Isolada",
-        "description": "Proteina de origen vegetal. Sin gluten. Sin azucares anadidos."
+        "name": "Proteína de Soja Isolada",
+        "description": "Proteína de origen vegetal. Sin gluten. Sin azúcares añadidos.",
+        "image": "assets/productos/Proteina de Soja Isolada.jpg"
       }
     ]
   },
@@ -44,64 +52,81 @@ export class ProductsComponent {
     "description": "Mezclas de hierbas para preparar infusiones. Consulta sus características y disponibilidad por WhatsApp.",
     "products": [
       {
-        "name": "Mate Antiestres",
-        "description": "Calma los nervios, tranquilizante, actua sobre cualquier alteracion nerviosa."
+        "name": "Mate Antiestrés",
+        "description": "Calma los nervios, tranquilizante, actúa sobre cualquier alteración nerviosa.",
+        "ingredients": "Psionaria, melisa, tilo, valeriana y menta.",
+        "image": "assets/productos/Antiestres.jpg"
       },
       {
         "name": "Mate Tekin",
-        "description": "Facilita el descenso de peso de manera natural y promueve una digestion ligera."
+        "description": "Facilita el descenso de peso de manera natural y promueve una digestión ligera.",
+        "ingredients": "Manzanilla, anís, menta, sen y gramilla.",
+        "image": "assets/productos/Tekin.jpg"
       },
       {
         "name": "Mate Gastritis",
-        "description": "Desinflamante del tracto digestivo que ayuda a neutralizar la acidez y el ardor estomacal."
+        "description": "Desinflamante del tracto digestivo que ayuda a neutralizar la acidez y el ardor estomacal.",
+        "ingredients": "Zarzaparrilla, manzanilla, boldo, hinojo y alcachofa.",
+        "image": "assets/productos/Gastritis.jpg"
       },
       {
-        "name": "Mate Hepatico",
-        "description": "Desinflamante, absorbe los gases, normaliza la secrecion biliar y digestivo."
+        "name": "Mate Hepático",
+        "description": "Desinflamante, absorbe los gases, normaliza la secreción biliar y digestivo.",
+        "ingredients": "Boldo, manzanilla, alcachofa, menta y carqueja.",
+        "image": "assets/productos/mate hepatico .jpg"
       },
       {
         "name": "Mate Anticolesterol",
-        "description": "Diuretico, ayuda a eliminar colesterol y trigliceridos."
+        "description": "Diurético, ayuda a eliminar colesterol y triglicéridos.",
+        "ingredients": "Alfalfa, zarzaparrilla, alcachofa, bolsa de pastor y lengua de vaca."
       },
       {
         "name": "Mate Reductor",
-        "description": "Laxante suave, ayuda a eliminar excesos de grasas del organismo y facilita el descenso de peso."
+        "description": "Laxante suave, ayuda a eliminar excesos de grasas del organismo y facilita el descenso de peso.",
+        "ingredients": "Manzanilla, anís, menta, fucus, té verde y gramilla.",
+        "image": "assets/productos/Paquete mate reductor.jpg"
       }
     ]
   },
   {
     "title": "Suplementos",
-    "description": "Productos para acompanamiento cardiovascular, hormonal, metabolico y bienestar general.",
+    "description": "Productos para acompañamiento cardiovascular, hormonal, metabólico y bienestar general.",
     "products": [
       {
         "name": "Omega 3 - 500 EPA 250 DHA",
-        "description": "Proteccion cardiovascular. Antiinflamatorio. Ayuda a la concentracion y memoria. Cuidado de la piel."
+        "description": "Protección cardiovascular. Antiinflamatorio. Ayuda a la concentración y memoria. Cuidado de la piel.",
+        "image": "assets/productos/omega3.jpg"
       },
       {
         "name": "Hormone Balance",
-        "description": "Energia y vitalidad. Fortalecimiento inmunologico. Antioxidante. Regula funcion hormonal."
+        "description": "Energía y vitalidad. Fortalecimiento inmunológico. Antioxidante. Regula función hormonal.",
+        "image": "assets/productos/Hormone-balance.jpg"
       },
       {
         "name": "Metabolism Booster",
-        "description": "Apoyo metabolico. Complemento para objetivos nutricionales. Acompanamiento con plan profesional."
+        "description": "Apoyo metabólico. Complemento para objetivos nutricionales. Acompanamiento con plan profesional.",
+        "image": "assets/productos/booster.png"
       }
     ]
   },
   {
     "title": "Edulcorantes",
-    "description": "Alternativas para endulzar con bajo impacto metabolico y uso practico en cocina.",
+    "description": "Alternativas para endulzar con bajo impacto metabólico y uso práctico en cocina.",
     "products": [
       {
         "name": "Stevia natural en polvo",
-        "description": "100% natural. Cero calorias. Apto para diabeticos. Segura para cocinar."
+        "description": "100% natural. Cero calorías. Apto para diabéticos. Segura para cocinar.",
+        "image": "assets/productos/Stevia-natural-alimenta.jpg"
       },
       {
         "name": "Stevia en polvo",
-        "description": "Bajo impacto metabolico. Facil disolucion. Alto rendimiento. Sabor mas identico al azucar."
+        "description": "Bajo impacto metabólico. Fácil disolución. Alto rendimiento. Sabor mas identico al azúcar.",
+        "image": "assets/productos/Stevia-en-polvo.jpg"
       },
       {
         "name": "Eritritol",
-        "description": "0% indice glucemico. Sabor similar al azucar. De facil digestion. Resistente al calor."
+        "description": "0% índice glucémico. Sabor similar al azúcar. De fácil digestión. Resistente al calor.",
+        "image": "assets/productos/Eritritol.jpg"
       }
     ]
   }

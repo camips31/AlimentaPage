@@ -1,25 +1,18 @@
 <div class="contact-page">
-  <section class="hero-section">
-    <div class="container">
-      <h1>Contacto</h1>
-      <p class="subtitle">Estamos aquí para ayudarte en tu camino hacia una vida más saludable</p>
-    </div>
-  </section>
-
   <section class="contact-content">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info-section">
 
           <div class="locations">
-            <h3>Sucursales</h3>
+            <h1 class="content-heading">Encuentra tu sucursal</h1>
             @for (location of contactInfo.locations; track location.city) {
               <div class="location-item">
                 <h4><span class="material-icons">place</span> {{ location.city }}</h4>
                 <p>{{ location.address }}</p>
                 <div class="location-phones">
                   <span class="material-icons">call</span>
-                  <span>{{ location.phones.join(' - ') }}</span>
+                  <span class="branch-phones">@for (phone of location.phones; track phone) { <a [href]="'https://wa.me/591' + phone" target="_blank" rel="noopener" [attr.aria-label]="'WhatsApp ' + location.city + ': ' + phone">{{ phone }}</a> }</span>
                 </div>
                 <a [href]="location.mapUrl" target="_blank" class="btn-map">
                   <span class="material-icons">map</span> Ver en el mapa

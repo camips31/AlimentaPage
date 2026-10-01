@@ -1,14 +1,27 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
 export class ServicesComponent {
+  serviceVisuals = [
+    { image: 'assets/services/clinica.png', summary: 'Cuida tu salud con acompañamiento especializado.' },
+    { image: 'assets/services/etapas.png', summary: 'Nutrición para crecer y vivir cada etapa con bienestar.' },
+    { image: 'assets/services/deportiva.png', summary: 'Alimenta tu energía y disfruta de tu rendimiento.' },
+    { image: 'assets/services/recomposicion.png', summary: 'Avanza hacia tus objetivos con hábitos sostenibles.' }
+  ];
+  careSteps = [
+    { icon: 'assignment', title: 'Evaluación', description: 'Conocemos tu salud, tus hábitos y tus objetivos.' },
+    { icon: 'restaurant', title: 'Plan personalizado', description: 'Una alimentación adaptada a tus gustos y necesidades.' },
+    { icon: 'groups', title: 'Talleres', description: 'Aprende herramientas prácticas, presencial u online.' },
+    { icon: 'favorite_border', title: 'Seguimiento', description: 'Te acompañamos y ajustamos tu plan en el camino.' }
+  ];
   serviceHighlights = [
     'Evaluación nutricional individual',
     'Planes alimentarios personalizados',

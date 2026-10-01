@@ -644,3 +644,19 @@
 
 /* Espaciado del inicio con el carrusel temporalmente desactivado. */
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding: 28px 0 42px; }
+
+/* Paneles originales a todo el ancho, sin franjas arriba o abajo. */
+:host .specialties { padding: 0 !important; margin: 0; width: 100%; background: transparent; }
+:host .specialties-grid { width: 100%; max-width: none; margin: 0; padding: 0; gap: 0; grid-template-columns: repeat(5,minmax(0,1fr)); }
+:host .specialty-panel { padding: 28px 20px 24px !important; min-height: 0 !important; justify-content: flex-start; border: 0; }
+:host .specialty-panel:nth-child(1) { background: #d8ecf7; }
+:host .specialty-panel:nth-child(2) { background: #f0dfcf; }
+:host .specialty-panel:nth-child(3) { background: #f7efe7; }
+:host .specialty-panel:nth-child(4) { background: #cfe2dc; }
+:host .specialty-panel:nth-child(5) { background: #e2d7df; }
+:host .specialty-panel::before { display: block; top: 12px; }
+:host .specialty-icon { height: 44px !important; margin-bottom: 12px; }
+:host .specialty-panel h3 { font-size: 16px; line-height: 1.35; }
+:host .specialty-panel p { font-size: 14px; text-align: center; margin: 0; }
+@media(max-width: 968px) { :host .specialties-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } :host .specialty-panel:last-child { grid-column: 1 / -1; } }
+@media(max-width: 540px) { :host .specialties-grid { grid-template-columns: 1fr; } :host .specialty-panel p { max-width: 300px; } }

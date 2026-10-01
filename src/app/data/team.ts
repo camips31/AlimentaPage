@@ -41,7 +41,7 @@ export const TEAM = [
       city: 'La Paz',
       id: 'mariel-llaguno',
       image: 'assets/Profiles/normalized/Mariel.png',
-      description: 'Licenciada en Nutrición y Dietética con más de 7 años de experiencia en el área clínica y educativa. Especializada en evaluación nutricional integral, diseño de planes alimentarios personalizados, atención presencial y online, docencia universitaria, gestión de servicios de alimentación y divulgación científica.',
+      description: 'Licenciada en Nutrición y Dietética con más de 7 años de experiencia en el área clínica y educativa. Especializada en evaluación nutricional integral, diseño de planes alimentarios personalizados, atención presencial y online, docencia universitaria, gestión de servicios de alimentación y divulgación científica. Su enfoque prioriza la educación alimentaria, la adherencia al tratamiento y la mejora sostenible de la salud.',
       education: [
         'Licenciatura en Nutrición y Dietética, 2015-2019, La Paz, Bolivia - Universidad Mayor de San Andrés (UMSA).',
         'Diplomado en Endocrinología Ginecológica, en curso - Nutriinfo Argentina.',

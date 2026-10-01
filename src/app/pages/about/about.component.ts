@@ -15,9 +15,9 @@ export class AboutComponent {
   vision = 'Ser el centro de bienestar líder en Bolivia reconocido por su excelencia, innovación y enfoque humano, contribuyendo a mejorar la calidad de vida de las personas mediante el acompañamiento nutricional continuo y la educación alimentaria consciente.';
   
   history = [
-    'Alimenta es un centro de bienestar personalizado que ofrece atención integral a través de un equipo de profesionales especializados en distintas áreas de la nutrición, psicología y entrenamiento.',
-    'Con presencia en las ciudades La Paz y Santa Cruz y de forma online en Bolivia, brindamos consultas individuales, programas nutricionales personalizados, talleres educativos y servicios corporativos enfocados en la promoción de hábitos saludables.',
-    'Nuestra filosofía se basa en una alimentación flexible y no restrictiva que alimenta el cuerpo, la mente y las emociones, ayudando a las personas a construir una relación saludable y sostenible con la alimentación, las emociones y los estilos de vida.'
+    'Somos un centro de bienestar que une nutrición, psicología y entrenamiento. Te acompañamos en La Paz, Santa Cruz y online en toda Bolivia.',
+    'Creemos en una alimentación flexible, sin restricciones, para cuidar tu cuerpo, mente y emociones con hábitos sostenibles.',
+    'Ofrecemos consultas individuales, programas personalizados, talleres y servicios para empresas.'
   ];
 
   aboutImages = [

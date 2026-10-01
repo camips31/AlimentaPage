@@ -13,7 +13,6 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent {
   whatsappLink = 'https://wa.me/59177731818?text=Hola%2C%20quiero%20agendar%20una%20consulta';
 
-  panelColors = ['#d8ecf7', '#f0dfcf', '#f7efe7', '#cfe2dc', '#e2d7df'];
 
   processSteps = [
     { title: 'Evaluación Inicial', description: 'Profunda comprensión de tu historial médico, hábitos y objetivos.' },

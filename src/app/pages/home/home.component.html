@@ -50,13 +50,10 @@
 </section>
 
 <!-- Especialidades & Servicios - panel pastel full width -->
-<section class="specialties">
-  <div class="container">
-    <h2 class="section-title">Especialidades &amp; Servicios</h2>
-  </div>
+<section class="specialties" aria-labelledby="home-specialties-title">
+  <h2 id="home-specialties-title" class="visually-hidden">Especialidades &amp; Servicios</h2>
   <div class="specialties-grid">
-    <div class="specialty-panel" *ngFor="let s of services.slice(0, 5); let i = index"
-      [style.background-color]="panelColors[i % panelColors.length]">
+    <div class="specialty-panel" *ngFor="let s of services.slice(0, 5); let i = index">
     <div class="specialty-icon">
       <img *ngIf="s.iconPath; else materialSpecialtyIcon" [src]="s.iconPath" [alt]="s.title" class="alimenta-icon">
       <ng-template #materialSpecialtyIcon><span class="material-icons">{{ s.icon }}</span></ng-template>

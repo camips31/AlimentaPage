@@ -2,22 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-interface InfoCard {
-  title: string;
-  description: string;
-}
-
-interface ServiceCard extends InfoCard {
-  icon: string;
-  iconPath: string;
-}
-
-interface DetailSection {
-  title: string;
-  paragraphs: string[];
-  items?: string[];
-}
-
 interface CollaboratorLogo {
   name: string;
   logo: string;
@@ -31,17 +15,21 @@ interface CollaboratorLogo {
   styleUrl: './companies.component.css'
 })
 export class CompaniesComponent {
+  selectedService = 0;
+  get activeService() { return this.briefingServices[this.selectedService]; }
+  selectService(value: string) { this.selectedService = Number(value); }
+
   briefingServices = [
   {
     "title": "Bienestar Corporativo",
     "paragraphs": [
-      "Llevamos la nutrición, la psicología y el entrenamiento físico a la plantilla de tu empresa, como un beneficio real de bienestar — no un beneficio simbólico más en la lista de RRHH.",
+      "Consultas, talleres y acompañamiento para tu equipo y sus familiares directos.",
       "Lo que reciben tus colaboradores:",
       "•\tAcceso a consultas de nutrición personalizada, psicología y entrenamiento físico",
       "•\tCondiciones preferentes frente a la tarifa particular",
       "•\tAtención presencial en nuestras sedes de La Paz y Santa Cruz, o virtual y asincrónica desde cualquier lugar del país",
       "•\tTalleres de bienestar: alimentación saludable, manejo del estrés, pausas activas y postura en el puesto de trabajo",
-      "•\tExtensión del beneficio a familiares directos",
+      "•\tProgramas adaptados a las necesidades de cada equipo",
       "Lo que recibe la empresa:",
       "•\tUn equipo con menos ausentismo por enfermedades prevenibles",
       "•\tReportes periódicos de uso, con datos reales para justificar la inversión en bienestar",
@@ -104,152 +92,14 @@ export class CompaniesComponent {
   }
 ];
 
+  benefitIcons = ['trending_up', 'event_available', 'health_and_safety', 'sentiment_satisfied_alt', 'groups'];
+
   benefits = [
     'Mayor productividad y rendimiento laboral',
-    'Reduccion del ausentismo',
-    'Disminucion de enfermedades cronicas y costos asociados',
+    'Reducción del ausentismo',
+    'Disminución de enfermedades crónicas y costos asociados',
     'Mejora del clima laboral',
     'Mayor compromiso del personal'
-  ];
-
-  mainServices: ServiceCard[] = [
-    {
-      icon: 'business_center',
-      iconPath: 'assets/icons/vegetable-icon (27).png',
-      title: 'Nutricionista presencial para la empresa',
-      description: 'Consultas presenciales de 30 minutos, planes de alimentacion personalizados y seguimientos continuos para colaboradores.'
-    },
-    {
-      icon: 'videocam',
-      iconPath: 'assets/icons/vegetable-icon (28).png',
-      title: 'Nutricionista online para la empresa',
-      description: 'Atencion virtual para empleados remotos mediante videollamada, con el mismo enfoque de consulta, plan y seguimiento.'
-    },
-    {
-      icon: 'monitor_heart',
-      iconPath: 'assets/icons/vegetable-icon (29).png',
-      title: 'Evaluacion nutricional de colaboradores',
-      description: 'Valoracion integral con mediciones antropometricas, analisis de habitos alimentarios y evaluacion de factores de riesgo.'
-    },
-    {
-      icon: 'person',
-      iconPath: 'assets/icons/vegetable-icon (30).png',
-      title: 'Consultas individuales',
-      description: 'Atencion personalizada segun objetivos, estado de salud, estilo de vida y requerimientos especificos de cada colaborador.'
-    },
-    {
-      icon: 'groups',
-      iconPath: 'assets/icons/vegetable-icon (31).png',
-      title: 'Talleres de alimentacion saludable',
-      description: 'Talleres dinamicos y participativos para promover habitos saludables, energia diaria y prevencion nutricional.'
-    },
-    {
-      icon: 'trending_down',
-      iconPath: 'assets/icons/vegetable-icon (32).png',
-      title: 'Programas de perdida de peso',
-      description: 'Programas estructurados con educacion nutricional, acompanamiento profesional y seguimiento continuo.'
-    },
-    {
-      icon: 'health_and_safety',
-      iconPath: 'assets/icons/vegetable-icon (33).png',
-      title: 'Prevencion de enfermedades',
-      description: 'Estrategias nutricionales para prevenir y controlar diabetes, hipertension, obesidad, dislipidemias y riesgo cardiovascular.'
-    },
-    {
-      icon: 'event_available',
-      iconPath: 'assets/icons/vegetable-icon (34).png',
-      title: 'Ferias de salud',
-      description: 'Evaluaciones nutricionales, asesoramiento profesional, actividades educativas y promocion de estilos de vida saludables.'
-    },
-    {
-      icon: 'fact_check',
-      iconPath: 'assets/icons/vegetable-icon (35).png',
-      title: 'Seguimiento nutricional',
-      description: 'Acompanamiento periodico para evaluar avances, reforzar habitos y ajustar recomendaciones nutricionales.'
-    }
-  ];
-
-  audienceItems = [
-    'Empresas e instituciones',
-    'Embajadas y consulados',
-    'Centros educativos y universidades',
-    'Organizaciones publicas y privadas',
-    'Asociaciones y grupos comunitarios'
-  ];
-
-  workshopBenefits = [
-    'Mejorar los habitos alimentarios de los colaboradores',
-    'Reducir el estres asociado a la alimentacion y el estilo de vida',
-    'Incrementar energia, concentracion y productividad',
-    'Promover una cultura de bienestar dentro de la organizacion',
-    'Disminuir factores de riesgo asociados a enfermedades cronicas'
-  ];
-
-  menuServices: DetailSection[] = [
-    {
-      title: 'Menus para colegios, guarderias y centros educativos',
-      paragraphs: [
-        'Disenamos menus balanceados y adecuados para cada etapa de crecimiento, garantizando el aporte nutricional necesario para el desarrollo fisico e intelectual de ninos y adolescentes.',
-        'Cumplimos criterios de calidad, variedad y seguridad alimentaria, promoviendo habitos saludables desde edades tempranas.'
-      ],
-      items: [
-        'Creacion, revision y supervision de menus',
-        'Menus equilibrados, variados y adaptados a productos locales',
-        'Adaptacion a alergias, intolerancias u otras condiciones medicas',
-        'Calculo nutricional y fichas tecnicas de preparacion',
-        'Validacion profesional por nutricionista colegiado/a'
-      ]
-    },
-    {
-      title: 'Menus para guarderias',
-      paragraphs: [
-        'La primera infancia es una etapa clave para el desarrollo fisico, cognitivo y la formacion de habitos alimentarios saludables.',
-        'Brindamos asesoria nutricional para guarderias y servicios de alimentacion infantil, con menus equilibrados y adaptados a cada grupo etario.'
-      ],
-      items: [
-        'Alimentacion basal',
-        'Texturas adaptadas y progresion alimentaria',
-        'Introduccion de alimentos tradicional o Baby Led Weaning',
-        'Alergias, intolerancias y condiciones especificas',
-        'Control y seguimiento del servicio de cocina'
-      ]
-    },
-    {
-      title: 'Menus y asesoramiento para residencias',
-      paragraphs: [
-        'Creamos, revisamos y supervisamos planificaciones alimentarias para residencias de personas mayores, centros de dia y servicios institucionales.',
-        'La alimentacion adecuada en esta etapa contribuye a prevenir y manejar enfermedades cronicas, mantener autonomia y mejorar la calidad de vida.'
-      ],
-      items: [
-        'Alimentacion basal y texturas modificadas',
-        'Disfagia, diabetes, hipertension e hipercolesterolemia',
-        'Dietas vegetarianas o adaptaciones especificas',
-        'Informe tecnico, calculo nutricional y fichas tecnicas',
-        'Asesoramiento continuo para la mejora de calidad alimentaria'
-      ]
-    },
-    {
-      title: 'Menus empresariales',
-      paragraphs: [
-        'Elaboramos menus equilibrados y adaptados a las necesidades de cada empresa, garantizando variedad, calidad nutricional y aceptacion por parte de los colaboradores.',
-        'Buscamos mejorar la alimentacion dentro del entorno laboral sin descuidar sabor, practicidad y viabilidad operativa.'
-      ],
-      items: [
-        'Talleres nutricionales para colaboradores',
-        'Talleres para personal de cocina',
-        'Evaluaciones nutricionales individuales',
-        'Elaboracion de menus institucionales',
-        'Programas de bienestar corporativo'
-      ]
-    }
-  ];
-
-  outsourcingBenefits = [
-    'Reduccion de costes',
-    'Optimizacion del tiempo',
-    'Acreditacion con menus equilibrados nutricionales',
-    'Asesoramiento dietetico',
-    'Incremento de la satisfaccion de los comensales'
   ];
 
   internshipPhotos = [

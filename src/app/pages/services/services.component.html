@@ -1,39 +1,60 @@
 <div class="services-page">
-  <section class="hero-section">
+  <section class="specialty-section" aria-labelledby="specialty-heading">
     <div class="container">
-      <h1>Nuestros Servicios</h1>
-      <p class="subtitle">Soluciones integrales de nutrición adaptadas a tus necesidades</p>
-    </div>
-  </section>
-
-  <section class="audiences-section">
-    <div class="container">
-      <h2>¿A quiénes ayudamos?</h2>
-      <div class="audience-grid">
-        @for (group of audienceGroups; track group.title) {
-          <article class="audience-card">
-            <h3>{{ group.title }}</h3>
-            <p>{{ group.description }}</p>
-            <h4>{{ group.listTitle }}</h4>
-            <ul>
-              @for (item of group.items; track item) {
-                <li>{{ item }}</li>
-              }
-            </ul>
+      <h1 class="content-heading" id="specialty-heading">¿En qué podemos ayudarte?</h1>
+      <div class="specialty-grid">
+        @for (group of audienceGroups; track group.title; let i = $index) {
+          <article class="specialty-card">
+            <img class="specialty-image" [src]="serviceVisuals[i].image" alt="" width="600" height="400" loading="lazy">
+            <div class="specialty-content">
+              <h3>{{ group.title }}</h3>
+              <p>{{ serviceVisuals[i].summary }}</p>
+              <details>
+                <summary><span class="details-closed">Ver especialidades</span><span class="details-open">Ocultar especialidades</span><span class="expand-icon" aria-hidden="true">+</span></summary>
+                <div class="specialty-details">
+                  <p>{{ group.description }}</p>
+                  <h4>{{ group.listTitle }}</h4>
+                  <ul>
+                    @for (item of group.items; track item) { <li>{{ item }}</li> }
+                  </ul>
+                  <button type="button" class="service-link" (click)="contactWhatsApp('Hola, me interesa ' + group.title)">Consultar por WhatsApp <span aria-hidden="true">↗</span></button>
+                </div>
+              </details>
+            </div>
           </article>
         }
       </div>
     </div>
   </section>
 
-  <section class="service-highlights-section">
+  <section class="care-section" aria-labelledby="care-heading">
     <div class="container">
-      <h2>Nuestros Servicios</h2>
-      <ul class="service-highlights">
-        @for (service of serviceHighlights; track service) {
-          <li>{{ service }}</li>
+      <h2 id="care-heading">¿Qué incluye tu atención?</h2>
+      <div class="care-grid">
+        @for (step of careSteps; track step.title) {
+          <article class="care-item">
+            <span class="care-icon material-icons" aria-hidden="true">{{ step.icon }}</span>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </article>
         }
+      </div>
+    </div>
+  </section>
+
+  <section class="partners-section">
+    <div class="container partners-layout">
+      <div><h2>También trabajamos en equipo</h2><p>Colaboramos con profesionales y organizaciones para acercar la atención a más personas.</p><a routerLink="/empresas" class="service-link">Conoce nuestras alianzas <span aria-hidden="true">↗</span></a></div>
+      <ul class="partner-list">
+        @for (service of serviceHighlights.slice(4); track service) { <li><span aria-hidden="true">✓</span>{{ service }}</li> }
       </ul>
+    </div>
+  </section>
+
+  <section class="guidance-section">
+    <div class="container guidance-panel">
+      <div><h2>Tu primer paso puede ser una conversación</h2><p>Cuéntanos qué necesitas y te orientamos.</p></div>
+      <button type="button" class="guidance-button" (click)="contactWhatsApp('Hola, no sé qué servicio elegir. ¿Me pueden orientar?')">No sé qué servicio elegir <span aria-hidden="true">↗</span></button>
     </div>
   </section>
 </div>

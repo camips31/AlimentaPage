@@ -1,154 +1,34 @@
 <div class="companies-page">
-  <section class="companies-hero">
-    <div class="container">
-      <h1>Planes y Servicios para Empresas</h1>
-      <p>Empresas saludables en Bolivia con programas de nutricion, bienestar corporativo y menus institucionales.</p>
-    </div>
-  </section>
-
-  <section class="intro-section">
-    <div class="container">
-      <div class="intro-grid">
-        <article class="intro-card">
-          <h2>Que es una empresa saludable</h2>
-          <p>
-            Una empresa saludable promueve el bienestar integral de sus colaboradores mediante acciones orientadas
-            a la prevención, el cuidado de la salud y la mejora de los hábitos de vida. Este enfoque busca impactar positivamente tanto en la calidad de vida de los trabajadores como en el desempeño y sostenibilidad de la organización.
-          </p>
-          <p>
-            Las empresas que invierten en salud laboral contribuyen a reducir el ausentismo, mejorar la productividad
-            y fortalecer el compromiso de sus equipos.
-          </p>
-        </article>
-
-        <article class="intro-card accent">
-          <h2>Por que invertir en bienestar corporativo</h2>
-          <ul>
-            @for (benefit of benefits; track benefit) {
-              <li>{{ benefit }}</li>
-            }
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="alimenta-section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Alimenta Empresas</h2>
-        <p>
-          Desarrollamos programas de nutricion y bienestar corporativo adaptados a empresas e instituciones en Bolivia.
-          Trabajamos junto a Recursos Humanos, Seguridad y Salud Ocupacional y Responsabilidad Social Empresarial.
-        </p>
-      </div>
-
-      <p>Diseñamos intervenciones personalizadas con objetivos claros y medibles. Nos encargamos de la planificación, ejecución y seguimiento del servicio, además de entregar reportes periódicos de resultados y participación.</p>
-      <div class="services-grid">
-        @for (service of briefingServices; track service.title) {
-          <article class="service-card">
-            <h3>{{ service.title }}</h3>
-            @for (paragraph of service.paragraphs; track $index) { <p>{{ paragraph }}</p> }
-            <button type="button" (click)="contactWhatsApp(service.title)">Pide un presupuesto</button>
-          </article>
+  <section class="intro-section"><div class="container company-reading">
+    <h1 class="content-heading">Bienestar para tu empresa</h1>
+    <p>Programas de nutrición, psicología y entrenamiento para cuidar a tus colaboradores y promover hábitos saludables.</p>
+    <aside class="wellbeing-benefits" aria-labelledby="wellbeing-benefits-title">
+      <div class="wellbeing-heading"><span class="material-icons" aria-hidden="true">spa</span><h2 id="wellbeing-benefits-title">¿Por qué invertir en bienestar?</h2></div>
+      <ul class="wellbeing-benefit-list">
+        @for (benefit of benefits; track benefit; let i = $index) {
+          <li><span class="material-icons" aria-hidden="true">{{ benefitIcons[i] }}</span><span>{{ benefit }}</span></li>
         }
+      </ul>
+    </aside>
+    <p class="company-method">Trabajamos con Recursos Humanos, Salud Ocupacional y Responsabilidad Social: planificamos, ejecutamos y damos seguimiento con objetivos medibles y reportes de participación y resultados.</p>
+  </div></section>
+  <section class="alimenta-section"><div class="container company-reading">
+    <h2>Encuentra el servicio para tu organización</h2>
+    <div class="company-explorer">
+      <div class="company-picker">
+        <span class="material-icons" aria-hidden="true">business_center</span>
+        <label for="organization-service">¿Qué necesita tu organización?</label>
+        <select id="organization-service" [value]="selectedService" (change)="selectService(serviceChoice.value)" #serviceChoice>
+          @for (service of briefingServices; track service.title; let i = $index) { <option [value]="i">{{ service.title }}</option> }
+        </select>
+        <p>Selecciona una opción para conocer el acompañamiento disponible.</p>
       </div>
-      <h2>Modalidades de atención corporativa</h2>
-      <div class="services-grid">
-        @for (service of mainServices; track service.title) {
-          <article class="service-card">
-            <span class="service-icon">
-              <img [src]="service.iconPath" [alt]="service.title" (error)="service.iconPath = ''">
-              @if (!service.iconPath) {
-                <span class="material-icons">{{ service.icon }}</span>
-              }
-            </span>
-            <h3>{{ service.title }}</h3>
-            <p>{{ service.description }}</p>
-            <button type="button" (click)="contactWhatsApp(service.title)">
-              Pide un presupuesto
-            </button>
-          </article>
-        }
-      </div>
+      <article class="company-result" aria-live="polite" aria-atomic="true">
+        <h3>{{ activeService.title }}</h3>
+        @for (paragraph of activeService.paragraphs; track $index) { <p [class.company-list-line]="paragraph.startsWith('•')">{{ paragraph }}</p> }
+      </article>
     </div>
-  </section>
-
-  <section class="workshops-section">
-    <div class="container">
-      <div class="workshop-grid">
-        <article>
-          <h2>Charlas de bienestar y alimentacion saludable</h2>
-          <p>
-            Ofrecemos conferencias educativas sobre nutricion, salud integral, manejo del estres, habitos saludables
-            y calidad de vida. Tambien disenamos charlas personalizadas segun las necesidades de cada institucion.
-          </p>
-          <h3>A quienes estan dirigidas</h3>
-          <ul>
-            @for (item of audienceItems; track item) {
-              <li>{{ item }}</li>
-            }
-          </ul>
-        </article>
-
-        <article class="benefit-panel">
-          <h3>Beneficios</h3>
-          <ul>
-            @for (benefit of workshopBenefits; track benefit) {
-              <li>{{ benefit }}</li>
-            }
-          </ul>
-          <button type="button" (click)="contactWhatsApp('charlas y talleres corporativos')">
-            Quiero contactar con alguien
-          </button>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="team-note">
-    <div class="container">
-      <h2>Equipo especializado</h2>
-      <p>
-        Contamos con un equipo multidisciplinario de nutricionistas y profesionales de la salud con experiencia en
-        nutricion clinica, deportiva, salud metabolica y psicologia aplicada a la conducta alimentaria.
-      </p>
-      <a routerLink="/sobre-nosotros">Conoce a los profesionales</a>
-    </div>
-  </section>
-
-  <section class="menus-section">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Menus institucionales y servicios especializados</h2>
-        <p>
-          Asesoria en menus para colegios, guarderias, centros educativos, residencias y empresas.
-        </p>
-      </div>
-
-      <div class="menu-grid">
-        @for (section of menuServices; track section.title) {
-          <article class="menu-card">
-            <h3>{{ section.title }}</h3>
-            @for (paragraph of section.paragraphs; track paragraph) {
-              <p>{{ paragraph }}</p>
-            }
-            @if (section.items?.length) {
-              <ul>
-                @for (item of section.items; track item) {
-                  <li>{{ item }}</li>
-                }
-              </ul>
-            }
-            <button type="button" (click)="contactWhatsApp(section.title)">
-              Mas informacion
-            </button>
-          </article>
-        }
-      </div>
-    </div>
-  </section>
-
+  </div></section>
   <section class="internships-section">
     <div class="container">
       <div class="internships-layout">
@@ -173,24 +53,12 @@
     </div>
   </section>
 
-  <section class="outsourcing-section">
-    <div class="container">
-      <h2>Beneficios de externalizar el servicio</h2>
-      <div class="outsourcing-list">
-        @for (benefit of outsourcingBenefits; track benefit) {
-          <span>{{ benefit }}</span>
-        }
-      </div>
-      <button type="button" (click)="contactWhatsApp('servicios empresariales e institucionales')">
-        Pidenos un presupuesto
-      </button>
-    </div>
-  </section>
+  <section class="outsourcing-section"><div class="container"><button type="button" (click)="contactWhatsApp('servicios empresariales e institucionales')">Pídenos un presupuesto</button></div></section>
 
   <section class="collaborators-section">
     <div class="container">
       <div class="section-heading">
-        <h2>Empresas que confian en nosotros</h2>
+        <h2>¿Con quiénes hemos colaborado?</h2>
         <p>Instituciones, marcas y medios que han trabajado con Alimenta.</p>
       </div>
 
