@@ -1,3 +1,5 @@
+import { inject } from '@angular/core';
+import { WhatsappService } from '../whatsapp-selector/whatsapp.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -11,6 +13,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  readonly whatsapp = inject(WhatsappService);
   currentYear = new Date().getFullYear();
 
   footerForm = {
@@ -31,7 +34,6 @@ Mi correo es: ${this.footerForm.email}
 
 Mensaje: ${this.footerForm.message}`;
 
-    const url = `https://wa.me/59178250459?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    this.whatsapp.open(message);
   }
 }

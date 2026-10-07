@@ -172,9 +172,15 @@ export class HomeComponent {
   }
 
   scrollTestimonials(carousel: HTMLElement, direction: number): void {
-    carousel.scrollBy({
-      left: direction * Math.min(carousel.clientWidth * 0.85, 520),
-      behavior: 'smooth'
+    const card = carousel.querySelector<HTMLElement>('.testimonial-card');
+    if (!card) return;
+    const gap = parseFloat(getComputedStyle(carousel).columnGap) || 0;
+    const step = card.getBoundingClientRect().width + gap;
+    const current = Math.round(carousel.scrollLeft / step);
+    const target = Math.max(0, Math.min((current + direction) * step, carousel.scrollWidth - carousel.clientWidth));
+    carousel.scrollTo({
+      left: target,
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
     });
   }
 

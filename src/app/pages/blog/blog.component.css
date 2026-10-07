@@ -24,3 +24,29 @@
   :host .post-image { height: 150px !important; }
   .post-footer button { min-height: 44px; }
 }
+
+.read-link, .back-link { color: #3f6e81; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
+.read-link:hover, .back-link:hover { text-decoration: underline; }
+.read-link:focus-visible, .back-link:focus-visible { outline: 2px solid #3f6e81; outline-offset: 3px; }
+.article-reading { max-width: 740px; margin: 0 auto; }
+.back-link { margin-bottom: 20px; }
+.article-reading .topic { display: block; margin-bottom: 12px; }
+.article-reading h1 { margin-bottom: 24px; }
+.article-reading h2 { margin: 28px 0 14px; }
+.article-reading p { line-height: 1.75; margin-bottom: 18px; text-align: left; }
+.article-photo { display: block; width: auto; max-width: 100%; max-height: 480px; height: auto; object-fit: contain; border-radius: 12px; margin: 24px auto 12px; }
+:host .article-reading .photo-credit { font-size: 12px; text-align: center; color: #737a74; margin: 0 0 24px; }
+
+/* Minimal editorial listing. */
+:host .posts-grid { gap: 28px; }
+:host .post-card, :host .post-card:hover { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+:host .post-image { border-radius: 10px; height: 155px !important; }
+:host .post-content { padding: 14px 0 8px !important; gap: 8px; }
+:host .topic { color: #737b78; text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 400; }
+:host .blog-page .post-content h2 { font-size: 17px !important; font-weight: 500; line-height: 1.4; }
+:host .post-content p { font-size: 14px; line-height: 1.55; }
+:host .post-footer { border: 0; margin: 0; padding: 0; }
+:host .read-link { font-size: 13px; font-weight: 500; }
+:host .article-reading { max-width: 680px; }
+:host .article-reading h1 { font-weight: 500; }
+:host .article-reading h2 { font-size: 21px !important; font-weight: 500; }

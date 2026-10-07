@@ -407,3 +407,20 @@ button:hover,
 .collaboration-controls button:focus-visible, .collaboration-track:focus-visible { outline: 2px solid #3f6e81; outline-offset: 3px; }
 @media (max-width: 800px) { .collaboration-track { grid-auto-columns: calc((100% - 16px) / 2); } }
 @media (max-width: 540px) { .collaboration-track { grid-auto-columns: 86%; } }
+
+/* Aligned collaboration copy and compact photo navigation. */
+:host .collaborators-section .section-heading { text-align: center; margin-bottom: 14px; }
+:host .collaborators-section .section-heading p { text-align: center; margin: 10px auto 0; max-width: 720px; }
+:host .collaborators-section > .container > p { text-align: center; max-width: 850px; margin: 0 auto 22px; font-size: 14px; line-height: 1.6; }
+.collaboration-carousel { position: relative; margin-top: 0; padding-inline: 22px; }
+.collaboration-controls { position: absolute; inset: 0 0 12px; display: flex; align-items: center; justify-content: space-between; margin: 0; pointer-events: none; z-index: 1; }
+:host .collaboration-controls button { pointer-events: auto; width: 40px; height: 40px; min-height: 40px; padding: 0; border: 1px solid #dce1da; background: #fffdf8; color: #3f6e81; box-shadow: 0 2px 6px #24485a12; }
+:host .collaboration-controls button:hover { background: #edf2ef; color: #24485a; }
+@media(max-width: 540px) { .collaboration-carousel { padding-inline: 16px; } :host .collaboration-controls button { width: 44px; height: 44px; } }
+
+/* Anchor arrows at the photo midpoint, independent of inherited button margins. */
+:host .collaboration-controls { inset: 0 0 12px; display: block; }
+:host .collaboration-controls button { position: absolute; top: 50%; margin: 0 !important; transform: translateY(-50%); }
+:host .collaboration-controls button:first-child { left: 0; }
+:host .collaboration-controls button:last-child { right: 0; }
+:host .collaboration-controls button:hover { transform: translateY(-50%); }

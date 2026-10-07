@@ -1,3 +1,5 @@
+import { inject } from '@angular/core';
+import { WhatsappService } from '../whatsapp-selector/whatsapp.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,6 +9,8 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: `
     <a 
+      (click)="whatsapp.open(undefined, $event)"
+      aria-haspopup="dialog"
       href="https://wa.me/59178250459?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Alimenta" 
       target="_blank"
       rel="noopener noreferrer"
@@ -69,4 +73,5 @@ import { CommonModule } from '@angular/common';
     }
   `]
 })
-export class WhatsappButtonComponent {}
+export class WhatsappButtonComponent {
+  readonly whatsapp = inject(WhatsappService);}

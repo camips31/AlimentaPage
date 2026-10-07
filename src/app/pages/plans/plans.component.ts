@@ -1,3 +1,5 @@
+import { inject } from '@angular/core';
+import { WhatsappService } from '../../shared/whatsapp-selector/whatsapp.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './plans.component.css'
 })
 export class PlansComponent {
+  readonly whatsapp = inject(WhatsappService);
   // Plan destacado en la versión anterior del catálogo.
   popularPlanIds = new Set([2]);
   separatePrices: Record<number, string> = { 4: '1380 Bs', 5: '1720 Bs', 8: '720 Bs', 9: '1080 Bs', 10: '1800 Bs' };
@@ -203,8 +206,6 @@ export class PlansComponent {
 
 
   contactWhatsApp(message: string) {
-    const phone = '59178250459';
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    this.whatsapp.open(message);
   }
 }

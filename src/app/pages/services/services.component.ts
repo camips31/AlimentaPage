@@ -1,3 +1,5 @@
+import { inject } from '@angular/core';
+import { WhatsappService } from '../../shared/whatsapp-selector/whatsapp.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -10,6 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './services.component.css'
 })
 export class ServicesComponent {
+  readonly whatsapp = inject(WhatsappService);
   serviceVisuals = [
     { image: 'assets/services/clinica.png', summary: 'Cuida tu salud con acompañamiento especializado.' },
     { image: 'assets/services/etapas.png', summary: 'Nutrición para crecer y vivir cada etapa con bienestar.' },
@@ -245,8 +248,6 @@ export class ServicesComponent {
   ];
 
   contactWhatsApp(message: string) {
-    const phone = '59178250459';
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    this.whatsapp.open(message);
   }
 }

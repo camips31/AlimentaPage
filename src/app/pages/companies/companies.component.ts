@@ -1,3 +1,5 @@
+import { inject } from '@angular/core';
+import { WhatsappService } from '../../shared/whatsapp-selector/whatsapp.service';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -15,6 +17,7 @@ interface CollaboratorLogo {
   styleUrl: './companies.component.css'
 })
 export class CompaniesComponent {
+  readonly whatsapp = inject(WhatsappService);
   selectedService = 0;
   get activeService() { return this.briefingServices[this.selectedService]; }
   selectService(value: string) { this.selectedService = Number(value); }
@@ -175,8 +178,7 @@ export class CompaniesComponent {
   ];
 
   contactWhatsApp(subject = 'planes y servicios para empresas') {
-    const phone = '59178250459';
     const message = `Hola! Quiero mas informacion sobre ${subject}.`;
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    this.whatsapp.open(message);
   }
 }

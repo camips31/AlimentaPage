@@ -1,28 +1,33 @@
 <div class="blog-page">
-  <section class="blog-content">
-    <div class="container">
-      <h1 class="visually-hidden">Artículos de Alimenta</h1>
-      <div class="posts-grid">
-        @for (post of blogPosts; track post.id) {
-          <article class="post-card">
-            <div class="post-image">
-              <img [src]="post.image" [alt]="post.title" loading="lazy" />
-
-            </div>
-            <div class="post-content">
-              <span class="topic">{{ post.label }}</span>
-              <h2>{{ post.title }}</h2>
-              <p>{{ post.excerpt }}</p>
-            </div>
-            <div class="post-footer">
-              <span class="author">Por {{ post.author }}</span>
-              <button type="button" (click)="contactWhatsApp(post.title)" [attr.aria-label]="'Consultar por WhatsApp sobre: ' + post.title">
-                Consultar <span aria-hidden="true">↗</span>
-              </button>
-            </div>
-          </article>
-        }
-      </div>
-    </div>
-  </section>
-</div>
+<section class="blog-content"><div class="container">
+@if (isArticle) {
+ <div class="article-reading">
+  <a class="back-link" routerLink="/blog">← Volver al blog</a>
+  @if (article) {
+   <article>
+    <span class="topic">{{ article.label }}</span>
+    <h1>{{ article.title }}</h1>
+    @for (block of article.blocks; track $index) {
+     @switch (block.type) {
+      @case ('heading') { <h2>{{ block.text }}</h2> }
+      @case ('image') { <img class="article-photo" [src]="block.text" [alt]="'Imagen del artículo: ' + article.title" loading="lazy"> }
+      @case ('credit') { <p class="photo-credit">{{ block.text }}</p> }
+      @default { <p>{{ block.text }}</p> }
+     }
+    }
+   </article>
+  } @else { <h1>Artículo no encontrado</h1> }
+ </div>
+} @else {
+ <h1 class="visually-hidden">Artículos de Alimenta</h1>
+ <div class="posts-grid">
+ @for (post of blogPosts; track post.id) {
+  <article class="post-card">
+   <a class="post-image" [routerLink]="['/blog', post.slug]" tabindex="-1" aria-hidden="true"><img [src]="post.image" alt="" loading="lazy"></a>
+   <div class="post-content"><span class="topic">{{ post.label }}</span><h2>{{ post.id === 2 ? 'Alimentación y acné: nutrientes clave para tu piel' : post.id === 3 ? 'Fibra alimentaria: equilibrio en tu alimentación' : post.title }}</h2><p>{{ post.excerpt }}</p></div>
+   <div class="post-footer"><a class="read-link" [routerLink]="['/blog', post.slug]" [attr.aria-label]="'Leer: ' + post.title">Leer artículo <span aria-hidden="true">→</span></a></div>
+  </article>
+ }
+ </div>
+}
+</div></section></div>

@@ -677,3 +677,43 @@
   :host .hero-box { min-height: 480px; padding: 28px 20px; }
   :host .hero-box::before { background-position: 58% center; }
 }
+
+/* Directional stages from the initial evaluation to autonomy. */
+.process-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px; }
+.process-step { position: relative; border-left: 0; padding-left: 0; }
+.process-marker { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; min-height: 32px; }
+.process-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: #eaf0f1; color: #3f6e81; font-size: 14px; font-weight: 600; }
+.process-endpoint { font-size: 11px; color: #6a7f78; font-weight: 600; }
+.process-step:not(:last-child)::after { content: '→'; position: absolute; right: -29px; top: 0; color: #3f6e81; font-size: 25px; line-height: 32px; }
+@media (max-width: 800px) {
+ .process-grid { grid-template-columns: 1fr; gap: 36px; }
+ .process-step { padding-left: 46px; }
+ .process-marker { margin-bottom: 6px; min-height: 0; }
+ .process-number { position: absolute; top: 0; left: 0; }
+ .process-step:not(:last-child)::after { content: '↓'; top: auto; bottom: -30px; left: 6px; right: auto; }
+ .process-step p { margin-bottom: 0; }
+}
+
+/* Compact, title-only reasons to choose Alimenta. */
+:host .benefits-section .section-title { text-align: center; }
+:host .benefits-section .grid { gap: 12px; }
+:host .benefits-section .benefit-card { display: flex; align-items: center; justify-content: center; padding: 14px 16px !important; min-height: 60px; border: 1px solid #3f6e811a; border-radius: 8px !important; box-shadow: none; background: #fffdf8; }
+:host .benefits-section .benefit-card:hover { transform: none; box-shadow: none; }
+:host .benefits-section .benefit-card h3 { margin: 0; text-align: center; font-size: 15px !important; font-weight: 500; line-height: 1.4; }
+
+/* Keep review navigation aligned with complete cards. */
+.testimonials-carousel { padding-inline: 0; }
+.testimonial-card { min-width: 0; scroll-snap-stop: always; }
+.testimonial-text { overflow-wrap: anywhere; }
+.testimonial-author > div:last-child { min-width: 0; overflow-wrap: anywhere; }
+.author-avatar { flex-shrink: 0; }
+@media (prefers-reduced-motion: reduce) { .testimonials-carousel { scroll-behavior: auto; } }
+
+
+/* Minimal, uniform benefits. */
+:host .benefits-section .benefit-card { min-height: 70px; padding: 18px 16px !important; border: 1px solid #dedfd7; border-radius: 10px !important; background: #fffdf8; box-shadow: none; }
+:host .benefits-section .benefit-card::before { display: none; }
+:host .benefits-section .benefit-card h3 { font-weight: 600; color: #24485a; }
+:host .benefits-section .benefit-card:hover { transform: none; box-shadow: none; }
+@media (max-width: 768px) { :host .benefits-section .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 360px) { :host .benefits-section .grid { grid-template-columns: 1fr; } }

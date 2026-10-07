@@ -1,3 +1,4 @@
+import { WhatsappSelectorComponent } from './shared/whatsapp-selector/whatsapp-selector.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
@@ -11,7 +12,8 @@ import { WhatsappButtonComponent } from './shared/whatsapp-button/whatsapp-butto
     RouterOutlet,
     HeaderComponent,
     FooterComponent,
-    WhatsappButtonComponent
+    WhatsappButtonComponent,
+    WhatsappSelectorComponent
   ],
   template: `
     <app-header></app-header>
@@ -20,6 +22,7 @@ import { WhatsappButtonComponent } from './shared/whatsapp-button/whatsapp-butto
     </main>
     <app-footer></app-footer>
     <app-whatsapp-button></app-whatsapp-button>
+    <app-whatsapp-selector></app-whatsapp-selector>
   `,
   styles: [`
     main {

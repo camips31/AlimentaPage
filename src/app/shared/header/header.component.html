@@ -57,7 +57,7 @@
 
       </ul>
       <div class="nav-cta" [class.active]="menuOpen">
-          <a href="https://wa.me/59178250459?text=Hola%2C%20quiero%20agendar%20una%20consulta" 
+          <a (click)="whatsapp.open('Hola, quiero agendar una consulta', $event)" aria-haspopup="dialog" href="https://wa.me/59178250459?text=Hola%2C%20quiero%20agendar%20una%20consulta" 
              target="_blank" 
              class="btn btn-primary"
              (click)="closeMenu()">

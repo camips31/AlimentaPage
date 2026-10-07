@@ -13,9 +13,13 @@
             @if (product.image) { <img [src]="product.image" [alt]="product.name" width="120" height="120" loading="lazy"> }
             @else { <span class="material-icons" aria-hidden="true">eco</span> }
           </div>
-          <span class="product-caption"><strong>{{ product.name }}</strong><span class="product-prompt">Ver descripción <span aria-hidden="true">+</span></span></span>
+          <span class="product-caption"><strong>{{ product.name }}</strong>
+            @if (product.presentations?.length) { <span class="product-price-label">{{ product.presentations!.length > 1 ? 'Desde ' : '' }}{{ product.presentations![0].price }} Bs</span> }
+            @if (product.priceNote) { <span class="product-price-note">{{ product.priceNote }}</span> }<span class="product-prompt">Ver detalles <span aria-hidden="true">+</span></span></span>
         </summary>
-        <div class="product-expanded"><p>{{ product.description }}</p>@if(product.ingredients) { <p class="product-composition"><strong>Ingredientes:</strong> {{ product.ingredients }}</p> }</div>
+        <div class="product-expanded">
+          @if (product.presentations?.length) { <dl class="product-presentations">@for (option of product.presentations; track option.size) { <div><dt>{{ option.size }}</dt><dd>{{ option.price }} Bs</dd></div> }</dl> }
+<p>{{ product.description }}</p>@if(product.ingredients) { <p class="product-composition"><strong>Ingredientes:</strong> {{ product.ingredients }}</p> }</div>
       </details>
     }
   </div>

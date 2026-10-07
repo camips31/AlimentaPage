@@ -27,13 +27,33 @@ export const TEAM = [
       philosophy: 'Nutricionista dietista enfocada en el diseño de planes de alimentación personalizados y el acompañamiento integral de pacientes. Me enfoco en promover la salud a través de la construcción de hábitos sostenibles, con la empatía para guiar a las personas hacia una mejor calidad de vida.'
     },
     {
-      name: 'Lic. Valeria Isabel Carrillo Sainz',
-      specialty: 'Nutrición Deportiva y Trastornos de la Conducta Alimentaria. Psiconutrición',
-      credential: 'C - 6144191',
-      city: 'La Paz',
-      id: 'valeria-carrillo',
-      image: ''
-    },
+      "name": "Lic. Valeria Isabel Carrillo Sainz",
+      "specialty": "Nutrición Deportiva, Trastornos de la Conducta Alimentaria y Psiconutrición",
+      "credential": "C - 6144191",
+      "city": "Barcelona · Dirección de Alimenta Bolivia",
+      "id": "valeria-carrillo",
+      "image": "",
+      "description": "Dietista-nutricionista con enfoque integral e individualizado. Actualmente ejerce en Barcelona, donde combina la consulta clínica, la gestión de servicios de nutrición y el acompañamiento a sus pacientes. Desde 2021 dirige Alimenta en Bolivia, coordinando equipos, procesos y administración de forma remota.",
+      "education": [
+            "Grado en Nutrición Humana y Dietética — Universidad Mayor de San Andrés, Bolivia.",
+            "Máster en Nutrición Deportiva y Actividad Física — Universitat de Barcelona.",
+            "Postgrado en Márketing y Comunicación — Universidad Abat Oliva CEU, Barcelona, España.",
+            "Formación de certificación ISAK Nivel 1 en antropometría."
+      ],
+      "specializations": [
+            "Nutrición deportiva para personas que practican actividad física amateur y deportistas de alto rendimiento.",
+            "Trastornos de la conducta alimentaria.",
+            "Psiconutrición con coaching nutricional.",
+            "Atención de adultos con obesidad, enfermedades metabólicas y necesidades relacionadas con la salud de la mujer.",
+            "Patologías digestivas complejas: síndrome del intestino irritable (SII), diverticulosis, estreñimiento, intolerancias y alergias alimentarias."
+      ],
+      "languages": [
+            "Español",
+            "Inglés (C1)",
+            "Catalán (B1)"
+      ],
+      "philosophy": "Su trabajo une rigor clínico, liderazgo y una comunicación cercana, con atención integral adaptada a cada paciente."
+},
     {
       name: 'Lic. Mariel Llaguno Gómez',
       specialty: 'Nutrición en Recomposición Corporal y Bariatría',

@@ -572,3 +572,48 @@
   :host .timeline-item { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px; border-top: 0; border-left: 2px solid #d7dfcc; padding: 8px 0 8px 14px; }
   :host .timeline-year { font-size: 14px; margin: 0; }
 }
+
+/* Directional milestones in Nuestro Recorrido. */
+:host .timeline { gap: 30px; }
+:host .timeline-item { border-top: 0; padding-top: 0; position: relative; }
+:host .timeline-item:not(:last-child)::after { content: '?'; position: absolute; right: -24px; top: 0; color: #3f6e81; font-size: 22px; line-height: 24px; }
+@media (max-width: 650px) {
+  :host .timeline { gap: 20px; }
+  :host .timeline-item { border-left: 0; padding: 0; }
+  :host .timeline-item:not(:last-child)::after { content: '?'; top: auto; bottom: -21px; left: 12px; right: auto; font-size: 18px; line-height: 20px; }
+}
+
+/* Continuous timeline drawn with CSS, without font-dependent arrows. */
+:host .timeline { position: relative; gap: 24px; padding-top: 22px; }
+:host .timeline::before { content: ''; display: block; position: absolute; left: 5px; right: 0; top: 5px; bottom: auto; width: auto; height: 2px; background: #8fa6ac; }
+:host .timeline::after { content: ''; position: absolute; top: 1px; right: 0; width: 8px; height: 8px; border-top: 2px solid #8fa6ac; border-right: 2px solid #8fa6ac; transform: rotate(45deg); }
+:host .timeline-item { position: relative; border: 0; padding: 0; }
+:host .timeline-item::before { content: ''; position: absolute; left: 0; top: -21px; width: 10px; height: 10px; border-radius: 50%; background: #3f6e81; }
+:host .timeline-item:not(:last-child)::after { display: none; }
+@media (max-width: 650px) {
+ :host .timeline { padding: 0 0 20px 24px; gap: 20px; }
+ :host .timeline::before { left: 4px; right: auto; top: 5px; bottom: 0; width: 2px; height: auto; }
+ :host .timeline::after { left: 1px; right: auto; top: auto; bottom: 0; transform: rotate(135deg); }
+ :host .timeline-item::before { top: 5px; left: -24px; }
+}
+
+/* Balanced history columns and controlled justified line lengths. */
+:host .history-section .content-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); max-width: 920px; gap: 36px !important; align-items: center; }
+:host .history-section .text-content { min-width: 0; }
+:host .history-section .text-content p { text-align: justify !important; text-align-last: left; text-justify: inter-word; hyphens: auto; overflow-wrap: break-word; font-size: 15px !important; line-height: 1.65 !important; margin: 0 0 12px; }
+:host .history-section .text-content p:last-child { margin-bottom: 0; }
+:host .history-section .image-content img { width: 100%; height: auto; max-height: none; aspect-ratio: auto; object-fit: contain; }
+@media (max-width: 700px) { :host .history-section .content-grid { grid-template-columns: 1fr; max-width: 480px; gap: 22px !important; } }
+
+/* Center each value's icon, heading and description on the same axis. */
+:host .values-section .value-card { text-align: center; }
+:host .values-section .value-icon { display: flex; align-items: center; justify-content: center; height: 38px; margin: 0 0 12px; }
+:host .values-section .value-icon img { display: block; margin: 0; object-fit: contain; }
+:host .values-section .value-card h3 { text-align: center; margin: 0 0 8px; }
+:host .values-section .value-card p { text-align: center; max-width: 240px; margin: 0 auto; line-height: 1.55; }
+
+/* Center incomplete rows while keeping equal value widths. */
+:host .values-section .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+:host .values-section .value-card { flex: 0 0 calc((100% - 36px) / 4); min-width: 0; box-sizing: border-box; }
+@media (max-width: 760px) { :host .values-section .value-card { flex-basis: calc((100% - 12px) / 2); } }
+@media (max-width: 380px) { :host .values-section .value-card { flex-basis: 100%; } }

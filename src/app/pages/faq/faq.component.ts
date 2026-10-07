@@ -1,3 +1,5 @@
+import { inject } from '@angular/core';
+import { WhatsappService } from '../../shared/whatsapp-selector/whatsapp.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -16,6 +18,7 @@ interface FaqItem {
   styleUrl: './faq.component.css'
 })
 export class FaqComponent {
+  readonly whatsapp = inject(WhatsappService);
   selectedCategory: string = 'Todas';
 
   categories = [
@@ -112,9 +115,7 @@ export class FaqComponent {
   }
 
   contactWhatsApp() {
-    const phone = '59178250459';
     const message = 'Hola! Tengo una pregunta que no encontré en las FAQ';
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    this.whatsapp.open(message);
   }
 }

@@ -1,3 +1,5 @@
+import { inject } from '@angular/core';
+import { WhatsappService } from '../whatsapp-selector/whatsapp.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -10,6 +12,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  readonly whatsapp = inject(WhatsappService);
   menuOpen = false;
 
   toggleMenu() {

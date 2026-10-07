@@ -227,3 +227,9 @@
 .product-expanded { padding: 0 18px 18px; }
 @media (max-width: 1000px) { .visual-products { grid-template-columns: repeat(2, minmax(0, 280px)); } }
 @media (max-width: 600px) { .visual-products { grid-template-columns: minmax(0, 300px); } .product-thumbnail { height: auto; } }
+
+.product-price-label { display:block; margin-top:8px; font-size:17px; font-weight:600; color:#3f6e81; }
+.product-price-note { display:block; margin-top:8px; font-size:13px; color:#68726c; }
+.product-presentations { margin:0 0 16px; font-size:14px; }
+.product-presentations div { display:flex; justify-content:space-between; gap:12px; padding:8px 0; border-bottom:1px solid #e8e3d8; }
+.product-presentations dd { margin:0; font-weight:600; color:#315f71; }

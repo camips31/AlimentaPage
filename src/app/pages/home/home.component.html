@@ -65,11 +65,12 @@
 </section>
 
 <!-- Nuestro Proceso Integrativo -->
-<section class="process">
+<section class="process" id="proceso-integrativo">
   <div class="container">
     <h2 class="section-title">Nuestro Proceso Integrativo</h2>
     <div class="process-grid">
-      <div class="process-step" *ngFor="let step of processSteps">
+      <div class="process-step" *ngFor="let step of processSteps; let i = index; let first = first; let last = last">
+        <div class="process-marker"><span class="process-number">{{ i + 1 }}</span><span class="process-endpoint" *ngIf="first || last">{{ first ? 'Inicio' : 'Meta' }}</span></div>
         <h4>{{ step.title }}</h4>
         <p>{{ step.description }}</p>
       </div>
@@ -81,17 +82,9 @@
 <section class="benefits-section bg-cream-soft">
   <div class="container">
     <h2 class="section-title">¿Por Qué Elegir Alimenta?</h2>
-    <p class="section-subtitle">
-      Nos destacamos por nuestro compromiso con tu salud y satisfacción
-    </p>
-    <div class="grid grid-4">
+<div class="grid grid-4">
       <div class="benefit-card" *ngFor="let benefit of benefits">
-        <div class="benefit-icon">
-          <img *ngIf="benefit.iconPath; else materialBenefitIcon" [src]="benefit.iconPath" [alt]="benefit.title" class="alimenta-icon">
-          <ng-template #materialBenefitIcon><span class="material-icons">{{ benefit.icon }}</span></ng-template>
-        </div>
-        <h3>{{ benefit.title }}</h3>
-        <p>{{ benefit.description }}</p>
+<h3>{{ benefit.title }}</h3>
       </div>
     </div>
   </div>
