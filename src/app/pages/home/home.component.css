@@ -590,9 +590,9 @@
 :host .specialties { padding: 0 !important; margin: 0; width: 100%; background: transparent; }
 :host .specialties-grid { width: 100%; max-width: none; margin: 0; padding: 0; gap: 0; }
 :host .specialty-panel { padding: 28px 20px 24px !important; min-height: 0 !important; justify-content: flex-start; border: 0; }
-:host .specialty-panel:nth-child(1) { background: #d8ecf7; }
-:host .specialty-panel:nth-child(2) { background: #f0dfcf; }
-:host .specialty-panel:nth-child(3) { background: #f7efe7; }
+:host .specialty-panel:nth-child(1) { background: #f0dfcf; }
+:host .specialty-panel:nth-child(2) { background: #f7efe7; }
+
 :host .specialty-panel::before { display: block; top: 12px; }
 :host .specialty-icon { height: 44px !important; margin-bottom: 12px; }
 :host .specialty-panel h3 { font-size: 16px; line-height: 1.35; }
@@ -681,8 +681,8 @@
  :host .process-step:not(:last-child)::before { top: auto; bottom: -20px; left: 12px; right: auto; width: 6px; height: 6px; }
 }
 
-/* Three core areas on the home page. */
-:host .specialties-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+/* Two core areas on the home page. */
+:host .specialties-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 :host .specialty-panel:last-child { grid-column: auto; }
 :host .specialty-panel p { max-width: 320px; margin-inline: auto; }
 @media (max-width: 650px) { :host .specialties-grid { grid-template-columns: 1fr; } }

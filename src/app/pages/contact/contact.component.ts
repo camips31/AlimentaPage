@@ -30,7 +30,7 @@ export class ContactComponent {
 
   contactInfo = {
     whatsapp: '+591 78250459',
-    emails: ['alimenta.vc@gmail.com', 'alimentaempresas@gmail.com'],
+    emails: ['alimentaempresas@gmail.com'],
     locations: [
       {
         city: 'Sede La Paz',

@@ -36,12 +36,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   services = [
   {
-    "icon": "local_hospital",
-    "iconPath": "assets/icons/vegetable-icon (1).png",
-    "title": "Nutrición Clínica",
-    "description": "Atención nutricional para cuidar tu salud y acompañar condiciones clínicas."
-  },
-  {
     "icon": "restaurant",
     "iconPath": "assets/icons/vegetable-icon (2).png",
     "title": "Nutrición Personalizada",

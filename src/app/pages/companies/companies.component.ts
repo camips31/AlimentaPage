@@ -117,9 +117,18 @@ export class CompaniesComponent {
 ];
 
   scrollCollaborations(track: HTMLElement, direction: number) {
-    const photo = track.firstElementChild as HTMLElement | null;
-    if (!photo) return;
-    track.scrollBy({ left: direction * (photo.offsetWidth + 16), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    const photos = Array.from(track.children) as HTMLElement[];
+    if (!photos.length) return;
+    const max = Math.max(0, track.scrollWidth - track.clientWidth);
+    const origin = photos[0].getBoundingClientRect().left;
+    const positions = [...new Set(photos.map(photo =>
+      Math.min(max, Math.max(0, photo.getBoundingClientRect().left - origin))
+    ))];
+    const current = track.scrollLeft;
+    const target = direction > 0
+      ? positions.find(position => position > current + 2) ?? 0
+      : [...positions].reverse().find(position => position < current - 2) ?? max;
+    track.scrollTo({ left: target, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }
 
   internshipPhotos = [

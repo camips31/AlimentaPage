@@ -403,10 +403,10 @@ button:hover,
 .collaboration-controls button { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #d8ded4; background: #fffdf7; color: #3f6e81; font-size: 22px; cursor: pointer; }
 .collaboration-controls button:hover { background: #3f6e81; color: white; }
 .collaboration-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 32px) / 3); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #a7b9ae transparent; padding-bottom: 12px; }
-.collaboration-track img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; scroll-snap-align: start; }
+.collaboration-track img { display: block; min-width: 0; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; scroll-snap-align: start; }
 .collaboration-controls button:focus-visible, .collaboration-track:focus-visible { outline: 2px solid #3f6e81; outline-offset: 3px; }
-@media (max-width: 800px) { .collaboration-track { grid-auto-columns: calc((100% - 16px) / 2); } }
-@media (max-width: 540px) { .collaboration-track { grid-auto-columns: 86%; } }
+@media (max-width: 800px) { .collaboration-track { grid-auto-columns: 100%; } }
+
 
 /* Aligned collaboration copy and compact photo navigation. */
 :host .collaborators-section .section-heading { text-align: center; margin-bottom: 14px; }
