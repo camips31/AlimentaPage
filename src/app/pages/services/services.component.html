@@ -17,7 +17,7 @@
                   <ul>
                     @for (item of group.items; track item) { <li>{{ item }}</li> }
                   </ul>
-                  <button type="button" class="service-link" (click)="contactWhatsApp('Hola, me interesa ' + group.title)">Consultar por WhatsApp <span aria-hidden="true">↗</span></button>
+                  <button type="button" class="service-link" (click)="contactWhatsApp('Hola, quisiera agendar una consulta de ' + group.title + '. ¿Podrían indicarme la disponibilidad?')">Consultar por WhatsApp <span aria-hidden="true">↗</span></button>
                 </div>
               </details>
             </div>

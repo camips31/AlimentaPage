@@ -99,7 +99,7 @@ export class ServicesComponent {
         'Coordinación con médicos tratantes'
       ],
       duration: 'Según necesidades individuales',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición Clínica del Adulto'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Nutrición Clínica del Adulto. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 2,
@@ -115,7 +115,7 @@ export class ServicesComponent {
         'Prevención de complicaciones'
       ],
       duration: 'Seguimiento continuo',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición para Cirugía Bariátrica'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Nutrición para Cirugía Bariátrica. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 3,
@@ -131,7 +131,7 @@ export class ServicesComponent {
         'Enfoque anti-dietas'
       ],
       duration: 'Mínimo 3 meses',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Salud Hormonal Femenina'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Salud Hormonal Femenina. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 4,
@@ -147,7 +147,7 @@ export class ServicesComponent {
         'Manejo de selectividad alimentaria'
       ],
       duration: 'Según necesidades del niño',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición Pediátrica'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Nutrición Pediátrica. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 5,
@@ -163,7 +163,7 @@ export class ServicesComponent {
         'Prevención de trastornos alimentarios'
       ],
       duration: 'Mínimo 2 meses',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición en la Adolescencia'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Nutrición en la Adolescencia. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 6,
@@ -179,7 +179,7 @@ export class ServicesComponent {
         'Baby Led Weaning (BLW)'
       ],
       duration: 'Según etapa',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición maternoinfantil'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Nutrición maternoinfantil. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 7,
@@ -195,7 +195,7 @@ export class ServicesComponent {
         'Estrategias de suplementación'
       ],
       duration: 'Mínimo 3 meses',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición Deportiva'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Nutrición Deportiva. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 8,
@@ -211,7 +211,7 @@ export class ServicesComponent {
         'Recuperación post-entrenamiento'
       ],
       duration: 'Mínimo 2 meses',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición para Rendimiento Físico'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Nutrición para Rendimiento Físico. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 9,
@@ -227,7 +227,7 @@ export class ServicesComponent {
         'Seguimiento continuo'
       ],
       duration: 'Según objetivos (mínimo 3 meses)',
-      whatsappMsg: '¡Hola! Me interesa el servicio de Recomposición Corporal'
+      whatsappMsg: 'Hola, quisiera agendar una consulta de Recomposición Corporal. ¿Podrían indicarme la disponibilidad?'
     },
     {
       id: 10,
@@ -243,7 +243,7 @@ export class ServicesComponent {
         'Material educativo incluido'
       ],
       duration: 'Según programación',
-      whatsappMsg: '¡Hola! Me interesa información sobre los Talleres y Educación Nutricional'
+      whatsappMsg: 'Hola, quisiera participar en sus talleres de educación nutricional. ¿Podrían indicarme las próximas fechas y cómo inscribirme?'
     }
   ];
 

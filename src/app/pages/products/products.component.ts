@@ -321,7 +321,7 @@ export class ProductsComponent {
 ];
 
   contactWhatsApp(productName: string) {
-    const message = `¡Hola! Me interesa el producto: ${productName}`;
+    const message = `Hola, quisiera consultar sobre ${productName}. ¿Podrían indicarme qué opciones tienen disponibles y cómo realizar un pedido?`;
     this.whatsapp.open(message);
   }
 }

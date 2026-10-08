@@ -115,7 +115,7 @@ export class FaqComponent {
   }
 
   contactWhatsApp() {
-    const message = '¡Hola! Tengo una pregunta que no encontré en las FAQ';
+    const message = 'Hola, tengo una duda sobre sus servicios que no pude resolver en la sección de preguntas frecuentes. ¿Podrían ayudarme?';
     this.whatsapp.open(message);
   }
 }

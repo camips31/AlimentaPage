@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy() { if (this.backgroundTimer) clearInterval(this.backgroundTimer); }
   selectBackground(index: number) { this.activeBackground = index; }
 
-  whatsappLink = 'https://wa.me/59178250459?text=Hola%2C%20quiero%20agendar%20una%20consulta';
+  whatsappLink = 'https://wa.me/59178250459?text=Hola%2C%20quisiera%20agendar%20una%20consulta.%20%C2%BFPodr%C3%ADan%20orientarme%20sobre%20el%20servicio%20m%C3%A1s%20adecuado%20e%20indicarme%20la%20disponibilidad%3F';
 
 
   processSteps = [

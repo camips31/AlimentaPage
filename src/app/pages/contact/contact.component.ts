@@ -81,7 +81,7 @@ export class ContactComponent {
     this.contactWhatsApp('Hola, soy ' + name + '.\n\n' + message);
   }
 
-  contactWhatsApp(message: string = '¡Hola! Me gustaría agendar una consulta') {
+  contactWhatsApp(message: string = 'Hola, quisiera agendar una consulta. ¿Podrían orientarme sobre el servicio más adecuado e indicarme la disponibilidad?') {
     this.whatsapp.open(message);
   }
 

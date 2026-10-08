@@ -178,7 +178,7 @@ export class CompaniesComponent {
   ];
 
   contactWhatsApp(subject = 'planes y servicios para empresas') {
-    const message = `¡Hola! Quiero más información sobre ${subject}.`;
+    const message = `Hola, quisiera solicitar un presupuesto de ${subject} para nuestra organización. ¿Qué información necesitan para preparar una propuesta?`;
     this.whatsapp.open(message);
   }
 }

@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
     <a 
       (click)="whatsapp.open(undefined, $event)"
       aria-haspopup="dialog"
-      href="https://wa.me/59178250459?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Alimenta" 
+      href="https://wa.me/59178250459?text=Hola%2C%20quisiera%20agendar%20una%20consulta%20de%20Nutrici%C3%B3n%20Cl%C3%ADnica.%20%C2%BFPodr%C3%ADan%20indicarme%20la%20disponibilidad%3F" 
       target="_blank"
       rel="noopener noreferrer"
       class="whatsapp-float"
