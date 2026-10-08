@@ -717,3 +717,14 @@
 :host .benefits-section .benefit-card:hover { transform: none; box-shadow: none; }
 @media (max-width: 768px) { :host .benefits-section .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 360px) { :host .benefits-section .grid { grid-template-columns: 1fr; } }
+
+/* Consistent process connectors, drawn without text arrow glyphs. */
+:host .process-marker { position: relative; z-index: 1; }
+:host .process-number { flex-shrink: 0; }
+:host .process-endpoint { background: #fff; padding-right: 8px; }
+:host .process-step:not(:last-child)::after { content: ''; left: 110px; right: 14px; top: 15px; height: 1px; background: #b7c8cd; font-size: 0; line-height: 0; }
+:host .process-step:not(:last-child)::before { content: ''; position: absolute; right: 14px; top: 12px; width: 6px; height: 6px; border-top: 1px solid #8ca7b0; border-right: 1px solid #8ca7b0; transform: rotate(45deg); }
+@media (max-width: 800px) {
+ :host .process-step:not(:last-child)::after { top: 40px; bottom: -28px; left: 15px; right: auto; width: 1px; height: auto; }
+ :host .process-step:not(:last-child)::before { top: auto; bottom: -28px; left: 12px; right: auto; transform: rotate(135deg); }
+}
