@@ -4,7 +4,7 @@
       <h1 class="visually-hidden">Planes y servicios para pacientes</h1>
       <p class="availability-note">Mismos planes y precios en La Paz, Santa Cruz y de forma remota.</p>
       @for (group of planGroups; track group.title; let groupIndex = $index) {
-        <div class="plan-group" role="region" [attr.aria-labelledby]="'plan-group-' + groupIndex">
+        <div class="plan-group" [class.nutrition-group]="groupIndex === 0" role="region" [attr.aria-labelledby]="'plan-group-' + groupIndex">
           <h2 class="plan-group-title" [id]="'plan-group-' + groupIndex">{{ group.title }}</h2>
           <div class="plans-grid">
             @for (slot of visiblePlans(group); track slot.id) {

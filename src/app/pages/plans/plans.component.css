@@ -414,3 +414,11 @@
 :host .plan-switch button:focus-visible { outline: 2px solid #293a40; outline-offset: 2px; }
 :host .plan-details { flex: 1; }
 @media (prefers-reduced-motion: reduce) { :host .plan-switch button { transition: none; } }
+
+/* Keep the four nutrition options together, including Metodo Fit. */
+:host .plans-section > .container { max-width: 1480px !important; }
+:host .nutrition-group .plans-grid,
+:host .nutrition-group .plan-group-title { max-width: 1432px; }
+:host .nutrition-group .plans-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1199px) { :host .nutrition-group .plans-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { :host .nutrition-group .plans-grid { grid-template-columns: 1fr; } }
