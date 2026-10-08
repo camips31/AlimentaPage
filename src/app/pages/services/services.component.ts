@@ -22,7 +22,7 @@ export class ServicesComponent {
   careSteps = [
     { icon: 'assignment', title: 'Evaluación', description: 'Conocemos tu salud, tus hábitos y tus objetivos.' },
     { icon: 'restaurant', title: 'Plan personalizado', description: 'Una alimentación adaptada a tus gustos y necesidades.' },
-    { icon: 'groups', title: 'Talleres', description: 'Aprende herramientas prácticas, presencial u online.' },
+    { icon: 'groups', title: 'Talleres', description: 'Aprende herramientas prácticas, presenciales u online.' },
     { icon: 'favorite_border', title: 'Seguimiento', description: 'Te acompañamos y ajustamos tu plan en el camino.' }
   ];
   serviceHighlights = [
