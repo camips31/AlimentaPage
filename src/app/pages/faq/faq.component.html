@@ -5,7 +5,9 @@
       <div class="categories-filter">
         @for (category of categories; track category) {
           <button
+            type="button"
             class="category-btn"
+            [attr.aria-pressed]="selectedCategory === category"
             [class.active]="selectedCategory === category"
             (click)="filterByCategory(category)">
             {{ category }}
@@ -16,7 +18,7 @@
       <div class="faqs-list">
         @for (faq of filteredFaqs; track faq.question) {
           <div class="faq-item" [class.open]="faq.isOpen">
-            <button class="faq-question" (click)="toggleFaq(faq)">
+            <button type="button" class="faq-question" [attr.aria-expanded]="faq.isOpen" (click)="toggleFaq(faq)">
               <span class="question-text">{{ faq.question }}</span>
               <span class="toggle-icon">{{ faq.isOpen ? '-' : '+' }}</span>
             </button>

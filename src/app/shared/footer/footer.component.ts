@@ -29,6 +29,7 @@ export class FooterComponent {
   };
 
   sendFooterWhatsApp(): void {
+    if (!this.footerForm.name.trim() || !this.footerForm.message.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.footerForm.email.trim())) return;
     const message = `Hola, soy ${this.footerForm.name}.
 Mi correo es: ${this.footerForm.email}
 

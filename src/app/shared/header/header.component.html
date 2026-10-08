@@ -57,10 +57,9 @@
 
       </ul>
       <div class="nav-cta" [class.active]="menuOpen">
-          <a (click)="whatsapp.open('Hola, quisiera agendar una consulta. ¿Podrían orientarme sobre el servicio más adecuado e indicarme la disponibilidad?', $event)" aria-haspopup="dialog" href="https://wa.me/59178250459?text=Hola%2C%20quisiera%20agendar%20una%20consulta.%20%C2%BFPodr%C3%ADan%20orientarme%20sobre%20el%20servicio%20m%C3%A1s%20adecuado%20e%20indicarme%20la%20disponibilidad%3F" 
+          <a (click)="whatsapp.open('Hola, quisiera agendar una consulta. ¿Podrían orientarme sobre el servicio más adecuado e indicarme la disponibilidad?', $event); closeMenu()" aria-haspopup="dialog" href="https://wa.me/59178250459?text=Hola%2C%20quisiera%20agendar%20una%20consulta.%20%C2%BFPodr%C3%ADan%20orientarme%20sobre%20el%20servicio%20m%C3%A1s%20adecuado%20e%20indicarme%20la%20disponibilidad%3F" 
              target="_blank" 
-             class="btn btn-primary"
-             (click)="closeMenu()">
+             class="btn btn-primary">
             Agenda tu cita
           </a>
           <a routerLink="/empresas"
