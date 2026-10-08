@@ -38,7 +38,7 @@ export class FaqComponent {
     },
     {
       question: '¿La atención es online o presencial?',
-      answer: 'Tenemos ambas modalidades de atención. Los horarios varían de acuerdo a la disponibilidad de nuestras nutricionistas.',
+      answer: 'Tenemos ambas modalidades de atención. Los horarios varían de acuerdo con la disponibilidad de nuestras nutricionistas.',
       isOpen: false,
       category: 'Atención'
     },
@@ -50,7 +50,7 @@ export class FaqComponent {
     },
     {
       question: '¿Se realizan planes personalizados?',
-      answer: 'Sí, todos nuestros planes son 100% personalizados, de acuerdo a las necesidades y gustos de cada uno de nuestros pacientes.',
+      answer: 'Sí, todos nuestros planes son 100% personalizados, de acuerdo con las necesidades y gustos de cada uno de nuestros pacientes.',
       isOpen: false,
       category: 'Atención'
     },
@@ -74,7 +74,7 @@ export class FaqComponent {
     },
     {
       question: '¿Ofrecen planes para empresas?',
-      answer: 'Sí, según las necesidades o disposición de la empresa se elabora un plan especial acorde a la cantidad de personas, a las actividades o con un enfoque de acuerdo a su trabajo.',
+      answer: 'Sí, según las necesidades o disposición de la empresa se elabora un plan especial acorde con la cantidad de personas, a las actividades o con un enfoque de acuerdo con su trabajo.',
       isOpen: false,
       category: 'General'
     },
@@ -91,7 +91,7 @@ export class FaqComponent {
       category: 'Pagos y Seguros'
     },
     {
-      question: '¿Puedo un llevar acompañante a la consulta?',
+      question: '¿Puedo llevar un acompañante a la consulta?',
       answer: 'Por supuesto, puedes llevar un acompañante a la consulta.',
       isOpen: false,
       category: 'Consultas'
@@ -115,7 +115,7 @@ export class FaqComponent {
   }
 
   contactWhatsApp() {
-    const message = 'Hola! Tengo una pregunta que no encontré en las FAQ';
+    const message = '¡Hola! Tengo una pregunta que no encontré en las FAQ';
     this.whatsapp.open(message);
   }
 }

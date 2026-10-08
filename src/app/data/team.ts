@@ -1,7 +1,7 @@
 export const TEAM = [
     {
       name: 'Lic. María René Nuñez Menacho',
-      specialty: 'Nutrición Pediátrica y Materno Infantil',
+      specialty: 'Nutrición pediátrica y maternoinfantil',
       credential: 'N - 9664083',
       city: 'Santa Cruz',
       id: 'maria-rene-nunez',
@@ -79,7 +79,7 @@ export const TEAM = [
     },
     {
       name: 'Lic. Lucía Pinell',
-      specialty: 'Psicología Cognitivo Conductual',
+      specialty: 'Psicología cognitivo-conductual',
       city: 'La Paz',
       id: 'lucia-pinell',
       image: 'assets/Profiles/normalized/Lucia.png',

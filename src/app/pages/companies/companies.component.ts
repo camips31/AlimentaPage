@@ -48,7 +48,7 @@ export class CompaniesComponent {
   {
     "title": "Alianzas Institucionales y ONG",
     "paragraphs": [
-      "Adaptamos nuestro acompañamiento nutricional y psicológico a organizaciones con una misión social, integrándonos a los programas que ya tienen en marcha en lugar de proponer algo aislado — con condiciones accesibles pensadas para la población que atienden."
+      "Adaptamos nuestro acompañamiento nutricional y psicológico a organizaciones con una misión social, integrándonos a los programas que ya tienen en marcha en lugar de proponer algo aislado; con condiciones accesibles pensadas para la población que atienden."
     ]
   },
   {
@@ -72,13 +72,13 @@ export class CompaniesComponent {
   {
     "title": "Charlas de Nutrición en Empresas",
     "paragraphs": [
-      "Llevamos una charla de nutrición puntual a tu empresa, sin necesidad de un convenio de bienestar completo — ideal como primer acercamiento o como actividad para una fecha específica (aniversario de la empresa, semana de la salud, cierre de año)."
+      "Llevamos una charla de nutrición puntual a tu empresa, sin necesidad de un convenio de bienestar completo; ideal como primer acercamiento o como actividad para una fecha específica (aniversario de la empresa, semana de la salud, cierre de año)."
     ]
   },
   {
     "title": "Tercerización de Menús para Guarderías",
     "paragraphs": [
-      "Diseñamos y supervisamos los menús de tu guardería con respaldo nutricional profesional, sin que la institución necesite contratar a un nutricionista en planilla — con revisión y actualización periódica según la edad y las necesidades de los niños."
+      "Diseñamos y supervisamos los menús de tu guardería con respaldo nutricional profesional, sin que la institución necesite contratar a un nutricionista en planilla, con revisión y actualización periódica según la edad y las necesidades de los niños."
     ]
   },
   {
@@ -90,7 +90,7 @@ export class CompaniesComponent {
   {
     "title": "Presencia en Medios — Vocería Experta en Nutrición",
     "paragraphs": [
-      "Nuestras nutricionistas participan como invitadas en programas de radio y televisión, y como autoras de artículos de nutrición para revistas — llevando el nombre de Alimenta como referencia experta en medios de comunicación."
+      "Nuestras nutricionistas participan como invitadas en programas de radio y televisión, y como autoras de artículos de nutrición para revistas, llevando el nombre de Alimenta como referencia experta en medios de comunicación."
     ]
   }
 ];
@@ -172,13 +172,13 @@ export class CompaniesComponent {
       logo: 'assets/empresas/ptv.jpg'
     },
     {
-      name: 'Embajada Britanica',
+      name: 'Embajada Británica',
       logo: 'assets/empresas/embaja.britanica.jpg'
     }
   ];
 
   contactWhatsApp(subject = 'planes y servicios para empresas') {
-    const message = `Hola! Quiero mas informacion sobre ${subject}.`;
+    const message = `¡Hola! Quiero más información sobre ${subject}.`;
     this.whatsapp.open(message);
   }
 }

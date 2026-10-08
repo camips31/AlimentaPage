@@ -58,7 +58,7 @@ export class ContactComponent {
       name: 'Facebook',
       icon: 'thumb_up',
       url: 'https://www.facebook.com/share/1LCzxk5mQx/',
-      handle: 'Alimenta Centro de Nutricion - Bolivia'
+      handle: 'Alimenta Centro de Nutrición - Bolivia'
     },
     {
       name: 'TikTok',

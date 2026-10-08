@@ -18,18 +18,6 @@
   position: relative;
 }
 
-.hero-box::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(20, 30, 24, 0.48), rgba(20, 30, 24, 0.38)), url('/assets/hero-bowl-saludable.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 1;
-  pointer-events: none;
-}
-
 .hero-box > * {
   position: relative;
   z-index: 1;
@@ -357,15 +345,11 @@
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--spacing-md);
   margin-top: var(--spacing-md);
 }
 
 .process-step {
   text-align: left;
-  border-left: 4px solid var(--accent);
-  padding-left: 16px;
 }
 
 .process-step h4 {
@@ -406,22 +390,10 @@
   transform: translateY(-4px);
 }
 
-.benefit-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-sm);
-  color: var(--brand-sand);
-}
-
 .benefit-card h3 {
   color: #24485a;
   margin-bottom: 0.5rem;
   font-size: 1.05rem;
-}
-
-.benefit-card p {
-  color: rgba(45, 52, 54, 0.72);
-  font-size: 0.9rem;
-  line-height: 1.6;
 }
 
 /* Testimonios */
@@ -544,34 +516,6 @@
 }
 
 /* CTA Final */
-.cta-section {
-  padding: var(--spacing-xl) 0;
-  background-color: var(--bg-cream-soft);
-}
-
-.cta-content {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.cta-content h2 {
-  color: var(--primary-dark);
-  margin-bottom: var(--spacing-sm);
-}
-
-.cta-content p {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  margin-bottom: var(--spacing-md);
-}
-
-.cta-buttons {
-  display: flex;
-  gap: var(--spacing-sm);
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
 @media (max-width: 768px) {
   .hero-box {
@@ -637,8 +581,6 @@
     height: 36px;
     width: 36px;
   }
-  .cta-buttons { flex-direction: column; }
-  .cta-buttons .btn { width: 100%; }
 }
 
 /* Espaciado del inicio con el carrusel temporalmente desactivado. */
@@ -646,13 +588,11 @@
 
 /* Paneles originales a todo el ancho, sin franjas arriba o abajo. */
 :host .specialties { padding: 0 !important; margin: 0; width: 100%; background: transparent; }
-:host .specialties-grid { width: 100%; max-width: none; margin: 0; padding: 0; gap: 0; grid-template-columns: repeat(5,minmax(0,1fr)); }
+:host .specialties-grid { width: 100%; max-width: none; margin: 0; padding: 0; gap: 0; }
 :host .specialty-panel { padding: 28px 20px 24px !important; min-height: 0 !important; justify-content: flex-start; border: 0; }
 :host .specialty-panel:nth-child(1) { background: #d8ecf7; }
 :host .specialty-panel:nth-child(2) { background: #f0dfcf; }
 :host .specialty-panel:nth-child(3) { background: #f7efe7; }
-:host .specialty-panel:nth-child(4) { background: #cfe2dc; }
-:host .specialty-panel:nth-child(5) { background: #e2d7df; }
 :host .specialty-panel::before { display: block; top: 12px; }
 :host .specialty-icon { height: 44px !important; margin-bottom: 12px; }
 :host .specialty-panel h3 { font-size: 16px; line-height: 1.35; }
@@ -697,9 +637,8 @@
 /* Compact, title-only reasons to choose Alimenta. */
 :host .benefits-section .section-title { text-align: center; }
 :host .benefits-section .grid { gap: 12px; }
-:host .benefits-section .benefit-card { display: flex; align-items: center; justify-content: center; padding: 14px 16px !important; min-height: 60px; border: 1px solid #3f6e811a; border-radius: 8px !important; box-shadow: none; background: #fffdf8; }
-:host .benefits-section .benefit-card:hover { transform: none; box-shadow: none; }
-:host .benefits-section .benefit-card h3 { margin: 0; text-align: center; font-size: 15px !important; font-weight: 500; line-height: 1.4; }
+:host .benefits-section .benefit-card { display: flex; align-items: center; justify-content: center; }
+:host .benefits-section .benefit-card h3 { margin: 0; text-align: center; font-size: 15px !important; line-height: 1.4; }
 
 /* Keep review navigation aligned with complete cards. */
 .testimonials-carousel { padding-inline: 0; }
@@ -759,7 +698,6 @@
 .background-dot { border: 0; background: transparent; width: 32px; height: 44px; padding: 0; cursor: pointer; display: grid; place-items: center; }
 .background-dot span { width: 7px; height: 7px; border: 1px solid white; border-radius: 50%; background: transparent; }
 .background-dot.selected span { background: white; }
-.background-pause { color: white; border: 0; border-radius: 16px; background: #0004; padding: 8px 12px; min-height: 44px; font: inherit; font-size: 12px; cursor: pointer; }
 .hero-background-controls button:focus-visible { outline: 2px solid white; outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .hero-backgrounds img { transition: none; } }
 

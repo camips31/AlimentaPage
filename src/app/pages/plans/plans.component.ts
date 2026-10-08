@@ -32,7 +32,7 @@ export class PlansComponent {
           "Informe completo de estado nutricional"
         ],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Primera consulta nutricional",
+        "whatsappMsg": "¡Hola! Me interesa la primera consulta nutricional",
         "saving": ""
       },
       {
@@ -46,7 +46,7 @@ export class PlansComponent {
           "Taller de nutrición"
         ],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Plan 1 mes",
+        "whatsappMsg": "¡Hola! Me interesa el plan 1 mes",
         "saving": ""
       },
       {
@@ -60,7 +60,7 @@ export class PlansComponent {
           "Taller de nutrición"
         ],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Reconsulta de seguimiento",
+        "whatsappMsg": "¡Hola! Me interesa la reconsulta de seguimiento",
         "saving": ""
       },
       {
@@ -76,7 +76,7 @@ export class PlansComponent {
           "Por separado: primera consulta + 3 planes mensuales = 1380 Bs"
         ],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Plan 12 semanas",
+        "whatsappMsg": "¡Hola! Me interesa el plan 12 semanas",
         "saving": "Ahorra 400 Bs"
       },
       {
@@ -91,7 +91,7 @@ export class PlansComponent {
           "Metabolism Booster (30 cápsulas) o proteína vegana de soja (500 g): 350 Bs (referencia del combo: 470 Bs)"
         ],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa COMBO Método Fit",
+        "whatsappMsg": "¡Hola! Me interesa el COMBO Método Fit",
         "saving": "Ahorra 220 Bs (~13%)"
       }
     ]
@@ -107,7 +107,7 @@ export class PlansComponent {
         "duration": "30 minutos",
         "includes": [],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Primera visita de psicología",
+        "whatsappMsg": "¡Hola! Me interesa la primera visita de psicología",
         "saving": ""
       },
       {
@@ -118,7 +118,7 @@ export class PlansComponent {
         "duration": "60 minutos",
         "includes": [],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Primera consulta de psicología",
+        "whatsappMsg": "¡Hola! Me interesa la primera consulta de psicología",
         "saving": ""
       },
       {
@@ -129,7 +129,7 @@ export class PlansComponent {
         "duration": "160 Bs/visita",
         "includes": [],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Psicología: 4 sesiones",
+        "whatsappMsg": "¡Hola! Me interesa Psicología: 4 sesiones",
         "saving": "Ahorra 80 Bs"
       },
       {
@@ -140,7 +140,7 @@ export class PlansComponent {
         "duration": "155 Bs/visita",
         "includes": [],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Psicología: 6 sesiones",
+        "whatsappMsg": "¡Hola! Me interesa Psicología: 6 sesiones",
         "saving": "Ahorra 150 Bs"
       },
       {
@@ -151,7 +151,7 @@ export class PlansComponent {
         "duration": "145 Bs/visita",
         "includes": [],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Psicología: 10 sesiones",
+        "whatsappMsg": "¡Hola! Me interesa Psicología: 10 sesiones",
         "saving": "Ahorra 350 Bs"
       }
     ]
@@ -167,7 +167,7 @@ export class PlansComponent {
         "duration": "1 mes",
         "includes": [],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Plan de entrenamiento",
+        "whatsappMsg": "¡Hola! Me interesa el plan de entrenamiento",
         "saving": ""
       }
     ]
@@ -183,7 +183,7 @@ export class PlansComponent {
         "duration": "",
         "includes": [],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Nutrición a domicilio",
+        "whatsappMsg": "¡Hola! Me interesa la nutrición a domicilio",
         "saving": ""
       },
       {
@@ -197,7 +197,7 @@ export class PlansComponent {
           "Sin necesidad de agendar videollamada"
         ],
         "buttonText": "Reservar",
-        "whatsappMsg": "Hola! Me interesa Consulta asincrónica",
+        "whatsappMsg": "¡Hola! Me interesa la consulta asincrónica",
         "saving": ""
       }
     ]

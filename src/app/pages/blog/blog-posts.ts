@@ -39,11 +39,11 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "Y cuando hay una conducta o un momento de “debilidad” donde cedes al deseo el cerebro se relaja, se libera dopamina y la respuesta cognitiva es “ya arruiné la dieta, así que da igual lo que coma ahora”."
+        "text": "Y cuando hay una conducta o un momento de “debilidad” en el que cedes al deseo, el cerebro se relaja, se libera dopamina y la respuesta cognitiva es “ya arruiné la dieta, así que da igual lo que coma ahora”."
       },
       {
         "type": "paragraph",
-        "text": "Generando un episodio de atracón: se suele creer, sentir y decir «No podía parar» y se experimenta una sensación de culpa, debilidad, angustia y falta de fuerza de voluntad. Muchas veces después de esto se busca compensar con distintas conductas que pueden hacernos daño."
+        "text": "Esto puede generar un episodio de atracón: se suele creer, sentir y decir «No podía parar» y se experimenta una sensación de culpa, debilidad, angustia y falta de fuerza de voluntad. Muchas veces después de esto se busca compensar con distintas conductas que pueden hacernos daño."
       },
       {
         "type": "image",
@@ -70,7 +70,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "blocks": [
       {
         "type": "paragraph",
-        "text": "El acné es una afección cutánea bastante frecuente que ocasiona una inflamación de la piel. Esta ocurre con mayor frecuencia en adolescentes y adultos jóvenes, pero puede llegar a quedarse hasta la edad adulta en algunos casos. La mayoría de las veces, los brotes ocurren en la cara, pero también pueden salir en la espalda, el pecho y los hombros."
+        "text": "El acné es una afección cutánea bastante frecuente que ocasiona una inflamación de la piel. Esta afección ocurre con mayor frecuencia en adolescentes y adultos jóvenes, pero puede llegar a quedarse hasta la edad adulta en algunos casos. La mayoría de las veces, los brotes ocurren en la cara, pero también pueden salir en la espalda, el pecho y los hombros."
       },
       {
         "type": "paragraph",
@@ -257,7 +257,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         "type": "paragraph",
-        "text": "Cada cuerpo es diferente, y lo que le sirve a uno no siempre es lo que tú necesitas. Si quieres descubrir el balance de fibra y proteínas para llegar a tus metas, visita nuestra sección de servicios y diseñamos tu plan a medida."
+        "text": "Cada cuerpo es diferente, y lo que le sirve a uno no siempre es lo que tú necesitas. Si quieres descubrir el balance de fibra y proteínas para llegar a tus metas, visita nuestra sección de servicios para que diseñemos tu plan a medida."
       }
     ],
     "image": "assets/articulos/blog/1-image3.jpeg",

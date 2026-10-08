@@ -33,7 +33,7 @@
 <!-- Valores -->
 <section class="values-section">
   <div class="container">
-    <h2 class="section-title">Nuestros Valores</h2>
+    <h2 class="section-title">Nuestros valores</h2>
     <div class="grid grid-4">
       <div class="value-card" *ngFor="let value of values">
         <div class="value-icon">
@@ -50,7 +50,7 @@
 <!-- Equipo -->
 <section class="team-section bg-beige">
   <div class="container">
-    <h2 class="section-title">Nuestro Equipo</h2>
+    <h2 class="section-title">Nuestro equipo</h2>
     <p class="section-subtitle">
       Alimenta está conformado por profesionales especializados en nutrición clínica, deportiva, pediátrica, psicología y entrenamiento físico.
     </p>
@@ -77,21 +77,21 @@
 
           <div class="member-detail-grid">
             <div class="member-detail" *ngIf="member.education?.length">
-              <h4>Formación Académica</h4>
+              <h4>Formación académica</h4>
               <ul>
                 <li *ngFor="let item of member.education">{{ item }}</li>
               </ul>
             </div>
 
             <div class="member-detail" *ngIf="member.specializations?.length">
-              <h4>Áreas de Especialización</h4>
+              <h4>Áreas de especialización</h4>
               <ul>
                 <li *ngFor="let item of member.specializations">{{ item }}</li>
               </ul>
             </div>
 
             <div class="member-detail" *ngIf="member.achievements?.length">
-              <h4>Logros Deportivos</h4>
+              <h4>Logros deportivos</h4>
               <ul>
                 <li *ngFor="let item of member.achievements">{{ item }}</li>
               </ul>
@@ -103,7 +103,7 @@
             <p>{{ member.languages.join(' · ') }}</p>
           </div>
           <div class="member-philosophy" *ngIf="member.philosophy">
-            <h4>Filosofía de Trabajo</h4>
+            <h4>Filosofía de trabajo</h4>
             <p>{{ member.philosophy }}</p>
           </div>
           </details>
@@ -115,7 +115,7 @@
 <!-- Línea de Tiempo -->
 <section class="timeline-section">
   <div class="container">
-    <h2 class="section-title">Nuestro Recorrido</h2>
+    <h2 class="section-title">Nuestro recorrido</h2>
     <div class="timeline">
       <div class="timeline-item" *ngFor="let milestone of milestones">
         <div class="timeline-year">{{ milestone.year }}</div>

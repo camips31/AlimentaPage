@@ -57,7 +57,7 @@ export class ServicesComponent {
       items: [
         'Nutrición pediátrica',
         'Nutrición en la adolescencia',
-        'Nutrición materno infantil'
+        'Nutrición maternoinfantil'
       ]
     },
     {
@@ -79,7 +79,7 @@ export class ServicesComponent {
         'Pérdida de peso',
         'Pérdida de grasa corporal',
         'Incremento de masa muscular',
-        'Acompañamiento pre y post cirugía bariátrica'
+        'Acompañamiento antes y después de la cirugía bariátrica'
       ]
     }
   ];
@@ -99,14 +99,14 @@ export class ServicesComponent {
         'Coordinación con médicos tratantes'
       ],
       duration: 'Según necesidades individuales',
-      whatsappMsg: 'Hola! Me interesa el servicio de Nutrición Clínica del Adulto'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición Clínica del Adulto'
     },
     {
       id: 2,
       title: 'Cirugía Bariátrica',
       icon: 'medical_services',
       iconPath: 'assets/icons/vegetable-icon (11).png',
-      description: 'Acompañamiento nutricional pre y post cirugía bariátrica para resultados óptimos.',
+      description: 'Acompañamiento nutricional antes y después de la cirugía bariátrica para resultados óptimos.',
       targetAudience: 'Pacientes candidatos o que ya pasaron por cirugía bariátrica',
       benefits: [
         'Preparación preoperatoria',
@@ -115,7 +115,7 @@ export class ServicesComponent {
         'Prevención de complicaciones'
       ],
       duration: 'Seguimiento continuo',
-      whatsappMsg: 'Hola! Me interesa el servicio de Nutrición para Cirugía Bariátrica'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición para Cirugía Bariátrica'
     },
     {
       id: 3,
@@ -131,7 +131,7 @@ export class ServicesComponent {
         'Enfoque anti-dietas'
       ],
       duration: 'Mínimo 3 meses',
-      whatsappMsg: 'Hola! Me interesa el servicio de Salud Hormonal Femenina'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Salud Hormonal Femenina'
     },
     {
       id: 4,
@@ -147,7 +147,7 @@ export class ServicesComponent {
         'Manejo de selectividad alimentaria'
       ],
       duration: 'Según necesidades del niño',
-      whatsappMsg: 'Hola! Me interesa el servicio de Nutrición Pediátrica'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición Pediátrica'
     },
     {
       id: 5,
@@ -163,11 +163,11 @@ export class ServicesComponent {
         'Prevención de trastornos alimentarios'
       ],
       duration: 'Mínimo 2 meses',
-      whatsappMsg: 'Hola! Me interesa el servicio de Nutrición en la Adolescencia'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición en la Adolescencia'
     },
     {
       id: 6,
-      title: 'Nutrición Materno Infantil',
+      title: 'Nutrición maternoinfantil',
       icon: 'pregnant_woman',
       iconPath: 'assets/icons/vegetable-icon (15).png',
       description: 'Acompañamiento nutricional durante el embarazo, lactancia y primeros años del bebé.',
@@ -179,7 +179,7 @@ export class ServicesComponent {
         'Baby Led Weaning (BLW)'
       ],
       duration: 'Según etapa',
-      whatsappMsg: 'Hola! Me interesa el servicio de Nutrición Materno Infantil'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición maternoinfantil'
     },
     {
       id: 7,
@@ -195,7 +195,7 @@ export class ServicesComponent {
         'Estrategias de suplementación'
       ],
       duration: 'Mínimo 3 meses',
-      whatsappMsg: 'Hola! Me interesa el servicio de Nutrición Deportiva'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición Deportiva'
     },
     {
       id: 8,
@@ -211,7 +211,7 @@ export class ServicesComponent {
         'Recuperación post-entrenamiento'
       ],
       duration: 'Mínimo 2 meses',
-      whatsappMsg: 'Hola! Me interesa el servicio de Nutrición para Rendimiento Físico'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Nutrición para Rendimiento Físico'
     },
     {
       id: 9,
@@ -227,7 +227,7 @@ export class ServicesComponent {
         'Seguimiento continuo'
       ],
       duration: 'Según objetivos (mínimo 3 meses)',
-      whatsappMsg: 'Hola! Me interesa el servicio de Recomposición Corporal'
+      whatsappMsg: '¡Hola! Me interesa el servicio de Recomposición Corporal'
     },
     {
       id: 10,
@@ -243,7 +243,7 @@ export class ServicesComponent {
         'Material educativo incluido'
       ],
       duration: 'Según programación',
-      whatsappMsg: 'Hola! Me interesa información sobre los Talleres y Educación Nutricional'
+      whatsappMsg: '¡Hola! Me interesa información sobre los Talleres y Educación Nutricional'
     }
   ];
 

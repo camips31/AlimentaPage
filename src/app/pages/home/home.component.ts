@@ -60,25 +60,25 @@ export class HomeComponent implements OnInit, OnDestroy {
       icon: 'person',
       iconPath: 'assets/icons/vegetable-icon (6).png',
       title: 'Atención Personalizada',
-      description: 'Planes diseñados específicamente para tus necesidades y objetivos'
+      description: 'Planes diseñados específicamente para tus necesidades y objetivos.'
     },
     {
       icon: 'bar_chart',
       iconPath: 'assets/icons/vegetable-icon (7).png',
       title: 'Seguimiento Profesional',
-      description: 'Evaluaciones periódicas para ajustar tu plan y asegurar resultados'
+      description: 'Evaluaciones periódicas para ajustar tu plan y asegurar resultados.'
     },
     {
       icon: 'local_hospital',
       iconPath: 'assets/icons/vegetable-icon (8).png',
       title: 'Presencial y Online',
-      description: 'Flexibilidad para atenderte como prefieras, desde donde estés'
+      description: 'Flexibilidad para atenderte como prefieras, desde donde estés.'
     },
     {
       icon: 'integration_instructions',
       iconPath: 'assets/icons/vegetable-icon (9).png',
       title: 'Enfoque Integral',
-      description: 'Abordaje completo que considera todos los aspectos de tu salud'
+      description: 'Abordaje completo que considera todos los aspectos de tu salud.'
     }
   ];
 

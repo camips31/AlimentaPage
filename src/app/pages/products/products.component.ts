@@ -37,7 +37,7 @@ export class ProductsComponent {
     "products": [
       {
         "name": "Proteína aislada de suero de leche",
-        "description": "Absorción ultrarrápida. Recuperación post-ejercicio. Síntesis muscular. Fortalece el sistema inmunológico.",
+        "description": "Absorción ultrarrápida. Recuperación posejercicio. Síntesis muscular. Fortalece el sistema inmunológico.",
         "image": "assets/productos/SUERO DE LECHE.png",
         "presentations": [
           {
@@ -139,7 +139,7 @@ export class ProductsComponent {
       },
       {
         "name": "Mate Hepático",
-        "description": "Desinflamante, absorbe los gases, normaliza la secreción biliar y digestivo.",
+        "description": "Desinflamante y digestivo. Absorbe los gases y normaliza la secreción biliar.",
         "ingredients": "Boldo, manzanilla, alcachofa, menta y carqueja.",
         "image": "assets/productos/HEPATICO.jpg",
         "presentations": [
@@ -192,7 +192,7 @@ export class ProductsComponent {
       },
       {
         "name": "Hormone Balance",
-        "description": "Energía y vitalidad. Fortalecimiento inmunológico. Antioxidante. Regula función hormonal.",
+        "description": "Energía y vitalidad. Fortalecimiento inmunológico. Antioxidante. Regula la función hormonal.",
         "image": "assets/productos/HORMONE BALANCE.png",
         "presentations": [
           {
@@ -203,7 +203,7 @@ export class ProductsComponent {
       },
       {
         "name": "Metabolism Booster",
-        "description": "Apoyo metabólico. Complemento para objetivos nutricionales. Acompanamiento con plan profesional.",
+        "description": "Apoyo metabólico. Complemento para objetivos nutricionales. Acompañamiento con un plan profesional.",
         "image": "assets/productos/BOOSTER.png",
         "priceNote": "Consultar precio"
       },
@@ -297,7 +297,7 @@ export class ProductsComponent {
       },
       {
         "name": "Stevia en polvo",
-        "description": "Bajo impacto metabólico. Fácil disolución. Alto rendimiento. Sabor mas identico al azúcar.",
+        "description": "Bajo impacto metabólico. Fácil disolución. Alto rendimiento. Sabor similar al azúcar.",
         "image": "assets/productos/STEVIA EN POLVO.png",
         "priceNote": "Consultar disponibilidad"
       },
@@ -321,7 +321,7 @@ export class ProductsComponent {
 ];
 
   contactWhatsApp(productName: string) {
-    const message = `Hola! Me interesa el producto: ${productName}`;
+    const message = `¡Hola! Me interesa el producto: ${productName}`;
     this.whatsapp.open(message);
   }
 }

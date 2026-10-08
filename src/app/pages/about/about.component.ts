@@ -29,43 +29,43 @@ export class AboutComponent {
       icon: 'verified_user',
       iconPath: 'assets/icons/vegetable-icon (20).png',
       title: 'Confianza',
-      description: 'Construimos relaciones basadas en la confianza y la transparencia con cada paciente'
+      description: 'Construimos relaciones basadas en la confianza y la transparencia con cada paciente.'
     },
     {
       icon: 'favorite',
       iconPath: 'assets/icons/vegetable-icon (21).png',
       title: 'Compromiso',
-      description: 'Dedicados a tu bienestar y a acompañarte en cada paso de tu proceso'
+      description: 'Dedicados a tu bienestar y a acompañarte en cada paso de tu proceso.'
     },
     {
       icon: 'people',
       iconPath: 'assets/icons/vegetable-icon (22).png',
       title: 'Empatía',
-      description: 'Comprendemos tus necesidades y te acompañamos con cercanía y calidez'
+      description: 'Comprendemos tus necesidades y te acompañamos con cercanía y calidez.'
     },
     {
       icon: 'workspace_premium',
       iconPath: 'assets/icons/vegetable-icon (23).png',
       title: 'Profesionalismo',
-      description: 'Respaldo científico y experiencia en cada consulta y recomendación'
+      description: 'Respaldo científico y experiencia en cada consulta y recomendación.'
     },
     {
       icon: 'balance',
       iconPath: 'assets/icons/vegetable-icon (24).png',
       title: 'Ética',
-      description: 'Actuamos con integridad y responsabilidad en cada aspecto de nuestro trabajo'
+      description: 'Actuamos con integridad y responsabilidad en cada aspecto de nuestro trabajo.'
     },
     {
       icon: 'school',
       iconPath: 'assets/icons/vegetable-icon (25).png',
       title: 'Educación',
-      description: 'Empoderamos a nuestros pacientes con conocimiento para tomar decisiones saludables'
+      description: 'Empoderamos a nuestros pacientes con conocimiento para tomar decisiones saludables.'
     },
     {
       icon: 'spa',
       iconPath: 'assets/icons/vegetable-icon (26).png',
       title: 'Bienestar Integral',
-      description: 'Enfoque holístico que considera cuerpo, mente y estilo de vida'
+      description: 'Enfoque holístico que considera cuerpo, mente y estilo de vida.'
     }
   ];
 
