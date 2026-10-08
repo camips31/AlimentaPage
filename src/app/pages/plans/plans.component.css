@@ -406,3 +406,11 @@
 :host .plans-page .plan-saving { background: #f8ebea; color: #9b3434; font-size: 13px; font-weight: 700; padding: 6px 10px; margin-top: 10px; }
 :host .separate-price { font-size: 12px; color: #777b76; margin: 12px 0 4px; }
 :host .separate-price s { margin-left: 4px; }
+
+/* Selectores de variantes: conservan la paleta y las tarjetas existentes. */
+:host .plan-switch { display: flex; gap: 4px; margin: 16px 14px 0; padding: 4px; border: 1px solid #e1ddd5; border-radius: 24px; background: #f0eee8; }
+:host .plan-switch button { flex: 1; min-width: 0; min-height: 44px; margin: 0; padding: 8px 5px; border: 0; border-radius: 20px; background: transparent; color: #3f6e81; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; transition: background-color .2s, color .2s; }
+:host .plan-switch button.is-selected { background: #3f6e81; color: #fff; }
+:host .plan-switch button:focus-visible { outline: 2px solid #293a40; outline-offset: 2px; }
+:host .plan-details { flex: 1; }
+@media (prefers-reduced-motion: reduce) { :host .plan-switch button { transition: none; } }

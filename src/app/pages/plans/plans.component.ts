@@ -205,6 +205,25 @@ export class PlansComponent {
 ];
 
 
+  selectedNutritionId = 2;
+  selectedPsychologyId = 8;
+  readonly nutritionOptions = [{ id: 2, label: '1 mes' }, { id: 4, label: '12 semanas' }];
+  readonly psychologyOptions = [{ id: 8, label: '4 sesiones' }, { id: 9, label: '6 sesiones' }, { id: 10, label: '10 sesiones' }];
+
+  visiblePlans(group: typeof this.planGroups[number]) {
+    return group.plans.filter(plan => ![4, 9, 10].includes(plan.id));
+  }
+
+  selectedPlan(slot: typeof this.planGroups[number]['plans'][number]) {
+    const id = slot.id === 2 ? this.selectedNutritionId : slot.id === 8 ? this.selectedPsychologyId : slot.id;
+    return this.planGroups.flatMap(group => group.plans).find(plan => plan.id === id)!;
+  }
+
+  selectPlan(slotId: number, planId: number) {
+    if (slotId === 2) this.selectedNutritionId = planId;
+    if (slotId === 8) this.selectedPsychologyId = planId;
+  }
+
   contactWhatsApp(message: string) {
     this.whatsapp.open(message);
   }
