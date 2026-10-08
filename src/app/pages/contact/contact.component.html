@@ -10,7 +10,7 @@
             <p>{{ location.address }}</p>
             <div class="branch-links">
               @for (phone of location.phones; track phone) {
-                <a (click)="whatsapp.open(undefined, $event)" aria-haspopup="dialog" [href]="'https://wa.me/591' + phone" target="_blank" rel="noopener" [attr.aria-label]="'WhatsApp ' + location.city + ': ' + phone"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: 'WhatsApp'}"></ng-container><span>{{ phone }}</span></a>
+                <a [href]="'https://wa.me/591' + phone" target="_blank" rel="noopener" [attr.aria-label]="'WhatsApp ' + location.city + ': ' + phone"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: 'WhatsApp'}"></ng-container><span>{{ phone }}</span></a>
               }
               <a class="directions-link" [href]="location.mapUrl" target="_blank" rel="noopener"><ng-container [ngTemplateOutlet]="contactIcon" [ngTemplateOutletContext]="{name: 'Map'}"></ng-container><span>Cómo llegar</span></a>
             </div>
