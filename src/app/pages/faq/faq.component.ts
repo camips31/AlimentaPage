@@ -91,8 +91,8 @@ export class FaqComponent {
       category: 'Pagos y Seguros'
     },
     {
-      question: '¿Puedo llevar acompañante a la consulta?',
-      answer: 'Por supuesto. Puedes llevar un acompañante a la consulta.',
+      question: '¿Puedo un llevar acompañante a la consulta?',
+      answer: 'Por supuesto, puedes llevar un acompañante a la consulta.',
       isOpen: false,
       category: 'Consultas'
     }

@@ -7,6 +7,7 @@
    <article>
     <span class="topic">{{ article.label }}</span>
     <h1>{{ article.title }}</h1>
+    <p class="article-byline">Por {{ article.author }}</p>
     @for (block of article.blocks; track $index) {
      @switch (block.type) {
       @case ('heading') { <h2>{{ block.text }}</h2> }
@@ -24,7 +25,7 @@
  @for (post of blogPosts; track post.id) {
   <article class="post-card">
    <a class="post-image" [routerLink]="['/blog', post.slug]" tabindex="-1" aria-hidden="true"><img [src]="post.image" alt="" loading="lazy"></a>
-   <div class="post-content"><span class="topic">{{ post.label }}</span><h2>{{ post.id === 2 ? 'Alimentación y acné: nutrientes clave para tu piel' : post.id === 3 ? 'Fibra alimentaria: equilibrio en tu alimentación' : post.title }}</h2><p>{{ post.excerpt }}</p></div>
+   <div class="post-content"><span class="topic">{{ post.label }}</span><h2>{{ post.id === 2 ? 'Alimentación y acné: nutrientes clave para tu piel' : post.id === 3 ? 'Fibra alimentaria: equilibrio en tu alimentación' : post.title }}</h2><p>{{ post.excerpt }}</p><p class="post-byline">Por {{ post.author }}</p></div>
    <div class="post-footer"><a class="read-link" [routerLink]="['/blog', post.slug]" [attr.aria-label]="'Leer: ' + post.title">Leer artículo <span aria-hidden="true">→</span></a></div>
   </article>
  }

@@ -1,5 +1,5 @@
 export interface ArticleBlock { type: string; text: string; }
-export interface BlogPost { id: number; title: string; slug: string; label: string; excerpt: string; image: string; blocks: ArticleBlock[]; }
+export interface BlogPost { author: string; id: number; title: string; slug: string; label: string; excerpt: string; image: string; blocks: ArticleBlock[]; }
 export const BLOG_POSTS: BlogPost[] = [
   {
     "id": 1,
@@ -61,7 +61,8 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "assets/articulos/blog/0-image1.jpeg",
     "slug": "entendiendo-los-atracones",
     "label": "Conducta alimentaria",
-    "excerpt": "Comprende el ciclo de los atracones y el papel de los pensamientos y las emociones."
+    "excerpt": "Comprende el ciclo de los atracones y el papel de los pensamientos y las emociones.",
+    "author": "Lic. Lucía Pinell"
   },
   {
     "id": 2,
@@ -175,7 +176,8 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "assets/articulos/blog/1-image1.jpeg",
     "slug": "alimentacion-y-acne",
     "label": "Nutrición y piel",
-    "excerpt": "Cómo se relacionan la alimentación y la salud de la piel."
+    "excerpt": "Cómo se relacionan la alimentación y la salud de la piel.",
+    "author": "Lic. María René Nuñez"
   },
   {
     "id": 3,
@@ -261,6 +263,7 @@ export const BLOG_POSTS: BlogPost[] = [
     "image": "assets/articulos/blog/1-image3.jpeg",
     "slug": "fibra-alimentaria",
     "label": "Hábitos saludables",
-    "excerpt": "Descubre por qué la fibra es importante y cómo equilibrarla con la proteína."
+    "excerpt": "Descubre por qué la fibra es importante y cómo equilibrarla con la proteína.",
+    "author": "Lic. María René Nuñez"
   }
 ];

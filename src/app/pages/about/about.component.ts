@@ -59,7 +59,7 @@ export class AboutComponent {
       icon: 'school',
       iconPath: 'assets/icons/vegetable-icon (25).png',
       title: 'Educación',
-      description: 'Empoderamos a nuestros pacientes con conocimiento para decisiones saludables'
+      description: 'Empoderamos a nuestros pacientes con conocimiento para tomar decisiones saludables'
     },
     {
       icon: 'spa',

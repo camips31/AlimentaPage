@@ -50,3 +50,6 @@
 :host .article-reading { max-width: 680px; }
 :host .article-reading h1 { font-weight: 500; }
 :host .article-reading h2 { font-size: 21px !important; font-weight: 500; }
+
+:host .post-content .post-byline { font-size: 12px; color: #737b78; margin: 4px 0 0; }
+:host .article-reading .article-byline { font-size: 14px; color: #61736f; margin: -12px 0 24px; }

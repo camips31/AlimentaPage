@@ -1,11 +1,21 @@
 <!-- Hero Section: estilo imagen referencia -->
 <section class="hero">
   <div class="hero-box">
+    <div class="hero-backgrounds" aria-hidden="true">
+      @for (photo of heroBackgrounds; track photo; let i = $index) { <img [src]="photo" alt="" [class.active]="activeBackground === i" [attr.fetchpriority]="i === 0 ? 'high' : 'low'"> }
+    </div>
+    <div class="hero-background-controls" aria-label="Imágenes de portada">
+      @for (photo of heroBackgrounds; track photo; let i = $index) { <button type="button" class="background-dot" [class.selected]="activeBackground === i" [attr.aria-label]="'Mostrar imagen ' + (i + 1)" [attr.aria-pressed]="activeBackground === i" (click)="selectBackground(i)"><span></span></button> }
+    </div>
     <div class="hero-team">
       <h1 class="hero-title">Nutrición que transforma hábitos, <br>salud y calidad de vida</h1>
       <p class="hero-subtitle">
         En Alimenta trabajamos con una filosofía de alimentación flexible y no restrictiva para ayudarte a mejorar tu salud física, mental y emocional mediante un acompañamiento profesional y personalizado.
       </p>
+      <div class="hero-modalities" aria-label="Modalidades de atención">
+        <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Presencial en La Paz y Santa Cruz</span>
+        <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="3" width="16" height="12" rx="2"/><path d="M2 20h20M9 15v5m6-5v5"/></svg>Online desde donde estés</span>
+      </div>
       <div class="hero-actions">
         <a class="btn btn-primary" routerLink="/contacto">Reserva tu consulta</a>
         <a class="btn btn-primary" routerLink="/planes">Conoce nuestros planes</a>
@@ -53,7 +63,7 @@
 <section class="specialties" aria-labelledby="home-specialties-title">
   <h2 id="home-specialties-title" class="visually-hidden">Especialidades &amp; Servicios</h2>
   <div class="specialties-grid">
-    <div class="specialty-panel" *ngFor="let s of services.slice(0, 5); let i = index">
+    <div class="specialty-panel" *ngFor="let s of services; let i = index">
     <div class="specialty-icon">
       <img *ngIf="s.iconPath; else materialSpecialtyIcon" [src]="s.iconPath" [alt]="s.title" class="alimenta-icon">
       <ng-template #materialSpecialtyIcon><span class="material-icons">{{ s.icon }}</span></ng-template>

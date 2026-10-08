@@ -1,5 +1,5 @@
 import { TEAM } from '../../data/team';
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -10,7 +10,20 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
+  readonly heroBackgrounds = [1, 2, 3, 4, 5].map(n => 'assets/bg (' + n + ').png');
+  activeBackground = 0;
+  backgroundsPaused = false;
+  private backgroundTimer?: ReturnType<typeof setInterval>;
+  ngOnInit() {
+    this.backgroundsPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.backgroundTimer = setInterval(() => {
+      if (!this.backgroundsPaused && !document.hidden) this.activeBackground = (this.activeBackground + 1) % this.heroBackgrounds.length;
+    }, 6500);
+  }
+  ngOnDestroy() { if (this.backgroundTimer) clearInterval(this.backgroundTimer); }
+  selectBackground(index: number) { this.activeBackground = index; }
+
   whatsappLink = 'https://wa.me/59178250459?text=Hola%2C%20quiero%20agendar%20una%20consulta';
 
 
@@ -22,37 +35,25 @@ export class HomeComponent {
   ];
 
   services = [
-    {
-      icon: 'local_hospital',
-      iconPath: 'assets/icons/vegetable-icon (1).png',
-      title: 'Nutrición Clínica',
-      description: 'Nutrición clínica del adulto, cirugía bariátrica y salud hormonal femenina'
-    },
-    {
-      icon: 'child_care',
-      iconPath: 'assets/icons/vegetable-icon (2).png',
-      title: 'Nutrición en Etapas de la Vida',
-      description: 'Nutrición pediátrica, adolescencia y materno infantil'
-    },
-    {
-      icon: 'fitness_center',
-      iconPath: 'assets/icons/vegetable-icon (3).png',
-      title: 'Nutrición Deportiva y Rendimiento',
-      description: 'Nutrición deportiva y planes para rendimiento físico'
-    },
-    {
-      icon: 'restaurant',
-      iconPath: 'assets/icons/vegetable-icon (4).png',
-      title: 'Evaluación Nutricional Individual',
-      description: 'Evaluación completa y personalizada de tu estado nutricional'
-    },
-    {
-      icon: 'menu_book',
-      iconPath: 'assets/icons/vegetable-icon (5).png',
-      title: 'Talleres y Educación',
-      description: 'Talleres presenciales y virtuales de educación nutricional'
-    }
-  ];
+  {
+    "icon": "local_hospital",
+    "iconPath": "assets/icons/vegetable-icon (1).png",
+    "title": "Nutrición Clínica",
+    "description": "Atención nutricional para cuidar tu salud y acompañar condiciones clínicas."
+  },
+  {
+    "icon": "restaurant",
+    "iconPath": "assets/icons/vegetable-icon (2).png",
+    "title": "Nutrición Personalizada",
+    "description": "Planes de alimentación adaptados a tus necesidades, hábitos y objetivos."
+  },
+  {
+    "icon": "psychology",
+    "iconPath": "assets/icons/vegetable-icon (3).png",
+    "title": "Psicología Clínica",
+    "description": "Acompañamiento para tu bienestar emocional y una relación saludable con la alimentación."
+  }
+];
 
   benefits = [
     {
