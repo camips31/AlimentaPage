@@ -32,7 +32,7 @@ export const TEAM = [
       "credential": "C - 6144191",
       "city": "Barcelona · Dirección de Alimenta Bolivia",
       "id": "valeria-carrillo",
-      "image": "",
+      "image": "assets/Profiles/normalized/Valeria.png",
       "description": "Dietista-nutricionista con enfoque integral e individualizado. Actualmente ejerce en Barcelona, donde combina la consulta clínica, la gestión de servicios de nutrición y el acompañamiento a sus pacientes. Desde 2021 dirige Alimenta en Bolivia, coordinando equipos, procesos y administración de forma remota.",
       "education": [
             "Grado en Nutrición Humana y Dietética — Universidad Mayor de San Andrés, Bolivia.",
